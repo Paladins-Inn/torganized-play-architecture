@@ -1,0 +1,73 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "simple-service.fullname" . }}-service
+  labels:
+    {{- include "simple-service.labels" . | nindent 4 }}
+    app.kubernetes.io/component: service
+spec:
+  {{- if not .Values.service.autoscaling.enabled }}
+  replicas: {{ .Values.service.replicaCount }}
+  {{- end }}
+  selector:
+    matchLabels:
+      {{- include "simple-service.selectorLabels" . | nindent 6 }}
+      app.kubernetes.io/component: service
+  template:
+    metadata:
+      {{- with .Values.service.podAnnotations }}
+      annotations:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      labels:
+        {{- include "simple-service.labels" . | nindent 8 }}
+        app.kubernetes.io/component: service
+        {{- with .Values.service.podLabels }}
+        {{- toYaml . | nindent 8 }}
+        {{- end }}
+    spec:
+      {{- with .Values.imagePullSecrets }}
+      imagePullSecrets:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      serviceAccountName: {{ include "simple-service.serviceAccountName" . }}
+      securityContext:
+        {{- toYaml .Values.service.podSecurityContext | nindent 8 }}
+      containers:
+        - name: {{ .Chart.Name }}
+          securityContext:
+            {{- toYaml .Values.service.securityContext | nindent 12 }}
+          image: "{{ .Values.service.image.repository }}:{{ .Values.service.image.tag | default .Chart.AppVersion }}"
+          imagePullPolicy: {{ .Values.service.image.pullPolicy }}
+          ports:
+            - name: http
+              containerPort: {{ .Values.service.service.port }}
+              protocol: TCP
+          startupProbe:
+            {{- toYaml .Values.service.startupProbe | nindent 12 }}
+          livenessProbe:
+            {{- toYaml .Values.service.livenessProbe | nindent 12 }}
+          readinessProbe:
+            {{- toYaml .Values.service.readinessProbe | nindent 12 }}
+          resources:
+            {{- toYaml .Values.service.resources | nindent 12 }}
+          {{- with .Values.service.volumeMounts }}
+          volumeMounts:
+            {{- toYaml . | nindent 12 }}
+          {{- end }}
+      {{- with .Values.service.volumes }}
+      volumes:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- with .Values.service.nodeSelector }}
+      nodeSelector:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- with .Values.service.affinity }}
+      affinity:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- with .Values.service.tolerations }}
+      tolerations:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}

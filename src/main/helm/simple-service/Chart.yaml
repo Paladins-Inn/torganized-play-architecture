@@ -1,0 +1,6 @@
+apiVersion: v2
+name: simple-service
+description: A chart for creating a simple service with database, API and/or web UI.
+type: application
+version: 0.1.0
+appVersion: "${project.version}"

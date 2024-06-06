@@ -1,0 +1,11 @@
+---
+kind: Configmap
+apiVersion: v1
+metadata:
+  name: {{ include "simple-service.fullname" . }}
+  labels:
+    {{- include "simple-service.labels" . | nindent 4 }}
+    app.kubernetes.io/component: service
+data:
+  application.properties:
+    
