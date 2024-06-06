@@ -1,0 +1,27 @@
+ifndef::imagesdir[:imagesdir: ../images]
+
+[[section-introduction-and-goals]]
+== Introduction and Goals
+
+
+
+=== Requirements Overview
+
+
+
+=== Quality Goals
+
+
+
+=== Stakeholders
+
+
+
+[options="header",cols="1,2,2"]
+|===
+|Role/Name|Contact|Expectations
+| Torg Player | Roland T. Lichti | Find nice tables to play Torg on conventions, online and open tables locally.
+| Torg Game Masters | Roland T. Lichti | Play Torg with players on conventions, online and locally.
+| Torganized Play Orga | Roland T. Lichti | * Help others play nice games.
+* Provide a shared timeline.
+|===
