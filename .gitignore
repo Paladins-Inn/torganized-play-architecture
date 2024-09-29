@@ -2,3 +2,5 @@
 docs/generated/
 target/
 *.iml
+src/main/docs/index.html
+src/main/docs/index.pdf

@@ -9,14 +9,17 @@ ifndef::imagesdir[:imagesdir: ../images]
 
 === Whitebox Overall System
 
-
-
-_**<Overview Diagram>**_
+.Overview of the SCS and their transcludes, pages and APIs.
+image::dcis-overview.drawio.svg[]
 
 Motivation::
+The system tries to separate the concerns of 
 
-_<text explanation>_
+* managing the games and campaign,
+* providing a character registry (and perhaps in future also a character vault), and
+* managing threats.
 
+In addition the functionality of the torg-codex should be provided.
 
 Contained Building Blocks::
 _<Description of contained building block (black boxes)>_
