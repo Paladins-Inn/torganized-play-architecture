@@ -6,7 +6,9 @@
 // configure EN settings for asciidoc
 include::src/config.adoc[]
 
-= image:lichti-wappen.png[Kaiserpfalz EDV-Service] Delphi Council Information System
+= Delphi Council Information System
+Roland T. Lichti <rlichti@kaiserpfalz-edv.de>
+:title-logo-image: image:lichti-wappen.png[align=center,pdfwidth=4in]
 :revnumber: 1.0.0-SNAPSHOT
 :revdate: September 2024
 // toc-title definition MUST follow document title without blank line!
