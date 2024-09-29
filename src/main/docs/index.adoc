@@ -6,10 +6,9 @@
 // configure EN settings for asciidoc
 include::src/config.adoc[]
 
-= image:arc42-logo.png[arc42] Template
-:revnumber: 8.2 EN
-:revdate: January 2023
-:revremark: (based upon AsciiDoc version)
+= image:lichti-wappen.png[Kaiserpfalz EDV-Service] Delphi Council Information System
+:revnumber: 1.0.0-SNAPSHOT
+:revdate: September 2024
 // toc-title definition MUST follow document title without blank line!
 :toc-title: Table of Contents
 
@@ -29,7 +28,7 @@ ifdef::backend-html5[]
 endif::backend-html5[]
 
 
-include::src/about-arc42.adoc[]
+include::src/about-paladinsinn.adoc[]
 
 // horizontal line
 ***
