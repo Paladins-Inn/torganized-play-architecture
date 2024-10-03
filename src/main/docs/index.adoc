@@ -41,6 +41,8 @@ include::src/about-paladinsinn.adoc[]
 // numbering from here on
 :numbered:
 
+= Context
+
 <<<<
 // 1. Introduction and Goals
 include::src/01_introduction_and_goals.adoc[]
@@ -53,6 +55,8 @@ include::src/02_architecture_constraints.adoc[]
 // 3. System Scope and Context
 include::src/03_system_scope_and_context.adoc[]
 
+
+= Systems
 <<<<
 // 4. Solution Strategy
 include::src/04_solution_strategy.adoc[]
@@ -73,6 +77,8 @@ include::src/07_deployment_view.adoc[]
 // 8. Concepts
 include::src/08_concepts.adoc[]
 
+
+= Reference Part
 <<<<
 // 9. Architecture Decisions
 include::src/09_architecture_decisions.adoc[]
@@ -89,4 +95,7 @@ include::src/11_technical_risks.adoc[]
 // 12. Glossary
 include::src/12_glossary.adoc[]
 
-
+<<<<
+// 13. Index
+[index]
+== Index

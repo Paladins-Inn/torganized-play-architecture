@@ -1,11 +1,7 @@
 ifndef::imagesdir[:imagesdir: ../images]
 
 [[section-building-block-view]]
-
-
 == Building Block View
-
-
 
 === Whitebox Overall System
 
@@ -21,94 +17,57 @@ The system tries to separate the concerns of
 
 In addition the functionality of the torg-codex should be provided.
 
-Contained Building Blocks::
-_<Description of contained building block (black boxes)>_
+==== Contained Building Blocks
 
-Important Interfaces::
-_<Description of important interfaces>_
+dcis-gaming::
+(((SCS,dcis-gaming)))
+(((dcis-gaming)))
+The gaming gets organized in this SCS.
+The ((mission))s are defined and their play results collected in t his subsystem.
+((Game Master))s can add local games to the system to enable a full track of an operative's (((operative))) history.
 
-
-
-
-==== <Name black box 1>
-
-
-
-_<Purpose/Responsibility>_
-
-_<Interface(s)>_
-
-_<(Optional) Quality/Performance Characteristics>_
-
-_<(Optional) Directory/File Location>_
-
-_<(Optional) Fulfilled Requirements>_
-
-_<(optional) Open Issues/Problems/Risks>_
+dcis-operatives::
+(((SCS,dcis-operatives)))
+(((dcis-operatives)))
+The ((storm knight))s or ((stormer))s (referred to as ((operative)s)) of a campaign are managed inside of this SCS.
 
 
+dcis-threats::
+(((SCS,dcis-threats)))
+(((dcis-threats)))
+The opposition to the Players is known as Threat in Torg Eternity.
+This system lets create new threat in addition to the ones defined by the original publishers.
+It also creates the famous threat cards out of the data and the image provided by the user creating the threat.
+
+torg-codex::
+(((SCS,torg-codex)))
+(((torg-codex)))
+A rip-off of the original https://torg-codex.com[Torg Codex]. A page I really appreciate and that shows the value to a lot of players.
+
+dcis-users::
+(((SCS,dcis-users)))
+(((dcis-users)))
+A quite straight forward user management system.
+Authentication is off handed to OpenIDConnect providers.
+So this SCS only manages some Off-Topic stuff.
+
+dcis-commons::
+(((SCS,dcis-commons)))
+(((dcis-commons)))
+The common java script, CSS and images or other resources that are used on multiple SCS.
+Helps the browsers to cache by referring the same stuff with the same URL instead of copying it to the different SCS.
 
 
-==== <Name black box 2>
+==== Important Interfaces
 
-_<black box template>_
-
-==== <Name black box n>
-
-_<black box template>_
+IDs::
+IDs throughout the system are UUID, not the simple numbers used by other systems.
+Reason is, that the ID should be generated on first creation of an object and UUID is a nice way to handle that distribution.
 
 
-==== <Name interface 1>
+<<<<
+include::05_building_block_view/level_1.adoc[]
 
-...
+// Level 2
 
-==== <Name interface m>
-
-
-
-=== Level 2
-
-
-
-==== White Box _<building block 1>_
-
-
-
-_<white box template>_
-
-==== White Box _<building block 2>_
-
-
-_<white box template>_
-
-...
-
-==== White Box _<building block m>_
-
-
-_<white box template>_
-
-
-
-=== Level 3
-
-
-
-
-==== White Box <_building block x.1_>
-
-
-
-
-_<white box template>_
-
-
-==== White Box <_building block x.2_>
-
-_<white box template>_
-
-
-
-==== White Box <_building block y.1_>
-
-_<white box template>_
+// Level 3

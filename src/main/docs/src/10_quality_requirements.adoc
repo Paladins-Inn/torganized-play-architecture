@@ -3,6 +3,32 @@ ifndef::imagesdir[:imagesdir: ../images]
 [[section-quality-scenarios]]
 == Quality Requirements
 
+[options="header",cols="1,4"]
+|===
+| Requirement | Description
+| [[REQ-MT,Maintainability]] **Maintainability** (((Quality Requirement, Maintainability)))
+| _**TBD**_
+
+| [[REQ-CO,Compatibility]] **Compatibility** (((Quality Requirement, Compatibility)))
+| _**TBD**_
+
+| [[REQ-FS,Functional Suitability]] **Functional Suitability** (((Quality Requirement, Functional Suitability)))
+| _**TBD**_
+
+| [[REQ-EF,Efficiency]] **Efficiency** (((Quality Requirement, Efficiency)))
+| _**TBD**_
+
+| [[REQ-US,Usability]] **Usability** (((Quality Requirement, Usability)))
+| _**TBD**_
+
+| [[REQ-RE,Reliability]] **Reliability** (((Quality Requirement, Reliability)))
+| _**TBD**_
+
+| [[REQ-PO,Portability]] **Portability** (((Quality Requirement, Portability)))
+| _**TBD**_
+
+|===
+
 
 
 
@@ -12,4 +38,30 @@ ifndef::imagesdir[:imagesdir: ../images]
 
 === Quality Scenarios
 
+[options="header",cols="1,9"]
+|===
+| ID | Scenario
+
+| [[MTYY,XXX]] **MTYY** (((Quality Requirement, Maintainability, XXX))) (((MTYY))) (((XXX)))
+| _**TBD**_
+
+| [[COYY,XXX]] **COYY** (((Quality Requirement, Compatibility, XXX))) (((COYY))) (((XXX)))
+| _**TBD**_
+
+| [[FSYY,XXX]] **FSYY** (((Quality Requirement, Functional Suitability, XXX))) (((FSYY))) (((XXX)))
+| _**TBD**_
+
+| [[EFYY,XXX]] **EFYY** (((Quality Requirement, Efficiency, XXX))) (((EFYY))) (((XXX)))
+| _**TBD**_
+
+| [[USYY,XXX]] **USYY** (((Quality Requirement, Usability, XXX))) (((USYY))) (((XXX)))
+| _**TBD**_
+
+| [[REYY,XXX]] **REYY** (((Quality Requirement, Reliability, XXX))) (((REYY))) (((XXX)))
+| _**TBD**_
+
+| [[POYY,XXX]] **POYY** (((Quality Requirement, Portability, XXX))) (((POYY))) (((XXX)))
+| _**TBD**_
+
+|===
 

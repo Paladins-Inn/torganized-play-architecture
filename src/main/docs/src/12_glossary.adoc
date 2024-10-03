@@ -9,9 +9,40 @@ ifndef::imagesdir[:imagesdir: ../images]
 |===
 |Term |Definition
 
-|<Term-1>
-|<definition-1>
+|Core Earth
+|The Realm of the original Earth.
 
-|<Term-2>
-|<definition-2>
+|NPC
+|Non Player Character. As opposed to PC.
+
+|Off-Topic
+|Everything that does not happen in the game world of a TTRPG.
+
+|Operative
+|Operatives are the player characters of a campaign.
+Torg Eternity distinguishes them as Storm Knight (heros, the good guys) or Stormers (villains, the bad guys). Normal campaigns circle around Storm Knights, but perhaps some want to play Stormers instead.
+
+|PC
+|Player Character. The characters played by the players of Torg Eternity. AS the name suggests.
+
+|Possibility Wars
+|The invasion of the different Realms is called Possibility Wars in Torg Eternity.
+
+|Realm
+|The different realities invading in Torg Eternity create the so called Realms on Earth. The remaining parts form the Realm of Core Earth.
+
+|Storm Knight
+|The good guys in the possibility wars.
+
+|Stormer
+|The bad guys in the possibility wars. Normally NPC
+
+|Torg Eternity
+|The reboot of the original TTRPG from the early 1990. The topic this whole system revolves about.
+
+|Threat
+|The dangerous enemies and monsters the players fight in this game.
+
+|TTRPG
+|Table Top Role Playing Game.
 |===

@@ -1,0 +1,17 @@
+ifndef::imagesdir[:imagesdir: ../images]
+
+==== dcis-threats
+(((SCS,dcis-threats)))
+(((dcis-threats)))
+
+_<Purpose/Responsibility>_
+
+===== Quality/Performance Characteristics
+
+===== Transcludes
+
+===== Rest APIs
+
+===== Fulfilled Requirements
+
+===== Open Issues/Problems/Risks

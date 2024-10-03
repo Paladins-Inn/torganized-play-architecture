@@ -1,0 +1,17 @@
+ifndef::imagesdir[:imagesdir: ../images]
+
+==== dcis-gaming
+(((SCS,dcis-gaming)))
+(((dcis-gaming)))
+
+_<Purpose/Responsibility>_
+
+===== Quality/Performance Characteristics
+
+===== Transcludes
+
+===== Rest APIs
+
+===== Fulfilled Requirements
+
+===== Open Issues/Problems/Risks

@@ -1,0 +1,17 @@
+ifndef::imagesdir[:imagesdir: ../images]
+
+==== dcis-commons
+(((SCS,dcis-commons)))
+(((dcis-commons)))
+
+_<Purpose/Responsibility>_
+
+===== Quality/Performance Characteristics
+
+===== Transcludes
+
+===== Rest APIs
+
+===== Fulfilled Requirements
+
+===== Open Issues/Problems/Risks
