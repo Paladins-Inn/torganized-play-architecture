@@ -44,6 +44,7 @@ ifndef::imagesdir[:imagesdir: ../images]
 ---_ Shared Campaign (FS03)
 -- Compatibility (CO)
 ---_ Compatible with FoundryVTT (CO01)
+---_ Compatible with Torg-Codex (CO02)
 -- Usability (US)
 ---_ Web based (US01)
 ---_ Foundry VTT (US02)
@@ -51,6 +52,7 @@ ifndef::imagesdir[:imagesdir: ../images]
 ++ Reliability (RE)
 ++ Efficiency (EF)
 ++ Maintainability (MT)
++++_ Small Team (MT01)
 @endmindmap
 ....
 
@@ -72,6 +74,9 @@ ifndef::imagesdir[:imagesdir: ../images]
 | [[CO01,Compatible with FoundryVTT (CO01)]] **CO01** (((Quality Requirement, Compatibility, Compatible with FoundryVTT))) (((Compatibility, Compatible with FoundryVTT)))
 | The data transfer to FoundryVTT based modules should be as seamless as possible.
 
+| [[CO02,Compatible with Torg-Codex (CO02)]] **CO02** (((Quality Requirement, Compatibility, Compatible with Torg-Codex))) (((Compatibility, Compatible with Torg-Codex)))
+| The data from DCIS which is compatible with the Torg-Codex (((torg-codex))) should be included in the Torg-Codex.
+
 | [[US01,Web based (US01)]] **US01** (((Quality Requirement, Usability, Web based))) (((Usability, Web based)))
 | The main interface should be web based.
 
@@ -84,8 +89,8 @@ ifndef::imagesdir[:imagesdir: ../images]
 | [[EFYY,XXX (EFYY)]] **EFYY** (((Quality Requirement, Efficiency, XXX))) (((Efficiency, XXX)))
 | _**TBD**_
 
-| [[MTYY,XXX]] **MTYY** (((Quality Requirement, Maintainability, XXX))) (((Maintainability, XXX)))
-| _**TBD**_
+| [[MT01,Small Team (MT01)]] **MT01** (((Quality Requirement, Maintainability, Small Team))) (((Maintainability, Small Team)))
+|Maintaining the software and the data must be possible for a small team (basically the full army of myself, me, and I).
 
 |===
 

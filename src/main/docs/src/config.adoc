@@ -9,3 +9,13 @@
 :imagesdir: ./images
 
 :doctype: book
+
+
+:fs01: <<FS01>> (((Quality Requirement, Functional Suitability, Tailored to Torg Eternity))) (((Functional Suitability, Tailored to Torg))) 
+:fs02: <<FS02>> (((Quality Requirement, Functional Suitability, Game Session Organization))) (((Functional Suitability, Game Session Organization)))
+:fs03: <<FS03>> (((Quality Requirement, Functional Suitability, Shared Campaign))) (((Functional Suitability, Shared Campaign)))
+:co01: <<CO01>> (((Quality Requirement, Compatibility, Compatible with FoundryVTT))) (((Compatibility, Compatible with FoundryVTT)))
+:co02: <<CO02>> (((Quality Requirement, Compatibility, Compatible with Torg-Codex))) (((Compatibility, Compatible with Torg-Codex)))
+:us01: <<US01>> (((Quality Requirement, Usability, Web based))) (((Usability, Web based)))
+:us02: <<US02>> (((Quality Requirement, Usability, FoundryVTT Module))) (((Usability, FoundryVTT Module)))
+:mt01: <<MT01>> (((Quality Requirement, Maintainability, Small Team))) (((Maintainability, Small Team)))

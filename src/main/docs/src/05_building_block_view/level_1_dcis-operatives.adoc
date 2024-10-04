@@ -14,4 +14,9 @@ _<Purpose/Responsibility>_
 
 ===== Fulfilled Requirements
 
+* {fs01}
+* {fs02}
+* {us01}
+* {us02}
+
 ===== Open Issues/Problems/Risks

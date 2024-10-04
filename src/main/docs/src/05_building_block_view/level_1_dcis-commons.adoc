@@ -4,14 +4,13 @@ ifndef::imagesdir[:imagesdir: ../../images]
 (((SCS,dcis-commons)))
 (((dcis-commons)))
 
-_<Purpose/Responsibility>_
+This SCS provides default CSS and java script that can be cached that way on the users computers to provide fast access to the HTML elements.
 
 ===== Quality/Performance Characteristics
-
-===== Transcludes
-
-===== Rest APIs
+Only static HTML/CSS/JavaScript is provided.
 
 ===== Fulfilled Requirements
+
+* {mt01}
 
 ===== Open Issues/Problems/Risks
