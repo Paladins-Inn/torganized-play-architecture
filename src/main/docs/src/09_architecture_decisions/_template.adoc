@@ -1,0 +1,20 @@
+ifndef::imagesdir[:imagesdir: ../../images]
+
+:adr-title: XXXX
+:adr-short: YYYY
+:adr-status: Proposed
+:adr-seq: {counter:adr}
+//[[adr-]]
+(((Architectural Decisions, ADR-{adr-seq})))
+(((ADR-{adr-seq})))
+=== ADR-{adr-seq} --  {adr-title}
+
+==== Context
+
+==== Decision
+
+==== Status
+{adr-status}
+
+==== Consequences
+

@@ -6,23 +6,13 @@
 
 ## Abstract
 
-TBD
+This project contains the arc42 description for the whole DCIS system.
+It is created as whitepaper containing the target system description.
+But during implementation it will evolve into the macro architecture document of the DCIS system.
 
 ## License
 
 The license for the software is LGPL 3.0 or newer.
-
-## Architecture
-
-tl;dr (ok, only the bullshit bingo words):
-
-* Immutable Objects
-* Relying heavily on generated code
-* 100 % test coverage of human generated code
-* Every line of code not written is bug free!
-
-Code test coverage for human generated code should be 100%, machine generated code is considered bugfree until proven wrong.
-But every line that needs not be written is a bug free line without need to test it. So aim for not writing code.
 
 ## A note from the author
 
@@ -33,4 +23,4 @@ So no short cuts to get faster.
 And be prepared for some basic discussions about the architecture or software design :-).
 
 ---
-Berlin, 2024-06-01
+Bensheim, 2024-10-03

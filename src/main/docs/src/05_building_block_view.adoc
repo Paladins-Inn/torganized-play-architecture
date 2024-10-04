@@ -64,6 +64,10 @@ IDs::
 IDs throughout the system are UUID, not the simple numbers used by other systems.
 Reason is, that the ID should be generated on first creation of an object and UUID is a nice way to handle that distribution.
 
+Foundry-VTT:
+Some SCS have defined a FoundryVTT API. This API is not defined yet.
+Target is to offer https://foundryvtt.com[FoundryVTT] modules to integrate with DCIS to enable the gameplay and make it as easy as possible to players to play Torg Eternity.
+
 
 <<<<
 include::05_building_block_view/level_1.adoc[]

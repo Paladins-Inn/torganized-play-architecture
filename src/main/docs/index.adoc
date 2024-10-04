@@ -81,7 +81,7 @@ include::src/08_concepts.adoc[]
 = Reference Part
 <<<<
 // 9. Architecture Decisions
-include::src/09_architecture_decisions.adoc[]
+include::src/09_architecture_decisions/index.adoc[]
 
 <<<<
 // 10. Quality Requirements
