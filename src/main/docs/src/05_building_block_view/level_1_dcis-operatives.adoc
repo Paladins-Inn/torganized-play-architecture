@@ -1,4 +1,4 @@
-ifndef::imagesdir[:imagesdir: ../images]
+ifndef::imagesdir[:imagesdir: ../../images]
 
 ==== dcis-operatives
 (((SCS,dcis-operatives)))

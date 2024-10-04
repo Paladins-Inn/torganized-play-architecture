@@ -1,9 +1,5 @@
 :homepage: https://paladins-inn.de
-
 :keywords: RPG, TTRPG, Software, Torg Eternity, Torg
-
-:numbered!:
-**About Paladins Inn**
 
 [role="lead"]
 image:klenkes74.jpg[klenkes74,150,150,role=left]

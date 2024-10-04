@@ -10,40 +10,43 @@ ifndef::imagesdir[:imagesdir: ../images]
 |===
 |Term |Definition
 
-|Core Earth
+|((Core Earth))
 |The Realm of the original Earth.
 
-|NPC
-|Non Player Character. As opposed to PC.
+|((NPC)) ((Non-Player Character))
+|Non-Player Character. As opposed to PC.
 
-|Off-Topic
+|((Off-Topic))
 |Everything that does not happen in the game world of a TTRPG.
 
-|Operative
+|((Operative))
 |Operatives are the player characters of a campaign.
 Torg Eternity distinguishes them as Storm Knight (heros, the good guys) or Stormers (villains, the bad guys). Normal campaigns circle around Storm Knights, but perhaps some want to play Stormers instead.
 
-|PC
+|((PC)) (((Player Character)))
 |Player Character. The characters played by the players of Torg Eternity. AS the name suggests.
 
-|Possibility Wars
+|((Possibility Wars))
 |The invasion of the different Realms is called Possibility Wars in Torg Eternity.
 
-|Realm
+|((Realm))
 |The different realities invading in Torg Eternity create the so called Realms on Earth. The remaining parts form the Realm of Core Earth.
 
-|Storm Knight
+|((Storm Knight))
 |The good guys in the possibility wars.
 
-|Stormer
-|The bad guys in the possibility wars. Normally NPC
+|((Stormer))
+|The bad guys in the possibility wars. Normally NPC, but there may be campaigns where the players take the role of the invaders.
 
-|Torg Eternity
+|((Torg Eternity))
 |The reboot of the original TTRPG from the early 1990. The topic this whole system revolves about.
 
-|Threat
+|((Torganized Game))
+|Torganized Game is a concept of running a shared campaign at large. The players can play at any desk being part of the Torganized Play. And the results can be scored for creating a shared world in which the Possibility Wars wage.
+
+|((Threat))
 |The dangerous enemies and monsters the players fight in this game.
 
-|TTRPG
-|Table Top Role Playing Game.
+|((TTRPG)) 
+|((Table Top Role Playing Game)).
 |===

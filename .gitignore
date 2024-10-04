@@ -4,4 +4,5 @@ target/
 *.iml
 src/main/docs/index.html
 src/main/docs/index.pdf
-.$*.bkp
+src/main/docs/index.epub
+*.drawio.svg.bkp

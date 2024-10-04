@@ -29,7 +29,7 @@ The ((mission))s are defined and their play results collected in t his subsystem
 dcis-operatives::
 (((SCS,dcis-operatives)))
 (((dcis-operatives)))
-The ((storm knight))s or ((stormer))s (referred to as ((operative)s)) of a campaign are managed inside of this SCS.
+The ((storm knight))s or ((stormer))s (referred to as ((operative))s of a campaign are managed inside of this SCS.
 
 
 dcis-threats::
@@ -61,16 +61,22 @@ Helps the browsers to cache by referring the same stuff with the same URL instea
 ==== Important Interfaces
 
 IDs::
-IDs throughout the system are UUID, not the simple numbers used by other systems.
+IDs throughout the system are ((UUID)), not the simple numbers used by other systems.
 Reason is, that the ID should be generated on first creation of an object and UUID is a nice way to handle that distribution.
 
-Foundry-VTT:
-Some SCS have defined a FoundryVTT API. This API is not defined yet.
-Target is to offer https://foundryvtt.com[FoundryVTT] modules to integrate with DCIS to enable the gameplay and make it as easy as possible to players to play Torg Eternity.
+((Foundry-VTT))::
+Some SCS declare a FoundryVTT API. This API is not defined yet.
+Objective is to offer https://foundryvtt.com[FoundryVTT] modules to integrate with DCIS to enable game play and make it as easy as possible for players to play Torg Eternity.
 
 
 <<<<
-include::05_building_block_view/level_1.adoc[]
+=== Level 1
+include::05_building_block_view/level_1_dcis-gaming.adoc[]
+include::05_building_block_view/level_1_dcis-operatives.adoc[]
+include::05_building_block_view/level_1_dcis-threats.adoc[]
+include::05_building_block_view/level_1_torg-codex.adoc[]
+include::05_building_block_view/level_1_dcis-users.adoc[]
+include::05_building_block_view/level_1_dcis-commons.adoc[]
 
 // Level 2
 

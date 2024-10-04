@@ -3,29 +3,29 @@ ifndef::imagesdir[:imagesdir: ../images]
 [[section-quality-scenarios]]
 == Quality Requirements
 
-[options="header",cols="1,4"]
+[options="header",cols="1,4a"]
 |===
 | Requirement | Description
-| [[REQ-MT,Maintainability]] **Maintainability** (((Quality Requirement, Maintainability)))
-| _**TBD**_
 
-| [[REQ-CO,Compatibility]] **Compatibility** (((Quality Requirement, Compatibility)))
-| _**TBD**_
+|[[REQ-FS,Functional Suitability]] **Functional Suitability** (((Quality Requirement, Functional Suitability)))
+|* The software **has to** support the playing of Torg Eternity games.
+* The software **should** support the shared campaign.
 
-| [[REQ-FS,Functional Suitability]] **Functional Suitability** (((Quality Requirement, Functional Suitability)))
-| _**TBD**_
+|[[REQ-CO,Compatibility]] **Compatibility** (((Quality Requirement, Compatibility)))
+|* The managed data **should** be accessible from FoundryVTT ((FoundryVTT)).
 
-| [[REQ-EF,Efficiency]] **Efficiency** (((Quality Requirement, Efficiency)))
-| _**TBD**_
+|[[REQ-US,Usability]] **Usability** (((Quality Requirement, Usability)))
+|* The software **has to** be accessible via Web Browsers
+* The software **should** provide interfaces for FoundryVTT modules.
 
-| [[REQ-US,Usability]] **Usability** (((Quality Requirement, Usability)))
-| _**TBD**_
+|[[REQ-RE,Reliability]] **Reliability** (((Quality Requirement, Reliability)))
+|_**TBD**_
 
-| [[REQ-RE,Reliability]] **Reliability** (((Quality Requirement, Reliability)))
-| _**TBD**_
+|[[REQ-EF,Efficiency]] **Efficiency** (((Quality Requirement, Efficiency)))
+|_**TBD**_
 
-| [[REQ-PO,Portability]] **Portability** (((Quality Requirement, Portability)))
-| _**TBD**_
+|[[REQ-MT,Maintainability]] **Maintainability** (((Quality Requirement, Maintainability)))
+|_**TBD**_
 
 |===
 
@@ -34,33 +34,57 @@ ifndef::imagesdir[:imagesdir: ../images]
 
 === Quality Tree
 
+[plantuml,quality-tree,svg]
+....
+@startmindmap
++ **Requirements**
+-- Functional Suitability (FS)
+---_ Tailored to Torg Eternity (FS01)
+---_ Game Session Organization (FS02)
+---_ Shared Campaign (FS03)
+-- Compatibility (CO)
+---_ Compatible with FoundryVTT (CO01)
+-- Usability (US)
+---_ Web based (US01)
+---_ Foundry VTT (US02)
 
+++ Reliability (RE)
+++ Efficiency (EF)
+++ Maintainability (MT)
+@endmindmap
+....
 
 === Quality Scenarios
 
-[options="header",cols="1,9"]
+[options="header",cols="1,9a"]
 |===
 | ID | Scenario
 
-| [[MTYY,XXX]] **MTYY** (((Quality Requirement, Maintainability, XXX))) (((MTYY))) (((XXX)))
+| [[FS01,Tailored to Torg Eternity (FS01)]] **FS01** (((Quality Requirement, Functional Suitability, Tailored to Torg Eternity))) (((Functional Suitability, Tailored to Torg Eternity)))
+| The system is created for enabling Torg Eternity Games.
+
+| [[FS02,Game Session Organization (FS02)]] **FS02** (((Quality Requirement, Functional Suitability, Game Session Organization))) (((Functional Suitability, Game Session Organization)))
+| The software should support in planning, running game sessions.
+
+| [[FS03,Shared Campaign (FS03)]] **FS03** (((Quality Requirement, Functional Suitability, Shared Campaign))) (((Functional Suitability, Shared Campaign)))
+| The software should create a shared campaign with a shared timeline following the Torganized Game (((Torganized Game))) concept.
+
+| [[CO01,Compatible with FoundryVTT (CO01)]] **CO01** (((Quality Requirement, Compatibility, Compatible with FoundryVTT))) (((Compatibility, Compatible with FoundryVTT)))
+| The data transfer to FoundryVTT based modules should be as seamless as possible.
+
+| [[US01,Web based (US01)]] **US01** (((Quality Requirement, Usability, Web based))) (((Usability, Web based)))
+| The main interface should be web based.
+
+| [[US02,FoundryVTT Module (US02)]] **US02** (((Quality Requirement, Usability, FoundryVTT Module))) (((Usability, FoundryVTT Module)))
+| The system should have API to support specialized FoundryVTT modules.
+
+| [[REYY,XXX (REYY)]] **REYY** (((Quality Requirement, Reliability, XXX))) (((Reliability, XXX)))
 | _**TBD**_
 
-| [[COYY,XXX]] **COYY** (((Quality Requirement, Compatibility, XXX))) (((COYY))) (((XXX)))
+| [[EFYY,XXX (EFYY)]] **EFYY** (((Quality Requirement, Efficiency, XXX))) (((Efficiency, XXX)))
 | _**TBD**_
 
-| [[FSYY,XXX]] **FSYY** (((Quality Requirement, Functional Suitability, XXX))) (((FSYY))) (((XXX)))
-| _**TBD**_
-
-| [[EFYY,XXX]] **EFYY** (((Quality Requirement, Efficiency, XXX))) (((EFYY))) (((XXX)))
-| _**TBD**_
-
-| [[USYY,XXX]] **USYY** (((Quality Requirement, Usability, XXX))) (((USYY))) (((XXX)))
-| _**TBD**_
-
-| [[REYY,XXX]] **REYY** (((Quality Requirement, Reliability, XXX))) (((REYY))) (((XXX)))
-| _**TBD**_
-
-| [[POYY,XXX]] **POYY** (((Quality Requirement, Portability, XXX))) (((POYY))) (((XXX)))
+| [[MTYY,XXX]] **MTYY** (((Quality Requirement, Maintainability, XXX))) (((Maintainability, XXX)))
 | _**TBD**_
 
 |===

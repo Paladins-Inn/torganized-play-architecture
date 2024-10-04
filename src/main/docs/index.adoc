@@ -6,13 +6,15 @@
 // configure EN settings for asciidoc
 include::src/config.adoc[]
 
-= Delphi Council Information System
-Roland T. Lichti <rlichti@kaiserpfalz-edv.de>
-:title-logo-image: image:lichti-wappen.png[align=center,pdfwidth=4in]
+:title-logo-image: image:KES-Wappen-740x1000.png[align=center,pdfwidth=4in]
 :revnumber: 1.0.0-SNAPSHOT
 :revdate: September 2024
 // toc-title definition MUST follow document title without blank line!
 :toc-title: Table of Contents
+
+= Delphi Council Information System
+Roland T. Lichti <rlichti@kaiserpfalz-edv.de>
+
 
 //additional style for arc42 help callouts
 ifdef::backend-html5[]
@@ -29,17 +31,9 @@ ifdef::backend-html5[]
 ++++
 endif::backend-html5[]
 
-
-include::src/about-paladinsinn.adoc[]
-
-// horizontal line
-***
-
-
-
-
 // numbering from here on
 :numbered:
+
 
 = Context
 
@@ -99,3 +93,10 @@ include::src/12_glossary.adoc[]
 // 13. Index
 [index]
 == Index
+
+[colophone]
+== About Paladins Inn
+include::src/about-paladinsinn.adoc[]
+
+// horizontal line
+***
