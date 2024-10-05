@@ -19,10 +19,10 @@ ifndef::imagesdir[:imagesdir: ../images]
 * The software **should** provide interfaces for FoundryVTT modules.
 
 |[[REQ-RE,Reliability]] **Reliability** (((Quality Requirement, Reliability)))
-|_**TBD**_
+|The systems needs to operate for world wide consumption.
 
 |[[REQ-EF,Efficiency]] **Efficiency** (((Quality Requirement, Efficiency)))
-|_**TBD**_
+|The software needs to answer requests fast. Otherwise it will not be accepted.
 
 |[[REQ-MT,Maintainability]] **Maintainability** (((Quality Requirement, Maintainability)))
 |_**TBD**_
@@ -50,7 +50,9 @@ ifndef::imagesdir[:imagesdir: ../images]
 ---_ Foundry VTT (US02)
 
 ++ Reliability (RE)
++++_ Working Hours 24/7 (RE01)
 ++ Efficiency (EF)
++++_ Fast Responses (EF01)
 ++ Maintainability (MT)
 +++_ Small Team (MT01)
 @endmindmap
@@ -62,34 +64,43 @@ ifndef::imagesdir[:imagesdir: ../images]
 |===
 | ID | Scenario
 
-| [[FS01,Tailored to Torg Eternity (FS01)]] **FS01** (((Quality Requirement, Functional Suitability, Tailored to Torg Eternity))) (((Functional Suitability, Tailored to Torg Eternity)))
-| The system is created for enabling Torg Eternity Games.
+|[[FS01,Tailored to Torg Eternity (FS01)]] **FS01** {fs01-index}
+|The system is created for enabling Torg Eternity Games.
 
-| [[FS02,Game Session Organization (FS02)]] **FS02** (((Quality Requirement, Functional Suitability, Game Session Organization))) (((Functional Suitability, Game Session Organization)))
-| The software should support in planning, running game sessions.
+|[[FS02,Game Session Organization (FS02)]] **FS02** {fs02-index}
+|The software should support in planning, running game sessions.
 
-| [[FS03,Shared Campaign (FS03)]] **FS03** (((Quality Requirement, Functional Suitability, Shared Campaign))) (((Functional Suitability, Shared Campaign)))
-| The software should create a shared campaign with a shared timeline following the Torganized Game (((Torganized Game))) concept.
+|[[FS03,Shared Campaign (FS03)]] **FS03** {fs03-index}
+|The software should create a shared campaign with a shared timeline following the Torganized Game (((Torganized Game))) concept.
 
-| [[CO01,Compatible with FoundryVTT (CO01)]] **CO01** (((Quality Requirement, Compatibility, Compatible with FoundryVTT))) (((Compatibility, Compatible with FoundryVTT)))
-| The data transfer to FoundryVTT based modules should be as seamless as possible.
+|[[CO01,Compatible with FoundryVTT (CO01)]] **CO01** {co01-index}
+|The data transfer to FoundryVTT based modules should be as seamless as possible.
 
-| [[CO02,Compatible with Torg-Codex (CO02)]] **CO02** (((Quality Requirement, Compatibility, Compatible with Torg-Codex))) (((Compatibility, Compatible with Torg-Codex)))
-| The data from DCIS which is compatible with the Torg-Codex (((torg-codex))) should be included in the Torg-Codex.
+|[[CO02,Compatible with Torg-Codex (CO02)]] **CO02** {co02-index}
+|The data from DCIS which is compatible with the Torg-Codex (((torg-codex))) should be included in the Torg-Codex.
 
-| [[US01,Web based (US01)]] **US01** (((Quality Requirement, Usability, Web based))) (((Usability, Web based)))
-| The main interface should be web based.
+|[[US01,Web based (US01)]] **US01** {us01-index}
+|The main interface should be web based.
 
-| [[US02,FoundryVTT Module (US02)]] **US02** (((Quality Requirement, Usability, FoundryVTT Module))) (((Usability, FoundryVTT Module)))
-| The system should have API to support specialized FoundryVTT modules.
+|[[US02,FoundryVTT Module (US02)]] **US02** {us02-index}
+|The system should have API to support specialized FoundryVTT modules.
 
-| [[REYY,XXX (REYY)]] **REYY** (((Quality Requirement, Reliability, XXX))) (((Reliability, XXX)))
-| _**TBD**_
+|[[RE01,Working hours 24/7 (RE01)]] **RE01** {re01-index}
+|Torg Eternity is played around the world. So the systems have to work 24/7. There is no maintenance window available where no users would be affected.
 
-| [[EFYY,XXX (EFYY)]] **EFYY** (((Quality Requirement, Efficiency, XXX))) (((Efficiency, XXX)))
-| _**TBD**_
+|[[EF01,Fast Response Times (EF01)]] **EF01** {ef01-index}
+| Request have to be answered quickly. The following time percentiles are sufficient:
+[options="header",cols="1,1"]
+!===
+!No. of messages!Response Time
+!95%!1,5s
+!90%!2s
+!75%!2,5s
+!50%!4s
+!25%!5
+!===
 
-| [[MT01,Small Team (MT01)]] **MT01** (((Quality Requirement, Maintainability, Small Team))) (((Maintainability, Small Team)))
+|[[MT01,Small Team (MT01)]] **MT01** {mt01-index}
 |Maintaining the software and the data must be possible for a small team (basically the full army of myself, me, and I).
 
 |===

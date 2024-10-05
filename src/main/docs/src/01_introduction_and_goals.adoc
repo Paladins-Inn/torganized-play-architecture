@@ -2,8 +2,8 @@ ifndef::imagesdir[:imagesdir: ../images]
 
 [[section-introduction-and-goals]]
 == Introduction and Goals
-
-
+The DCIS (Delphi Council Information System) is a software to support the ((Torganized Game)).
+The Torganized Game is a ((Shared Campaign))
 
 === Requirements Overview
 
