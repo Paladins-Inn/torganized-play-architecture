@@ -7,3 +7,6 @@
 /KES\ Corporate\ Contributor\ License\ Agreement*
 /SECURITY.md
 /README.md
+*.svg.bkp
+*.bak
+*.cache

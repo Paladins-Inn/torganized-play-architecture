@@ -6,3 +6,5 @@ src/main/docs/index.html
 src/main/docs/index.pdf
 src/main/docs/index.epub
 *.drawio.svg.bkp
+*.bak
+*.cache
