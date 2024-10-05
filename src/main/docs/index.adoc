@@ -11,7 +11,7 @@ include::src/config.adoc[]
 :title-logo-image: image:delphi-council.png[align=center,pdfwidth=4in]
 :toc-title: Table of Contents
 Roland T. Lichti <rlichti@kaiserpfalz-edv.de>
-Whitepaper, {docdate}
+0.1.0-SNAPSHOT, {docdate}
 
 
 //additional style for arc42 help callouts
