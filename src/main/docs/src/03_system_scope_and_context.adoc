@@ -4,23 +4,38 @@ ifndef::imagesdir[:imagesdir: ../images]
 == System Scope and Context
 
 
-
-
-
 === Business Context
 
+[plantuml,business-context,svg]
+....
+@startuml
+left to right direction
+skinparam actorStyle awesome
 
+:User: --> (Register operative)
+:User: --> (Delete operatives)
+:User: --> (List available tables)
+:User: --> (Apply for seat on table)
+:User: --> (Check operatives HR file)
 
-**<Diagram or Table>**
+@enduml
+....
 
-**<optionally: Explanation of external domain interfaces>**
 
 === Technical Context
 
+[plantuml,technical-context,svg]
+....
+@startuml
+left to right direction
+skinparam actorStyle awesome
 
+package user as player
+package gaming
+package operatives
+package threats
 
-**<Diagram or Table>**
-
-**<optionally: Explanation of technical interfaces>**
+@enduml
+....
 
 **<Mapping Input/Output to Channels>**

@@ -19,6 +19,9 @@
 :us02-index: (((Quality Requirement, Usability, FoundryVTT Module))) (((Usability, FoundryVTT Module)))
 :us02: <<US02>> {us02-index}
 
+:us03-index: (((Quality Requirement, Usability, Multi-Language))) (((Usability, Multi-Language)))
+:us03: <<US03>> {us03-index}
+
 :re01-index: (((Quality Requirement, Reliability, Working hours 24/7))) (((Reliability, Working hours 24/7)))
 :re01: <<RE01>> {re01-index}
 

@@ -6,15 +6,12 @@
 // configure EN settings for asciidoc
 include::src/config.adoc[]
 
-:title-logo-image: image:KES-Wappen-740x1000.png[align=center,pdfwidth=4in]
-:revnumber: 1.0.0-SNAPSHOT
-:revdate: September 2024
-// toc-title definition MUST follow document title without blank line!
-:toc-title: Table of Contents
-
 = Delphi Council Information System
 :doctype: book
+:title-logo-image: image:delphi-council.png[align=center,pdfwidth=4in]
+:toc-title: Table of Contents
 Roland T. Lichti <rlichti@kaiserpfalz-edv.de>
+Whitepaper, {docdate}
 
 
 //additional style for arc42 help callouts

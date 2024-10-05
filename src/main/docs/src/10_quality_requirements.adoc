@@ -17,6 +17,8 @@ ifndef::imagesdir[:imagesdir: ../images]
 |[[REQ-US,Usability]] **Usability** (((Quality Requirement, Usability)))
 |* The software **has to** be accessible via Web Browsers
 * The software **should** provide interfaces for FoundryVTT modules.
+* The software **has to** be internationalized.
+  There has to be localization for at least _German_ and _English_ languages.
 
 |[[REQ-RE,Reliability]] **Reliability** (((Quality Requirement, Reliability)))
 |The systems needs to operate for world wide consumption.
@@ -49,6 +51,7 @@ This includes using widely used frameworks so help can be given quite easily.
 -- Usability (US)
 ---_ Web based (US01)
 ---_ Foundry VTT (US02)
+---_ Multi-language (US03)
 
 ++ Reliability (RE)
 +++_ Working Hours 24/7 (RE01)
@@ -86,14 +89,18 @@ This includes using widely used frameworks so help can be given quite easily.
 |[[US02,FoundryVTT Module (US02)]] **US02** {us02-index}
 |The system should have API to support specialized FoundryVTT modules.
 
+|[[US03,Multi Language (US03)]] **US03** {us03-index}
+|The system **has to** be available at least in *German* and *English* language.
+Other translations **should* be easily addable.
+
 |[[RE01,Working hours 24/7 (RE01)]] **RE01** {re01-index}
 |Torg Eternity is played around the world. So the systems have to work 24/7. There is no maintenance window available where no users would be affected.
 
 |[[EF01,Fast Response Times (EF01)]] **EF01** {ef01-index}
 | Request have to be answered quickly. The following time percentiles are sufficient:
-[options="header",cols="1,1"]
+[options="header",width=40%,cols="1,1"]
 !===
-!No. of messages!Response Time
+!Percentage of requests !Response Time
 !95%!1,5s
 !90%!2s
 !75%!2,5s
