@@ -25,7 +25,8 @@ ifndef::imagesdir[:imagesdir: ../images]
 |The software needs to answer requests fast. Otherwise it will not be accepted.
 
 |[[REQ-MT,Maintainability]] **Maintainability** (((Quality Requirement, Maintainability)))
-|_**TBD**_
+|The software should be easily maintainable.
+This includes using widely used frameworks so help can be given quite easily.
 
 |===
 
