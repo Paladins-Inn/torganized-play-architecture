@@ -47,7 +47,7 @@ This includes using widely used frameworks so help can be given quite easily.
 ---_ Shared Campaign (FS03)
 -- Compatibility (CO)
 ---_ Compatible with FoundryVTT (CO01)
----_ Compatible with Torg-Codex (CO02)
+---_ Compatible with torg-codex (CO02)
 -- Usability (US)
 ---_ Web based (US01)
 ---_ Foundry VTT (US02)
@@ -80,8 +80,8 @@ This includes using widely used frameworks so help can be given quite easily.
 |[[CO01,Compatible with FoundryVTT (CO01)]] **CO01** {co01-index}
 |The data transfer to FoundryVTT based modules should be as seamless as possible.
 
-|[[CO02,Compatible with Torg-Codex (CO02)]] **CO02** {co02-index}
-|The data from DCIS which is compatible with the Torg-Codex (((torg-codex))) should be included in the Torg-Codex.
+|[[CO02,Compatible with torg-codex (CO02)]] **CO02** {co02-index}
+|The data from DCIS which is compatible with the torg-codex (((torg-codex))) should be included in the torg-codex.
 
 |[[US01,Web based (US01)]] **US01** {us01-index}
 |The main interface should be web based.

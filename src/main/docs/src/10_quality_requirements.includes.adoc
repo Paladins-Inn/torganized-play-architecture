@@ -10,7 +10,7 @@
 :co01-index: (((Quality Requirement, Compatibility, Compatible with FoundryVTT))) (((Compatibility, Compatible with FoundryVTT)))
 :co01: <<CO01>> {co01-index}
 
-:co02-index: (((Quality Requirement, Compatibility, Compatible with Torg-Codex))) (((Compatibility, Compatible with Torg-Codex)))
+:co02-index: (((Quality Requirement, Compatibility, Compatible with torg-codex))) (((Compatibility, Compatible with torg-codex)))
 :co02: <<CO02>> {co02-index}
 
 :us01-index: (((Quality Requirement, Usability, Web based))) (((Usability, Web based)))

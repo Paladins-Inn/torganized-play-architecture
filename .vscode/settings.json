@@ -1,11 +1,37 @@
 {
     "cSpell.words": [
+        "cdown",
+        "clist",
+        "cremove",
+        "cthreat",
         "dcis",
         "enduml",
+        "foundryvtt",
+        "logfile",
+        "maccept",
+        "mapply",
+        "mcreate",
+        "mlist",
+        "mreg",
+        "mremove",
+        "mscore",
+        "ophistory",
+        "oplist",
+        "opreg",
+        "opretire",
+        "portin",
+        "portout",
+        "skinparam",
+        "smscore",
         "startuml",
         "stormer",
         "Stormers",
         "torg",
-        "TTRPG"
+        "torgcodex",
+        "TTRPG",
+        "ulist",
+        "ulog",
+        "ulogfile",
+        "usecase"
     ]
 }
