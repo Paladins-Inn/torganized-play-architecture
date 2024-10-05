@@ -42,14 +42,16 @@ It also creates the famous threat cards out of the data and the image provided b
 torg-codex::
 (((SCS,torg-codex)))
 (((torg-codex)))
-A rip-off of the original https://torg-codex.com[Torg Codex]. A page I really appreciate and that shows the value to a lot of players.
+A rip-off of the original https://torg-codex.com[Torg Codex]. 
+A page I really appreciate and that shows the value to a lot of players.
+**Best case scenario is that the SCS could still run completely separately without relying on any other SCS (even with another theme for page display).**
 
 dcis-users::
 (((SCS,dcis-users)))
 (((dcis-users)))
 A quite straight forward user management system.
 Authentication is off handed to OpenIDConnect providers.
-So this SCS only manages some Off-Topic stuff.
+So this SCS only manages some &#2191;Out-Game stuff.
 
 dcis-commons::
 (((SCS,dcis-commons)))
@@ -64,10 +66,12 @@ IDs::
 IDs throughout the system are ((UUID)), not the simple numbers used by other systems.
 Reason is, that the ID should be generated on first creation of an object and UUID is a nice way to handle that distribution.
 
-((Foundry-VTT))::
+((Foundry-VTT)) cite:[foundryvtt]::
 Some SCS declare a FoundryVTT API. This API is not defined yet.
 Objective is to offer https://foundryvtt.com[FoundryVTT] modules to integrate with DCIS to enable game play and make it as easy as possible for players to play Torg Eternity.
 
+((Torg-Codex)) cite:[torgcodex]::
+The SCSs containing data types that are also provided by the Torg-Codex should provide an interface for the Torg-Codex to include that data.
 
 <<<<
 === Level 1
