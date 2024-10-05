@@ -13,6 +13,7 @@ include::src/config.adoc[]
 :toc-title: Table of Contents
 
 = Delphi Council Information System
+:doctype: book
 Roland T. Lichti <rlichti@kaiserpfalz-edv.de>
 
 
@@ -72,7 +73,6 @@ include::src/07_deployment_view.adoc[]
 include::src/08_concepts.adoc[]
 
 
-= Reference Part
 <<<<
 // 9. Architecture Decisions
 include::src/09_architecture_decisions/index.adoc[]
@@ -85,18 +85,23 @@ include::src/10_quality_requirements.adoc[]
 // 11. Technical Risks
 include::src/11_technical_risks.adoc[]
 
+
+= Appendix
+
 <<<<
 // 12. Glossary
 include::src/12_glossary.adoc[]
 
 <<<<
-// 13. Index
+[bibliography]
+== Bibliography
+bibliography::[]
+
+<<<<
 [index]
 == Index
 
-[colophone]
+<<<<
+[colophon]
 == About Paladins Inn
 include::src/about-paladinsinn.adoc[]
-
-// horizontal line
-***
