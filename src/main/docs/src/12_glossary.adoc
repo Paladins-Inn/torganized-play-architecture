@@ -4,27 +4,83 @@ ifndef::imagesdir[:imagesdir: ../images]
 [glossary]
 == Glossary
 
+This glossary tries to explain the terms used throughout this document.
+There are terms of the general _TTRPG_ lingo specialized terms to _Torg Eternity_.
+And of course there are terms special to the _DCIS_. 
 
-
-[cols="e,2e" options="header"]
+[cols="1,3a" options="header"]
 |===
 |Term |Definition
 
+|((Campaign))
+|A series of _sessions_ that are connected in some way.
+Often used in _TTRPGs_ groups to connect several separate adventures to create a long arch or storyline with a big impact on the world or the heroes of the campaign.
+
+|((Campaign Orga))
+|The people running the _meta plot_ of the _Possibility Wars_.
+Currently the _shared campaign_ follows the official storyline of _Torg Eternity_.
+But in future they may need to split to keep up the _shared campaign_ within _Torganized Play_.
+
+|((Campaign Update))
+|From time to time the _campaign orga_ updates the shared storyline and moves on in time.
+
 |((Core Earth))
-|The Realm of the original Earth.
+|The _realm_ of the original Earth.
+
+|((Cosm))
+|The different Realities of Torg (and _Torg Eternity_) are called cosms.
+
+|((Delphi Council))
+|In the world of _Torg_ the central organization fighting for _Core Earth_ against the _Invaders_ is the Delphi Council.
+
+|((DCIS)) ((Delphi Council Information System))
+|This software.
+It uses the _in-game_ story of being the _Delphi Councils_ HR system.
+All _operatives_ are registered here.
+The _missions_ and _special missions_ are basically the reports in the personal files of the _operatives_.
+
+There are some _out-game_ elements and services to the DCIS.
+but mainly it tries to be as immersive as possible.
+
+|((Discord))
+|Discord is a (voice) chat.
+It started as chat system for video games to support creating and running guilds but evolved in a general chat system with different so called servers for any topic possible.
+During the covid pandemic the _TTRPG_ community discovered discord to play games on it.
+
+|((Foundry VTT)) cite:[foundryvtt]
+|A _virtual table top_.
+
+|((GM)) ((Game Master))
+|The one person who plays the world the _players_ play their _PCs_ in.
+The GM plays all _NPCs_ and creates the hooks for the stories played by the whole group.
+Depending on the play style the GM creates only a _sandbox_ or runs a tight storyline.
+These are the two extremes of GM based _TTRPG_.
+
+|((In-Game))
+|Everything happing in the world of the _TTRPG_.
+It's the opposite of _out-game_.
+
+|((Mission))
+|In context of the _DCIS_ a mission is a single adventure game that influences the _shared campaign_.
+It is prepared for a standardized scoring to create a story line event if the _storm knights_ are successful or not.
 
 |((NPC)) ((Non-Player Character))
-|Non-Player Character. As opposed to PC.
+|Non-Player Character. As opposed to _PC_.
 
-|((Off-Topic))
-|Everything that does not happen in the game world of a TTRPG.
+|((Out-Game))
+|Everything that does not happen in the game world of a _TTRPG_.
+It's the opposite of _in-game_
 
 |((Operative))
-|Operatives are the player characters of a campaign.
-Torg Eternity distinguishes them as Storm Knight (heros, the good guys) or Stormers (villains, the bad guys). Normal campaigns circle around Storm Knights, but perhaps some want to play Stormers instead.
+|Operatives are the player characters of a _campaign_.
+Torg Eternity distinguishes them as Storm Knight (heros, the good guys) or Stormers (villains, the bad guys).
+Normal _campaigns_ circle around Storm Knights, but perhaps some want to play Stormers instead.
+
+|((Player))
+|The person playing _PCs_ at a _table_.
 
 |((PC)) (((Player Character)))
-|Player Character. The characters played by the players of Torg Eternity. AS the name suggests.
+|Player Character. The characters played by the _players_ of Torg Eternity. AS the name suggests.
 
 |((Possibility Wars))
 |The invasion of the different Realms is called Possibility Wars in Torg Eternity.
@@ -32,21 +88,61 @@ Torg Eternity distinguishes them as Storm Knight (heros, the good guys) or Storm
 |((Realm))
 |The different realities invading in Torg Eternity create the so called Realms on Earth. The remaining parts form the Realm of Core Earth.
 
+|((Roll20)) cite:[roll20]
+|A _virtual table top_.
+
+|((Session))
+|A single event on a _TTRPG_ _table_. 
+A session may depend on the time available but normally ranges from 2h to 8h.
+Shorter sessions are rare, longer sessions not so much.
+
+|((Shared Campaign))
+|While in TTRPG _players_ often create _Campaigns_ for their local group.
+There are seldom _Campaigns_ stretching several _tables_.
+These are called shared campaign.
+
+_Torg Eternity_ provides the ideal in-game construct to explain diverging memories of different _players_ (and therefore _operatives_): it's inherent changing of Reality.
+Every _operative_ may have experienced the same _mission_ differently, even with different outcomes, some events may have altered their outcome to the "official" outcome of the _shared campaign_.
+
+It may happen that several _players_ playing a _mission_ have played previous _missions_ with different outcomes but the _operatives_ of these _missions_ may meet and find out, that their memories of the events differ and accept that because they live in the reality changing world of the _Possibility Wars_.
+
+|((Special Mission))
+|A _mission_ that is recorded in _DCIS_ for recording the character development playing on local _tables_.
+In opposite to _missions_ the special mission is a one time game run by a single _GM_.
+
+It has been introduced to the _DCIS_ to enable _GMs_ to play in the _shared campaign_ locally and still have an effect on the _player characters_ advancement in the _torganized plays_ _shared campaign_.
+
+If the events are easily integrated in the _shared campaign_ the _campain orga_ may introduce it in the _campaign updates_.
+
 |((Storm Knight))
 |The good guys in the possibility wars.
 
 |((Stormer))
-|The bad guys in the possibility wars. Normally NPC, but there may be campaigns where the players take the role of the invaders.
+|The bad guys in the _possibility wars_. Normally _NPC_, but there may be _campaigns_ where the _players_ take the role of the invaders.
+
+|((Table))
+|A single _Game Master_ runs his own table.
+The concept is quite young in _TTRPG_.
+It describes either a group meeting regular with the same _Game Master_; or a _Game Master_ runs a table where _players_ get invited to.
+
+> I think the concept entered the _TTRPG_ space with the famous actual play streams of the big _TTRPG_ streamers.
+> -- klenkes74
 
 |((Torg Eternity))
-|The reboot of the original TTRPG from the early 1990. The topic this whole system revolves about.
+|The reboot of the original _TTRPG_ from the early 1990. The topic this whole system revolves about.
 
-|((Torganized Game))
-|Torganized Game is a concept of running a shared campaign at large. The players can play at any desk being part of the Torganized Play. And the results can be scored for creating a shared world in which the Possibility Wars wage.
+|((Torganized Play))
+|Torganized Play is a concept of running a _shared campaign_ at large.
+The _players_ can play at any _table_ being part of the Torganized Play.
+And the results can be scored for creating a _shared campaign_ in the _Possibility Wars_.
 
 |((Threat))
-|The dangerous enemies and monsters the players fight in this game.
+|The dangerous enemies and monsters the _players_ fight in this game.
 
 |((TTRPG)) 
 |((Table Top Role Playing Game)).
+
+|((Virtual Table Top)) ((VTT))
+|A highly specialized environment to play _TTRPG_ online.
+
 |===
