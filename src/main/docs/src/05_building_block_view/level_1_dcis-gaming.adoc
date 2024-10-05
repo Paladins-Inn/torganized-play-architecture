@@ -1,14 +1,37 @@
 ifndef::imagesdir[:imagesdir: ../../images]
 
 ==== dcis-gaming
+
 (((SCS,dcis-gaming)))
 (((dcis-gaming)))
-
-_<Purpose/Responsibility>_
+This system contains all logic for the shared campaign (((Shared Campaign))) management and all gaming sessions (session (((Session))).
+It relies on data provided by <<dcis-operatives>> and <<dcis-players>>.
 
 ===== Quality/Performance Characteristics
+Besides of the default performance characteristics {ef01} no additional performance requirements exist.
+
+
+===== Pages
+* List Missions
+* Edit Missions
+* Rate Missions
+* List Story Arc
+* Edit Story
+* Rate Campaign
+* Campaign History
+* Edit News
+* Score Campaign
+* Games List
+* Edit Game
+* Score Game
 
 ===== Transcludes
+* Games History
+* Games Tile
+* Games Shortlist
+* Mission Shortlist
+* News
+* Mission Rating
 
 ===== Rest APIs
 

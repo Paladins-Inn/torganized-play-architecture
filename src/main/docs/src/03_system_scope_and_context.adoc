@@ -50,7 +50,7 @@ admin --> opretire
 @enduml
 ....
 
-.These use cases revolve around the ((session)) management of the games and the ((shared campaign)) management.
+.These use cases revolve around the session (((Session)) management of the games and the shared campaign (((Shared Campaign))) management.
 [plantuml,business-context-gaming,svg]
 ....
 @startuml
@@ -106,7 +106,7 @@ admin --> mremove
 ....
 
 
-.The management and use of new ((Threats)).
+.The management and use of new ((Trheat))s.
 [plantuml,business-context-threats,svg]
 ....
 @startuml

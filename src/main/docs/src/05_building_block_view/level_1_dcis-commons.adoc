@@ -9,8 +9,15 @@ This SCS provides default CSS and java script that can be cached that way on the
 ===== Quality/Performance Characteristics
 Only static HTML/CSS/JavaScript is provided.
 
+
+===== Pages
+* CSS for Torganized Play
+* JavaScript for Torganized Play
+
 ===== Fulfilled Requirements
 
 * {mt01}
 
 ===== Open Issues/Problems/Risks
+* The versioned assets need to be managed carefully.
+  Otherwise pages relying on them may break.

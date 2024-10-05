@@ -4,13 +4,34 @@ ifndef::imagesdir[:imagesdir: ../../images]
 (((SCS,torg-codex)))
 (((torg-codex)))
 
-_<Purpose/Responsibility>_
 
 ===== Quality/Performance Characteristics
+Besides of the default performance characteristics {ef01} no additional performance requirements exist.
+
 
 ===== Transcludes
+* Threat Tile
+* Threat List
+* Full Threat Card
+* Threat ???
+* DriveThrough Registration
+* Item Tile
+* Item List
+* Shard List
+* Shard Tile
+* Perk List
+* Perk Tile
+* Spell List
+* Spell Tile
+* Miracle List
+* Miracle Tile
+* Psionics List
+* Psionics Tile
+* Cosm List
+* Cosm Tile
 
 ===== Rest APIs
+* Foundry API
 
 ===== Fulfilled Requirements
 

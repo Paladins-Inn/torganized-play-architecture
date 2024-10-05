@@ -23,13 +23,13 @@ dcis-gaming::
 (((SCS,dcis-gaming)))
 (((dcis-gaming)))
 The gaming gets organized in this SCS.
-The ((mission))s are defined and their play results collected in t his subsystem.
-((Game Master))s can add local games to the system to enable a full track of an operative's (((operative))) history.
+The mission (((Mission)))s are defined and their play results collected in t his subsystem.
+((Game Master))s can add local games to the system to enable a full track of an operative's (((Operative))) history.
 
 dcis-operatives::
 (((SCS,dcis-operatives)))
 (((dcis-operatives)))
-The ((storm knight))s or ((stormer))s (referred to as ((operative))s of a campaign are managed inside of this SCS.
+The storm knight (((Storm Knight)))s or stormer (((Stormer)))s (referred to as operative (((Operative)))s of a campaign are managed inside of this SCS.
 
 
 dcis-threats::
@@ -66,7 +66,7 @@ IDs::
 IDs throughout the system are ((UUID)), not the simple numbers used by other systems.
 Reason is, that the ID should be generated on first creation of an object and UUID is a nice way to handle that distribution.
 
-((Foundry-VTT)) cite:[foundryvtt]::
+((FoundryVTT)) cite:[foundryvtt]::
 Some SCS declare a FoundryVTT API. This API is not defined yet.
 Objective is to offer https://foundryvtt.com[FoundryVTT] modules to integrate with DCIS to enable game play and make it as easy as possible for players to play Torg Eternity.
 

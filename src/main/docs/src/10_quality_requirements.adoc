@@ -50,7 +50,7 @@ This includes using widely used frameworks so help can be given quite easily.
 ---_ Compatible with torg-codex (CO02)
 -- Usability (US)
 ---_ Web based (US01)
----_ Foundry VTT (US02)
+---_ FoundryVTT (US02)
 ---_ Multi-language (US03)
 
 ++ Reliability (RE)
@@ -75,7 +75,7 @@ This includes using widely used frameworks so help can be given quite easily.
 |The software should support in planning, running game sessions.
 
 |[[FS03,Shared Campaign (FS03)]] **FS03** {fs03-index}
-|The software should create a shared campaign with a shared timeline following the Torganized Game (((Torganized Game))) concept.
+|The software should create a shared campaign with a shared timeline following the Torganized Play (((Torganized Play))) concept.
 
 |[[CO01,Compatible with FoundryVTT (CO01)]] **CO01** {co01-index}
 |The data transfer to FoundryVTT based modules should be as seamless as possible.
@@ -91,7 +91,7 @@ This includes using widely used frameworks so help can be given quite easily.
 
 |[[US03,Multi Language (US03)]] **US03** {us03-index}
 |The system **has to** be available at least in *German* and *English* language.
-Other translations **should* be easily addable.
+Other translations **should** be easily addable.
 
 |[[RE01,Working hours 24/7 (RE01)]] **RE01** {re01-index}
 |Torg Eternity is played around the world. So the systems have to work 24/7. There is no maintenance window available where no users would be affected.

@@ -47,7 +47,7 @@ but mainly it tries to be as immersive as possible.
 It started as chat system for video games to support creating and running guilds but evolved in a general chat system with different so called servers for any topic possible.
 During the covid pandemic the _TTRPG_ community discovered discord to play games on it.
 
-|((Foundry VTT)) cite:[foundryvtt]
+|((FoundryVTT)) cite:[foundryvtt]
 |A _virtual table top_.
 
 |((GM)) ((Game Master))
@@ -90,6 +90,12 @@ Normal _campaigns_ circle around Storm Knights, but perhaps some want to play St
 
 |((Roll20)) cite:[roll20]
 |A _virtual table top_.
+
+|((Self Contained System)) ((SCS))
+|A self contained system is a microservice with UI responsibly and independent database.
+Needed data is transferred asynchronously and fulfills eventual consistency.
+It offers fragments of HTML via HTTP to be included in UIs from other systems.
+Please check cite:[scs] for more information.
 
 |((Session))
 |A single event on a _TTRPG_ _table_. 
