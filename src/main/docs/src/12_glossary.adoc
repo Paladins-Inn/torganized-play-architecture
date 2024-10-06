@@ -12,6 +12,16 @@ And of course there are terms special to the _DCIS_.
 |===
 |Term |Definition
 
+|12 Factor App
+|Some principles how to design a microservice application. Please check cite:[12factor] for further information.
+
+|Agile Manifesto
+|The Manifesto for Agile Software Development as published on cite:[agilemanifesto].
+
+|((AMQP))
+|A messaging protocol standard that defines also the wire protocol.
+That way the wire protocol is not proprietary which enables cross-organization communication via messaging.
+
 |((Campaign))
 |A series of _sessions_ that are connected in some way.
 Often used in _TTRPGs_ groups to connect several separate adventures to create a long arch or storyline with a big impact on the world or the heroes of the campaign.
@@ -24,11 +34,15 @@ But in future they may need to split to keep up the _shared campaign_ within _To
 |((Campaign Update))
 |From time to time the _campaign orga_ updates the shared storyline and moves on in time.
 
+|((Clean Code))
+|Clean Code has been promoted by several books by Robert C. Martin.
+A nice website to describe it is cite:[cleancode].
+
 |((Core Earth))
 |The _realm_ of the original Earth.
 
 |((Cosm))
-|The different Realities of Torg (and _Torg Eternity_) are called cosms.
+|The different Realities of Torg (and _Torg Eternity_) are called cosm.
 
 |((Delphi Council))
 |In the world of _Torg_ the central organization fighting for _Core Earth_ against the _Invaders_ is the Delphi Council.
@@ -46,6 +60,9 @@ but mainly it tries to be as immersive as possible.
 |Discord is a (voice) chat.
 It started as chat system for video games to support creating and running guilds but evolved in a general chat system with different so called servers for any topic possible.
 During the covid pandemic the _TTRPG_ community discovered discord to play games on it.
+
+|((DRY))-Principle
+|An architectural principle in software development: "**D**on't **repeat** **y**ourself".
 
 |((FoundryVTT)) cite:[foundryvtt]
 |A _virtual table top_.
@@ -118,7 +135,7 @@ In opposite to _missions_ the special mission is a one time game run by a single
 
 It has been introduced to the _DCIS_ to enable _GMs_ to play in the _shared campaign_ locally and still have an effect on the _player characters_ advancement in the _torganized plays_ _shared campaign_.
 
-If the events are easily integrated in the _shared campaign_ the _campain orga_ may introduce it in the _campaign updates_.
+If the events are easily integrated in the _shared campaign_ the _campaign orga_ may introduce it in the _campaign updates_.
 
 |((Storm Knight))
 |The good guys in the possibility wars.
