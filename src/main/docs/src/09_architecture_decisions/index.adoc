@@ -11,3 +11,6 @@ include::using-adrs.adoc[]
 
 <<<<
 include::sql-data-store.adoc[]
+
+<<<<
+include::messaging-rabbitmq.adoc[]
