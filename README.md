@@ -1,4 +1,4 @@
-# torganized-play-architecture
+# dcis-architecture
 
 > What man is a man who does not make the world better.
 >
@@ -7,7 +7,7 @@
 ## Abstract
 
 This project contains the arc42 description for the whole DCIS system.
-It is created as whitepaper containing the target system description.
+It is created as white paper containing the target system description.
 But during implementation it will evolve into the macro architecture document of the DCIS system.
 
 ## License
