@@ -1,5 +1,46 @@
-= Architecture Constraints
 [[section-architecture-constraints]]
+= Architecture Constraints
 
 ifndef::imagesdir[:imagesdir: ../images]
 
+.Technical Constraints
+[cols="<.<4m,<.<16a,<.<20a",option="headers",frame="topbot",grid="rows"]
+|===
+| ID | Title | Description
+
+| [[CT001,CT-001 Kubernetes]] CT-001
+| Runtime Environment Kubernetes
+| The Target runtime environment is Kubernetes.
+
+| [[CT002,CT-002 Publishing Chain]] CT-002
+| Publishing Chain
+| The pubishing chain is GitHub (with actions) and the containers and helm charts get published via quay.io.
+
+|===
+
+
+.Organisational Constraints
+[cols="<.<4m,<.<16a,<.<20a",option="headers",frame="topbot",grid="rows"]
+|===
+| ID | Title | Description
+
+| [[CO001,CO-001 Paladins-Inn]] CO-001
+| Paladins-Inn
+| The software will be distributed by Paladins-Inn, the non-commercial RPG support branch of Kaiserpfalz EDV-Service.
+|===
+
+
+.Political Constraints
+[cols="<.<4m,<.<16a,<.<20a",option="headers",frame="topbot",grid="rows"]
+|===
+| ID | Title | Description
+
+| [[CP001, CP-001 Non-Profit]] CP-001
+| Non Profit
+| The software is developed without profit. It is provided via LGPL v3.0 or newer.
+
+| [[CP002, CP-002 Intellectual Property]] CP-002
+| Intellectual Property
+| The TORG franchise is owned by Ulisses Spiele and is licensed for non-profit for Torganized Play to Roland Lichti.
+
+|===

@@ -4,18 +4,29 @@
 ifndef::imagesdir[:imagesdir: ../images]
 
 
-== _<Concept 1>_
+== Self Contained Systems
 
-_<explanation>_
+The system architecture is a microservice based approach following the self-contained system as specified by
+cite:[scs].
 
 
+== Observability
 
-== _<Concept 2>_
+=== Logging
 
-_<explanation>_
+The system will log json events.
 
-...
 
-== _<Concept n>_
+=== Monitoring
 
-_<explanation>_
+The microservices will provide prometheus metrics to be harvested.
+
+
+=== Alerting
+
+Alerting is handled via prometheus and defined using the metrics provided by the systems.
+
+
+=== Reporting
+
+Currently there are no plans for a structured reporting.
