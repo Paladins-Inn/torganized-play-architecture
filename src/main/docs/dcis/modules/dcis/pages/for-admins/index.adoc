@@ -1,0 +1,6 @@
+= Manual for System Admins
+klenkes74 <klenkes74@paladins-inn.de>
+
+== Table of Content
+
+include::partial$nav-admins.adoc[]
