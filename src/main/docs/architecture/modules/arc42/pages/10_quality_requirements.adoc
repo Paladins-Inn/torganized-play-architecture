@@ -1,0 +1,122 @@
+= Quality Requirements
+[[section-quality-scenarios]]
+
+ifndef::imagesdir[:imagesdir: ../images]
+
+include::10_quality_requirements.includes.adoc[]
+
+[cols="<.<1,<.<4a",options="header",frame="topbot",grid="rows"]
+|===
+| Requirement | Description
+
+|[[REQ-FS,Functional Suitability]] **Functional Suitability** (((Quality Requirement, Functional Suitability)))
+|* The software **has to** support the playing of Torg Eternity games.
+* The software **should** support the shared campaign.
+
+|[[REQ-CO,Compatibility]] **Compatibility** (((Quality Requirement, Compatibility)))
+|* The managed data **should** be accessible from FoundryVTT ((FoundryVTT)).
+
+|[[REQ-US,Usability]] **Usability** (((Quality Requirement, Usability)))
+|* The software **has to** be accessible via Web Browsers
+* The software **should** provide interfaces for FoundryVTT modules.
+* The software **has to** be internationalized.
+  There has to be localization for at least _German_ and _English_ languages.
+
+|[[REQ-RE,Reliability]] **Reliability** (((Quality Requirement, Reliability)))
+|The systems needs to operate for world wide consumption.
+
+|[[REQ-EF,Efficiency]] **Efficiency** (((Quality Requirement, Efficiency)))
+|The software needs to answer requests fast. Otherwise it will not be accepted.
+
+|[[REQ-MT,Maintainability]] **Maintainability** (((Quality Requirement, Maintainability)))
+|The software should be easily maintainable.
+This includes using widely used frameworks so help can be given quite easily.
+
+|===
+
+
+
+
+== Quality Tree
+
+[plantuml,quality-tree,svg]
+....
+@startmindmap
++ **Requirements**
+-- Functional Suitability (FS)
+---_ Tailored to Torg Eternity (FS01)
+---_ Game Session Organization (FS02)
+---_ Shared Campaign (FS03)
+-- Compatibility (CO)
+---_ Compatible with FoundryVTT (CO01)
+---_ Compatible with torg-codex (CO02)
+-- Usability (US)
+---_ Web based (US01)
+---_ FoundryVTT (US02)
+---_ Multi-language (US03)
+
+++ Reliability (RE)
++++_ Working Hours 24/7 (RE01)
++++_ 12-Factor (RE02)
+++ Efficiency (EF)
++++_ Fast Responses (EF01)
+++ Maintainability (MT)
++++_ Small Team (MT01)
++++_ 12-Factor (RE02)
+@endmindmap
+....
+
+== Quality Scenarios
+
+[cols="<.<1,<.<9a",options="header",frame="topbot",grid="rows"]
+|===
+| ID | Scenario
+
+|[[FS01,Tailored to Torg Eternity (FS01)]] **FS01** {fs01-index}
+|The system is created for enabling Torg Eternity Games.
+
+|[[FS02,Game Session Organization (FS02)]] **FS02** {fs02-index}
+|The software should support in planning, running game sessions.
+
+|[[FS03,Shared Campaign (FS03)]] **FS03** {fs03-index}
+|The software should create a shared campaign with a shared timeline following the Torganized Play (((Torganized Play))) concept.
+
+|[[CO01,Compatible with FoundryVTT (CO01)]] **CO01** {co01-index}
+|The data transfer to FoundryVTT based modules should be as seamless as possible.
+
+|[[CO02,Compatible with torg-codex (CO02)]] **CO02** {co02-index}
+|The data from DCIS which is compatible with the torg-codex (((torg-codex))) should be included in the torg-codex.
+
+|[[US01,Web based (US01)]] **US01** {us01-index}
+|The main interface should be web based.
+
+|[[US02,FoundryVTT Module (US02)]] **US02** {us02-index}
+|The system should have API to support specialized FoundryVTT modules.
+
+|[[US03,Multi Language (US03)]] **US03** {us03-index}
+|The system **has to** be available at least in *German* and *English* language.
+Other translations **should** be easily addable.
+
+|[[RE01,Working hours 24/7 (RE01)]] **RE01** {re01-index}
+|Torg Eternity is played around the world. So the systems have to work 24/7. There is no maintenance window available where no users would be affected.
+
+|[[RE02,12 Factor (RE02)]] **RE02** {re02-index}
+|Following the guidelines of 'The Twelve-Factor App'cite:[factor12]  support the maintainability and resilience of the system.
+
+|[[EF01,Fast Response Times (EF01)]] **EF01** {ef01-index}
+| Request have to be answered quickly. The following time percentiles are sufficient:
+[cols="<.<1,<.<1",width=40%,options="header",frame="topbot",grid="rows"]
+!===
+!Percentage of requests !Response Time
+!95%!1,5s
+!90%!2s
+!75%!2,5s
+!50%!4s
+!25%!5
+!===
+
+|[[MT01,Small Team (MT01)]] **MT01** {mt01-index}
+|Maintaining the software and the data must be possible for a small team (basically the full army of myself, me, and I).
+
+|===
+

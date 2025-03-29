@@ -1,0 +1,17 @@
+// asciidoc settings for EN (English)
+// ==================================
+:toc-title: table of contents
+
+// enable table-of-contents
+
+// where are images located?
+:imagesdir: ./images
+
+:bibtex-file: bibtex/torg-eternity.bib
+:bibtex-order: alphabetical
+:bibtex-locale: en-GB
+:bibtex-format: asciidoc
+
+:heading-font-color: #ff0000
+
+include::10_quality_requirements.includes.adoc[]

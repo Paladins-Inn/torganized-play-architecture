@@ -1,0 +1,5 @@
+= Delphi Council Information System
+Roland T. Lichti <rlichti@kaiserpfalz-edv.de>
+
+include::tp:torganized-play:partial$torganized-play.adoc[]
+

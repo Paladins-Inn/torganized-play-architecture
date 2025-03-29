@@ -1,0 +1,6 @@
+[NOTE]
+====
+Torganized Play is an organization to provided a shared campaign for the TORG Eternity gaming system.
+
+Please feel free to xref:tp:torganized-play:index.adoc[inform yourself on our pages].
+====

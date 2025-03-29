@@ -1,0 +1,7 @@
+* xref:dcis:dcis:index.adoc[Home]
+* xref:dcis:dcis:for-players/index.adoc[]
+* xref:dcis:dcis:for-gms/index.adoc[]
+* xref:dcis:dcis:for-orga/index.adoc[]
+* xref:dcis:dcis:for-judges/index.adoc[]
+* xref:dcis:dcis:for-admins/index.adoc[]
+include::partial$nav-admins.adoc[]

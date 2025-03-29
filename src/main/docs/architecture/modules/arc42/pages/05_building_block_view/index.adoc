@@ -1,0 +1,89 @@
+= Building Block View
+[[section-building-block-view]]
+
+ifndef::imagesdir[:imagesdir: ../images]
+
+include::arc42:10_quality_requirements.includes.adoc[]
+
+== Whitebox Overall System
+
+.Overview of the SCS and their transcludes, pages and APIs.
+image::dcis-overview.drawio.svg[]
+
+Motivation::
+The system tries to separate the concerns of 
+
+* managing the games and campaign,
+* providing a character registry (and perhaps in future also a character vault), and
+* managing threats.
+
+In addition the functionality of the torg-codex should be provided.
+
+=== Contained Building Blocks
+
+dcis-gaming::
+(((SCS,dcis-gaming)))
+(((dcis-gaming)))
+The gaming gets organized in this SCS.
+The mission (((Mission)))s are defined and their play results collected in t his subsystem.
+((Game Master))s can add local games to the system to enable a full track of an operative's (((Operative))) history.
+
+dcis-operatives::
+(((SCS,dcis-operatives)))
+(((dcis-operatives)))
+The storm knight (((Storm Knight)))s or stormer (((Stormer)))s (referred to as operative (((Operative)))s of a campaign are managed inside of this SCS.
+
+
+dcis-threats::
+(((SCS,dcis-threats)))
+(((dcis-threats)))
+The opposition to the Players is known as Threat in Torg Eternity.
+This system lets create new threat in addition to the ones defined by the original publishers.
+It also creates the famous threat cards out of the data and the image provided by the user creating the threat.
+
+torg-codex::
+(((SCS,torg-codex)))
+(((torg-codex)))
+A rip-off of the original https://torg-codex.com[Torg Codex]. 
+A page I really appreciate and that shows the value to a lot of players.
+**Best case scenario is that the SCS could still run completely separately without relying on any other SCS (even with another theme for page display).**
+
+dcis-users::
+(((SCS,dcis-users)))
+(((dcis-users)))
+A quite straight forward user management system.
+Authentication is off handed to OpenIDConnect providers.
+So this SCS only manages some &#2191;Out-Game stuff.
+
+dcis-commons::
+(((SCS,dcis-commons)))
+(((dcis-commons)))
+The common java script, CSS and images or other resources that are used on multiple SCS.
+Helps the browsers to cache by referring the same stuff with the same URL instead of copying it to the different SCS.
+
+
+=== Important Interfaces
+
+IDs::
+IDs throughout the system are ((UUID)), not the simple numbers used by other systems.
+Reason is, that the ID should be generated on first creation of an object and UUID is a nice way to handle that distribution.
+
+((FoundryVTT)) cite:[foundryvtt]::
+Some SCS declare a FoundryVTT API. This API is not defined yet.
+Objective is to offer https://foundryvtt.com[FoundryVTT] modules to integrate with DCIS to enable game play and make it as easy as possible for players to play Torg Eternity.
+
+((torg-codex)) cite:[torgcodex]::
+The SCSs containing data types that are also provided by the torg-codex should provide an interface for the torg-codex to include that data.
+
+<<<<
+== Level 1
+include::level_1_dcis-commons.adoc[leveloffset=+1]
+include::level_1_dcis-users.adoc[leveloffset=+1]
+include::level_1_dcis-gaming.adoc[leveloffset=+1]
+include::level_1_dcis-operatives.adoc[leveloffset=+1]
+include::level_1_dcis-threats.adoc[leveloffset=+1]
+include::level_1_torg-codex.adoc[leveloffset=+1]
+
+// Level 2
+
+// Level 3

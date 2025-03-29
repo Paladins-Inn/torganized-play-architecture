@@ -1,0 +1,6 @@
+---
+name: dcis
+version: ~
+title: Delphi Council Information System
+nav:
+  - modules/ROOT/pages/nav.adoc

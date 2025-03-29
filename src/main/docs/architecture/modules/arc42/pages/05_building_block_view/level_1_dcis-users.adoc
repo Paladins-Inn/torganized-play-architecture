@@ -1,0 +1,60 @@
+= dcis-users
+(((SCS, dcis-users)))
+(((dcis-users)))
+
+include::arc42:10_quality_requirements.includes.adoc[]
+
+Handles the user management stuff for the whole system.
+
+== Quality/Performance Characteristics
+Besides of the default performance characteristics {ef01} no additional performance requirements exist.
+
+
+== Pages
+* List Users
+* Create User
+* Edit User
+* Rate User
+* List Tickets
+* Open Ticket
+* Manage Tickets
+
+== Transcludes
+* User Actions
+* User List
+* User Tile
+* Ticket List
+* Complaint List
+
+== Messsaging
+
+[cols="<.<5,<.<2,<.<3,<.<10a" options="header",frame="topbot",grid="rows"]
+|===
+| Name | Type | Direction | Notes
+
+| dcis.user.log
+| Queue
+| Inbound
+| New log entries for the users action log
+
+| dcis.user.notification
+| Topic
+| Outbound
+| Changes to user states are published for recognition by other systems.
+
+| dcis.user.register
+| Queue
+| Inbound
+| If users register themselves on other systems they can send the new user into this system.
+
+|===
+
+
+== Rest APIs
+* Add log entry to users log
+
+== Fulfilled Requirements
+
+* {mt01}
+
+== Open Issues/Problems/Risks

@@ -1,0 +1,35 @@
+---
+site:
+  title: Torganized Play
+  start_page: tp:torganized-play:index.adoc
+ui:
+  bundle:
+    url: ../ui-bundle/
+    snapshot: true
+
+asciidoc:
+  attributes:
+    sectanchors: true
+    plantuml-server-url: http://www.plantuml.com/plantuml
+    plantuml-fetch-diagram: true
+    imagesoutdir: temp_image/
+  extensions:
+    - asciidoctor-plantuml
+
+output:
+  dir: ../../../site
+
+content:
+  sources:
+    - url: ../../../
+      start_path: src/main/docs/torganized-play
+      branches: main
+      version: false
+    - url: ../../../
+      start_path: src/main/docs/dcis
+      branches: main
+      version: false
+    - url: ../../../
+      start_path: src/main/docs/architecture
+      branches: main
+      version: false

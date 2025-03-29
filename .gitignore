@@ -5,9 +5,10 @@ target/
 src/main/docs/index.html
 src/main/docs/index.pdf
 src/main/docs/index.epub
-src/main/docs/images/quality-tree.svg
-src/main/docs/modules/arc42/.asciidoctor/
-src/main/docs/modules/arc42/index.pdf
+src/main/docs/.asciidoctor/
 *.drawio.svg.bkp
 *.bak
 *.cache
+build/
+/site/
+/node_modules/

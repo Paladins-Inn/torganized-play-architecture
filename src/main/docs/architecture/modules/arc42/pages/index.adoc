@@ -1,0 +1,11 @@
+= DCIS Systemarchitektur
+Roland T. Lichti <rlichti@kaiserpfalz-edv.de>
+0.1.0-SNAPSHOT, {docdate}
+
+include::tp:torganized-play:partial$torganized-play.adoc[]
+
+include::partial$nav.adoc[]
+
+[colophon]
+== About Paladins Inn
+include::about-paladinsinn.adoc[]
