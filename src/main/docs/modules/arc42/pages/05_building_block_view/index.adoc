@@ -76,12 +76,12 @@ The SCSs containing data types that are also provided by the torg-codex should p
 
 <<<<
 == Level 1
-include::05_building_block_view/level_1_dcis-gaming.adoc[leveloffset=+1]
-include::05_building_block_view/level_1_dcis-operatives.adoc[leveloffset=+1]
-include::05_building_block_view/level_1_dcis-threats.adoc[leveloffset=+1]
-include::05_building_block_view/level_1_torg-codex.adoc[leveloffset=+1]
-include::05_building_block_view/level_1_dcis-users.adoc[leveloffset=+1]
-include::05_building_block_view/level_1_dcis-commons.adoc[leveloffset=+1]
+include::level_1_dcis-commons.adoc[leveloffset=+1]
+include::level_1_dcis-users.adoc[leveloffset=+1]
+include::level_1_dcis-gaming.adoc[leveloffset=+1]
+include::level_1_dcis-operatives.adoc[leveloffset=+1]
+include::level_1_dcis-threats.adoc[leveloffset=+1]
+include::level_1_torg-codex.adoc[leveloffset=+1]
 
 // Level 2
 

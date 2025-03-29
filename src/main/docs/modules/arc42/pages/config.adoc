@@ -13,4 +13,6 @@
 :bibtex-locale: en-GB
 :bibtex-format: asciidoc
 
+:heading-font-color: #ff0000
+
 include::10_quality_requirements.includes.adoc[]

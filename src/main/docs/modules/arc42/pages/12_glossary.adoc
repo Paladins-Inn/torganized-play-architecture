@@ -13,7 +13,7 @@ And of course there are terms special to the _DCIS_.
 |Term |Definition
 
 |12 Factor App
-|Some principles how to design a microservice application. Please check cite:[12factor] for further information.
+|Some principles how to design a microservice application. Please check cite:[factor12] for further information.
 
 |Agile Manifesto
 |The Manifesto for Agile Software Development as published on cite:[agilemanifesto].

@@ -3,7 +3,7 @@
 (((SCS,dcis-gaming)))
 (((dcis-gaming)))
 This system contains all logic for the shared campaign (((Shared Campaign))) management and all gaming sessions (session (((Session))).
-It relies on data provided by <<dcis-operatives>> and <<dcis-players>>.
+It relies on data provided by <<dcis-operatives>> and <<dcis-users>>.
 
 == Quality/Performance Characteristics
 Besides of the default performance characteristics {ef01} no additional performance requirements exist.

@@ -7,7 +7,7 @@
 
 '''
 
-include::using-adrs.adoc[leveloffset=+1
+include::using-adrs.adoc[leveloffset=+1]
 
 '''
 

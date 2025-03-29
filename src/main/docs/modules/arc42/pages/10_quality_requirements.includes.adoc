@@ -25,6 +25,9 @@
 :re01-index: (((Quality Requirement, Reliability, Working hours 24/7))) (((Reliability, Working hours 24/7)))
 :re01: <<RE01>> {re01-index}
 
+:re02-index: (((Quality Requirement, Reliability, 12-Factor))) (((Reliability, 12-Factor)))
+:re02: <<RE02>> {re02-index}
+
 :ef01-index: (((Quality Requirement, Reliability, Fast Response Times))) (((Reliability, Fast Response Times)))
 :ef01: <<EF01>> {ef01-index}
 

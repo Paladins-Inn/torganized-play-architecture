@@ -56,10 +56,12 @@ This includes using widely used frameworks so help can be given quite easily.
 
 ++ Reliability (RE)
 +++_ Working Hours 24/7 (RE01)
++++_ 12-Factor (RE02)
 ++ Efficiency (EF)
 +++_ Fast Responses (EF01)
 ++ Maintainability (MT)
 +++_ Small Team (MT01)
++++_ 12-Factor (RE02)
 @endmindmap
 ....
 
@@ -96,6 +98,9 @@ Other translations **should** be easily addable.
 
 |[[RE01,Working hours 24/7 (RE01)]] **RE01** {re01-index}
 |Torg Eternity is played around the world. So the systems have to work 24/7. There is no maintenance window available where no users would be affected.
+
+|[[RE02,12 Factor (RE02)]] **RE02** {re02-index}
+|Following the guidelines of 'The Twelve-Factor App'cite:[factor12]  support the maintainability and resilience of the system.
 
 |[[EF01,Fast Response Times (EF01)]] **EF01** {ef01-index}
 | Request have to be answered quickly. The following time percentiles are sufficient:
