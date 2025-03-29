@@ -1,36 +1,34 @@
-ifndef::imagesdir[:imagesdir: ../../images]
-
-==== dcis-threats
+= dcis-threats
 
 (((SCS,dcis-threats)))
 (((dcis-threats)))
 Management of the threats library of Torganized Play.
 
-===== Quality/Performance Characteristics
+== Quality/Performance Characteristics
 Besides of the default performance characteristics {ef01} no additional performance requirements exist.
 
 
-===== Pages
+== Pages
 * Threat List
 * Edit Threat
 * Threat Card Image
 
 
-===== Transcludes
+== Transcludes
 * Threat List
 * Threat Tile
 * Full Threat List
 * Threat Avatar
 * Rate Threat
 
-===== Rest APIs
+== Rest APIs
 * FoundryVTT
 
-===== Fulfilled Requirements
+== Fulfilled Requirements
 
 * {fs01}
 * {fs02}
 * {us01}
 * {us02}
 
-===== Open Issues/Problems/Risks
+== Open Issues/Problems/Risks

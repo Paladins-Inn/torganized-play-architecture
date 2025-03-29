@@ -1,9 +1,10 @@
+= Quality Requirements
+[[section-quality-scenarios]]
+
 ifndef::imagesdir[:imagesdir: ../images]
 
-[[section-quality-scenarios]]
-== Quality Requirements
 
-[options="header",cols="1,4a"]
+[cols="<.<1,<.<4a",options="header",frame="topbot",grid="rows"]
 |===
 | Requirement | Description
 
@@ -35,7 +36,7 @@ This includes using widely used frameworks so help can be given quite easily.
 
 
 
-=== Quality Tree
+== Quality Tree
 
 [plantuml,quality-tree,svg]
 ....
@@ -62,9 +63,9 @@ This includes using widely used frameworks so help can be given quite easily.
 @endmindmap
 ....
 
-=== Quality Scenarios
+== Quality Scenarios
 
-[options="header",cols="1,9a"]
+[cols="<.<1,<.<9a",options="header",frame="topbot",grid="rows"]
 |===
 | ID | Scenario
 
@@ -98,7 +99,7 @@ Other translations **should** be easily addable.
 
 |[[EF01,Fast Response Times (EF01)]] **EF01** {ef01-index}
 | Request have to be answered quickly. The following time percentiles are sufficient:
-[options="header",width=40%,cols="1,1"]
+[cols="<.<1,<.<1",width=40%,options="header",frame="topbot",grid="rows"]
 !===
 !Percentage of requests !Response Time
 !95%!1,5s

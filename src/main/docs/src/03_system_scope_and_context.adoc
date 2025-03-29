@@ -1,10 +1,10 @@
+= System Scope and Context
+[[section-system-scope-and-context]]
+
 ifndef::imagesdir[:imagesdir: ../images]
 
-[[section-system-scope-and-context]]
-== System Scope and Context
 
-
-=== Business Context
+== Business Context
 
 .These use cases revolve around the ((PC))s. They are called ((Operative))s here.
 [plantuml,business-context-operatives,svg]
@@ -12,6 +12,8 @@ ifndef::imagesdir[:imagesdir: ../images]
 @startuml
 left to right direction
 skinparam actorStyle awesome
+skinparam nodesep 50
+skinparam ranksep 200
 
 actor Player as player
 actor GM as gm
@@ -21,7 +23,8 @@ rectangle Operatives {
     usecase "Register Operative" as opreg
     usecase "List Operatives" as oplist
     usecase "List Operatives History" as ophistory
-    usecase "Retire Operative" as opretire
+    usecase "Decomission Operative" as opretire
+    usecase "Re-enlist Operative" as opreenlist
 }
 
 rectangle TorganizedPlay {
@@ -39,13 +42,16 @@ gm --> ophistory
 judge --> oplist
 judge --> ophistory
 judge --> opretire
+judge --> opreenlist
 orga --> oplist
 orga --> ophistory
 orga --> opretire
+orga --> opreenlist
 admin --> opreg
 admin --> oplist
 admin --> ophistory
 admin --> opretire
+admin --> opreenlist
 
 @enduml
 ....
@@ -56,6 +62,8 @@ admin --> opretire
 @startuml
 left to right direction
 skinparam actorStyle awesome
+skinparam nodesep 50
+skinparam ranksep 200
 
 actor Player as player
 actor GM as gm
@@ -82,6 +90,7 @@ rectangle Gaming {
 
 player --> mlist
 player --> mapply
+player --> mremove
 gm --> mreg
 gm --> mscore
 gm --> smscore
@@ -112,6 +121,8 @@ admin --> mremove
 @startuml
 left to right direction
 skinparam actorStyle awesome
+skinparam nodesep 50
+skinparam ranksep 200
 
 actor Player as player
 actor GM as gm
@@ -153,6 +164,8 @@ admin --> cdown
 @startuml
 left to right direction
 skinparam actorStyle awesome
+skinparam nodesep 50
+skinparam ranksep 200
 
 actor Player as player
 actor GM as gm
@@ -179,6 +192,8 @@ player --> codex
 @startuml
 left to right direction
 skinparam actorStyle awesome
+skinparam nodesep 50
+skinparam ranksep 200
 
 actor Player as player
 actor GM as gm
@@ -194,30 +209,53 @@ rectangle Player {
     usecase "List player logfile" as ulogfile
 
     usecase "Create new logfile entry" as ulog
+
+    usecase "Detain player" as udetain
+    usecase "Petition Detainment" as udetainpetition
+    usecase "Release player" as urelease
+
+    usecase "Ban player" as uban
+    usecase "Petition Ban" as ubanpetition
+    usecase "Unban player" as uunban
 }
 
 player --> ulist
 player --> ulogfile
+player --> udetainpetition
+player --> ubanpetition
 gm --> ulist
 judge --> ulist
 judge --> ulogfile
+judge --> uban
+judge --> uunban
+judge --> udetain
+judge --> urelease
 orga --> ulist
 orga --> ulogfile
+orga --> udetain
+orga --> urelease
+orga --> udetainpetition
 admin --> ulist
 admin --> ulogfile
+admin --> uban
+admin --> uunban
+admin --> udetain
+admin --> urelease
 
 @enduml
 ....
 
 
-=== Technical Context
+<<<
+== Technical Context
 
 .The technical context of the DCIS.
 [plantuml,technical-context,svg]
 ....
 @startuml
-@startuml
 skinparam actorStyle awesome
+skinparam nodesep 50
+skinparam ranksep 200
 
 actor :Player:
 actor :GM:
@@ -252,70 +290,70 @@ together{
 
 component dcis-gaming {
     portin HTTP as HTTPgaming
-    portout kafka as KAFKAgaming
+    portout broker as BROKERgaming
 
     component "torganized-play-gaming" as DCISgaming
     database "PostgreSQL" as gamingDB
 
     HTTPgaming -- DCISgaming
-    KAFKAgaming -- DCISgaming
+    BROKERgaming -- DCISgaming
     DCISgaming -- gamingDB
 }
 
 component torg-codex {
     portin HTTP as HTTPcodex
-    portout kafka as KAFKAcodex
+    portout broker as BROKERcodex
 
     component "torg-codex" as DCIScodex
     database "MongoDB" as codexDB
 
     HTTPcodex -- DCIScodex
-    KAFKAcodex -- DCIScodex
+    BROKERcodex -- DCIScodex
     DCIScodex -- codexDB
 }
 
 component dcis-threats {
     portin HTTP as HTTPthreats
-    portout kafka as KAFKAthreats
+    portout broker as BROKERthreats
 
     component "torganized-play-threats" as DCISthreats
     database "PostgreSQL" as threatsDB
 
     HTTPthreats -- DCISthreats
-    KAFKAthreats -- DCISthreats
+    BROKERthreats -- DCISthreats
     DCISthreats -- threatsDB
 }
 
-[kafka-broker]
-component "kafka-broker" {
-    portin kafka as KAFKAbroker
+[broker-broker]
+component "broker-broker" {
+    portin broker as BROKERbroker
 
-    component "kafka-broker" as DCISkafka
+    component "broker-broker" as DCISbroker
 
-    KAFKAbroker -- DCISkafka
+    BROKERbroker -- DCISbroker
 }
 
 component dcis-operatives {
     portin HTTP as HTTPoperatives
-    portout kafka as KAFKAoperatives
+    portout broker as BROKERoperatives
 
     component "torganized-play-operatives" as DCISoperatives
     database "PostgreSQL" as operativesDB
 
     HTTPoperatives -- DCISoperatives
-    KAFKAoperatives -- DCISoperatives
+    BROKERoperatives -- DCISoperatives
     DCISoperatives -- operativesDB
 }
 
 component dcis-players {
     portin HTTP as HTTPplayers
-    portout kafka as KAFKAplayers
+    portout broker as BROKERplayers
 
     component "torganized-play-players" as DCISplayers
     database "PostgreSQL" as playersDB
 
     HTTPplayers -- DCISplayers
-    KAFKAplayers -- DCISplayers
+    BROKERplayers -- DCISplayers
     DCISplayers -- playersDB
 }
 
@@ -353,11 +391,11 @@ HTTPingress .d.> HTTPcommons : use
 DCISplayers ..> mail : use
 DCISplayers ..> discord : use
 
-KAFKAbroker <.u.> KAFKAgaming : use
-KAFKAbroker <.u.> KAFKAcodex : use
-KAFKAbroker <.u.> KAFKAthreats : use
-KAFKAbroker <.u.> KAFKAoperatives : use
-KAFKAbroker <.u.> KAFKAplayers : use
+BROKERbroker <.u.> BROKERgaming : use
+BROKERbroker <.u.> BROKERcodex : use
+BROKERbroker <.u.> BROKERthreats : use
+BROKERbroker <.u.> BROKERoperatives : use
+BROKERbroker <.u.> BROKERplayers : use
 @enduml
 ....
 

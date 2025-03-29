@@ -1,16 +1,14 @@
-ifndef::imagesdir[:imagesdir: ../../images]
-
-==== dcis-users
+= dcis-users
 (((SCS, dcis-users)))
 (((dcis-users)))
 
 Handles the user management stuff for the whole system.
 
-===== Quality/Performance Characteristics
+== Quality/Performance Characteristics
 Besides of the default performance characteristics {ef01} no additional performance requirements exist.
 
 
-===== Pages
+== Pages
 * List Users
 * Create User
 * Edit User
@@ -19,16 +17,16 @@ Besides of the default performance characteristics {ef01} no additional performa
 * Open Ticket
 * Manage Tickets
 
-===== Transcludes
+== Transcludes
 * User Actions
 * User List
 * User Tile
 * Ticket List
 * Complaint List
 
-===== Messsaging
+== Messsaging
 
-[cols="1,3a" options="header"]
+[cols="<.<5,<.<2,<.<3,<.<10a" options="header",frame="topbot",grid="rows"]
 |===
 | Name | Type | Direction | Notes
 
@@ -50,11 +48,11 @@ Besides of the default performance characteristics {ef01} no additional performa
 |===
 
 
-===== Rest APIs
+== Rest APIs
 * Add log entry to users log
 
-===== Fulfilled Requirements
+== Fulfilled Requirements
 
 * {mt01}
 
-===== Open Issues/Problems/Risks
+== Open Issues/Problems/Risks

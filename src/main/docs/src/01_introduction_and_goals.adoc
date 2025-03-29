@@ -1,7 +1,9 @@
+= Introduction and Goals
+[[section-introduction-and-goals]]
+
 ifndef::imagesdir[:imagesdir: ../images]
 
-[[section-introduction-and-goals]]
-== Introduction and Goals
+
 The ((DCIS)) (Delphi Council Information System) is a software to support the ((Torganized Play)).
 The Torganized Play is a shared campaign (((Shared Campaign))) for ((Torg Eternity)).
 
@@ -15,7 +17,7 @@ Since ((VTT))s are the place where lots of tables are played within the Torganiz
 Since it is hard to get content into ((Roll20)), we decided to opt-in for ((FoundryVTT)) as VTT of choice.
 
 
-=== Requirements Overview
+== Requirements Overview
 Priority are the requirements directly paying into the objective of the DCIS of organizing games and scoring for the shared campaign (((Shared Campaign))) of ((Torganized Play)).
 
 * {fs02}
@@ -29,15 +31,15 @@ In addition, the interoperability with other Torg Eternity supporting systems is
 * {us03}
 
 
-=== Quality Goals
+== Quality Goals
 
 * {re01}
 * {ef01}
 
 
-=== Stakeholders
+== Stakeholders
 
-[options="header",cols="2,2,6a"]
+[cols="<.<2,<.<2,<.<6a",options="header",frame="topbot",grid="rows"]
 |===
 |Role/Name|Contact|Expectations
 

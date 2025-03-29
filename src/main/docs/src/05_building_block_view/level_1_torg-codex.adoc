@@ -1,15 +1,13 @@
-ifndef::imagesdir[:imagesdir: ../../images]
-
-==== torg-codex
+= torg-codex
 (((SCS,torg-codex)))
 (((torg-codex)))
 
 
-===== Quality/Performance Characteristics
+== Quality/Performance Characteristics
 Besides of the default performance characteristics {ef01} no additional performance requirements exist.
 
 
-===== Transcludes
+== Transcludes
 * Threat Tile
 * Threat List
 * Full Threat Card
@@ -30,14 +28,14 @@ Besides of the default performance characteristics {ef01} no additional performa
 * Cosm List
 * Cosm Tile
 
-===== Rest APIs
+== Rest APIs
 * Foundry API
 
-===== Fulfilled Requirements
+== Fulfilled Requirements
 
 * {fs01}
 * {fs02}
 * {us01}
 * {us02}
 
-===== Open Issues/Problems/Risks
+== Open Issues/Problems/Risks

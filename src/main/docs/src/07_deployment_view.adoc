@@ -1,13 +1,12 @@
-ifndef::imagesdir[:imagesdir: ../images]
-
+= Deployment View
 [[section-deployment-view]]
 
 
-== Deployment View
+ifndef::imagesdir[:imagesdir: ../images]
 
 
 
-=== Infrastructure Level 1
+== Infrastructure Level 1
 
 
 
@@ -25,11 +24,11 @@ Mapping of Building Blocks to Infrastructure::
 _<description of the mapping>_
 
 
-=== Infrastructure Level 2
+== Infrastructure Level 2
 
 
 
-==== _<Infrastructure Element 1>_
+=== _<Infrastructure Element 1>_
 
 _<diagram + explanation>_
 
@@ -39,6 +38,6 @@ _<diagram + explanation>_
 
 ...
 
-==== _<Infrastructure Element n>_
+=== _<Infrastructure Element n>_
 
 _<diagram + explanation>_

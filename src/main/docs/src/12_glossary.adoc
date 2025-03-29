@@ -2,13 +2,13 @@ ifndef::imagesdir[:imagesdir: ../images]
 
 [[section-glossary]]
 [glossary]
-== Glossary
+= Glossary
 
 This glossary tries to explain the terms used throughout this document.
 There are terms of the general _TTRPG_ lingo specialized terms to _Torg Eternity_.
 And of course there are terms special to the _DCIS_. 
 
-[cols="1,3a" options="header"]
+[cols="<.<1,<.<3a",options="header",frame="topbot",grid="rows"]
 |===
 |Term |Definition
 
@@ -138,10 +138,11 @@ It has been introduced to the _DCIS_ to enable _GMs_ to play in the _shared camp
 If the events are easily integrated in the _shared campaign_ the _campaign orga_ may introduce it in the _campaign updates_.
 
 |((Storm Knight))
-|The good guys in the possibility wars.
+|The good guys in the possibility wars. They are called _operatives_ in context of the DCIS.
 
 |((Stormer))
 |The bad guys in the _possibility wars_. Normally _NPC_, but there may be _campaigns_ where the _players_ take the role of the invaders.
+The "evil" _operatives_.
 
 |((Table))
 |A single _Game Master_ runs his own table.
@@ -167,5 +168,8 @@ And the results can be scored for creating a _shared campaign_ in the _Possibili
 
 |((Virtual Table Top)) ((VTT))
 |A highly specialized environment to play _TTRPG_ online.
+
+|((YAGNI))-Principle
+|An architectural principle in software development: "**Y**ou **A**in't **G**ona **N**eed **I**t".
 
 |===

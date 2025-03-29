@@ -1,7 +1,6 @@
-ifndef::imagesdir[:imagesdir: ../images]
-
+= Solution Strategy
 [[section-solution-strategy]]
-== Solution Strategy
 
+ifndef::imagesdir[:imagesdir: ../images]
 
 

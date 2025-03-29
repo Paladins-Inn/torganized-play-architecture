@@ -1,9 +1,10 @@
+= Building Block View
+[[section-building-block-view]]
+
 ifndef::imagesdir[:imagesdir: ../images]
 
-[[section-building-block-view]]
-== Building Block View
 
-=== Whitebox Overall System
+== Whitebox Overall System
 
 .Overview of the SCS and their transcludes, pages and APIs.
 image::dcis-overview.drawio.svg[]
@@ -17,7 +18,7 @@ The system tries to separate the concerns of
 
 In addition the functionality of the torg-codex should be provided.
 
-==== Contained Building Blocks
+=== Contained Building Blocks
 
 dcis-gaming::
 (((SCS,dcis-gaming)))
@@ -60,7 +61,7 @@ The common java script, CSS and images or other resources that are used on multi
 Helps the browsers to cache by referring the same stuff with the same URL instead of copying it to the different SCS.
 
 
-==== Important Interfaces
+=== Important Interfaces
 
 IDs::
 IDs throughout the system are ((UUID)), not the simple numbers used by other systems.
@@ -74,13 +75,13 @@ Objective is to offer https://foundryvtt.com[FoundryVTT] modules to integrate wi
 The SCSs containing data types that are also provided by the torg-codex should provide an interface for the torg-codex to include that data.
 
 <<<<
-=== Level 1
-include::05_building_block_view/level_1_dcis-gaming.adoc[]
-include::05_building_block_view/level_1_dcis-operatives.adoc[]
-include::05_building_block_view/level_1_dcis-threats.adoc[]
-include::05_building_block_view/level_1_torg-codex.adoc[]
-include::05_building_block_view/level_1_dcis-users.adoc[]
-include::05_building_block_view/level_1_dcis-commons.adoc[]
+== Level 1
+include::05_building_block_view/level_1_dcis-gaming.adoc[leveloffset=+1]
+include::05_building_block_view/level_1_dcis-operatives.adoc[leveloffset=+1]
+include::05_building_block_view/level_1_dcis-threats.adoc[leveloffset=+1]
+include::05_building_block_view/level_1_torg-codex.adoc[leveloffset=+1]
+include::05_building_block_view/level_1_dcis-users.adoc[leveloffset=+1]
+include::05_building_block_view/level_1_dcis-commons.adoc[leveloffset=+1]
 
 // Level 2
 

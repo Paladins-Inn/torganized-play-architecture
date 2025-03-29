@@ -1,7 +1,5 @@
-ifndef::imagesdir[:imagesdir: ../images]
-
+= Architecture Constraints
 [[section-architecture-constraints]]
-== Architecture Constraints
 
-
+ifndef::imagesdir[:imagesdir: ../images]
 
