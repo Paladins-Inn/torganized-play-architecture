@@ -37,8 +37,6 @@ endif::backend-html5[]
 [%always]
 <<<
 
-= Context
-
 // 1. Introduction and Goals
 include::architecture/modules/arc42/pages/01_introduction_and_goals.adoc[leveloffset=+1]
 
@@ -52,7 +50,6 @@ include::architecture/modules/arc42/pages/03_system_scope_and_context.adoc[level
 
 
 <<<
-= Systems
 // 4. Solution Strategy
 include::architecture/modules/arc42/pages/04_solution_strategy.adoc[leveloffset=+1]
 
@@ -70,8 +67,6 @@ include::architecture/modules/arc42/pages/07_deployment_view.adoc[leveloffset=+1
 
 
 <<<
-= Appendix
-
 // 8. Concepts
 include::architecture/modules/arc42/pages/08_concepts.adoc[leveloffset=+1]
 
