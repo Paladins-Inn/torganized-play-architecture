@@ -4,15 +4,16 @@
 * <<adr-using-adrs>>
 * <<adr-sql-data-store>>
 * <<adr-messaging>>
+* <<adr-spring-boot>>
 
-'''
-
+<<<
 include::using-adrs.adoc[leveloffset=+1]
 
-'''
-
+<<<
 include::sql-data-store.adoc[leveloffset=+1]
 
-'''
-
+<<<
 include::messaging-rabbitmq.adoc[leveloffset=+1]
+
+<<<
+include::spring-boot.adoc[leveloffset=+1]

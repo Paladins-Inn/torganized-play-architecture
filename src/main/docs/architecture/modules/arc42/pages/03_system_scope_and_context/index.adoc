@@ -14,6 +14,7 @@ include::operatives.adoc[leveloffset=+2]
 include::gaming.adoc[leveloffset=+2]
 include::threats.adoc[leveloffset=+2]
 include::torg-codex.adoc[leveloffset=+2]
+include::arbitration.adoc[leveloffset=+2]
 
 <<<
 [[technical-context]]

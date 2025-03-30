@@ -3,8 +3,6 @@
 ....
 @startuml
 skinparam actorStyle awesome
-skinparam nodesep 50
-skinparam ranksep 200
 
 :Player: << Human >>
 :GM: << Human >>
@@ -73,11 +71,11 @@ component dcis-threats {
     DCISthreats -- threatsDB
 }
 
-[broker-broker]
-component "broker-broker" {
+[broker]
+component "broker" {
     portin AMQP as AMQPbroker
 
-    component "broker-broker" as DCISbroker
+    component "broker" as DCISbroker
 
     AMQPbroker -- DCISbroker
 }

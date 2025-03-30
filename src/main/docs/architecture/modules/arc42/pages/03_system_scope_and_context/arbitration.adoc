@@ -1,0 +1,65 @@
+[[uc-arbitration]]
+= Arbitration
+
+To handle user-provided content and human interactions, a system for arbitration is needed.
+While arbitration can be started in every system the core functions are seperated out.
+The result of the arbitration will then be executed in the correct vertical.
+
+.The Arbitration System.
+[plantuml,business-context-codex,svg]
+....
+@startuml
+left to right direction
+skinparam actorStyle awesome
+skinparam nodesep 50
+skinparam ranksep 200
+
+Player as user << Human >>
+GM as gm << Human >>
+Judge as judge << Human >>
+Orga as orga << Human >>
+Admin as admin << Human >>
+
+:DCIS System: as system << System >>
+:DCIS Users: as dcisUsers << System >>
+:DCIS Operatives: as dcisOperatives << System >>
+:DCIS Gaming: as dcisGaming << System >>
+:DCIS Threats: as dcisThreats << System >>
+:Torg Codex: as torgCodex << System >>
+
+user <|-- gm : is a
+user <|-- judge : is a
+user <|-- orga : is a
+user <|-- admin : is a
+
+dcisUsers --|> system : is a
+dcisOperatives --|> system : is a
+dcisGaming --|> system : is a
+system <|-- dcisThreats : is a
+system <|-- torgCodex : is a
+
+rectangle Petitions {
+    usecase (Start Arbitration)/ as start
+    usecase (List Arbitrations)/ as list
+    usecase (Hand in Info)/ as info
+    usecase (Decide)/ as decide
+}
+
+user --> start
+user --> info
+user --> list : involved only
+orga --> list
+admin --> list
+list <-- judge
+info <-- judge
+decide <-- judge
+
+system ..> start : asynchronous
+system ..> list : asynchronous
+system ..> info : asynchronous
+system <.. decide : asynchronous
+dcisUsers <.. decide : asynchronous
+user <.. dcisUsers : decision via email/discord/...
+
+@enduml
+....
