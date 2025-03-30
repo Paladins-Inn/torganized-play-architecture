@@ -10,24 +10,21 @@ skinparam actorStyle awesome
 skinparam nodesep 50
 skinparam ranksep 200
 
-rectangle Users {
-    Player as user << Human >>
-    GM as gm << Human >>
-}
+Player as user << Human >>
+GM as gm << Human >>
 
-rectangle API {
-    :Foundry VTT: as foundryVTT << System >>
-}
+:Foundry VTT: as foundryVTT << System >>
+:DCIS Gaming: as dcisGaming << System >>
 
-rectangle TorganizedPlay {
-    Judge as judge << Human >>
-    Orga as orga << Human >>
-    Admin as admin << Human >>
-}
+Judge as judge << Human >>
+Orga as orga << Human >>
+Admin as admin << Human >>
 
 
 rectangle Operatives {
     usecase "Register Operative" as opreg
+    usecase "Generate Operative" as opgen
+    usecase "Manage Operative Data" as opedit
     usecase "List Operatives" as oplist
     usecase "List Operatives History" as ophistory
 
@@ -42,12 +39,18 @@ rectangle Operatives {
 }
 
 gm --> foundryVTT : uses
-oplist <-- foundryVTT : only on table
-opdata <-- foundryVTT : only on table
-ophistory <-- foundryVTT : only on table
+foundryVTT --> oplist : only on table
+foundryVTT --> opdata : only on table
+foundryVTT --> ophistory : only on table
+
+oplist ..> dcisGaming : checks table
+opdata ..> dcisGaming : checks table
+ophistory ..> dcisGaming : checks table
 
 user --> opreg
 user --> oplist
+user --> opgen
+user --> opedit : only owned
 user --> opdata : only owned
 user --> ophistory : only owned
 user --> opretire : only owned
@@ -58,6 +61,7 @@ gm --> ophistory : only on table
 gm --> oppetition
 oplist <-- judge
 opdata <-- judge
+opedit <-- judge
 ophistory <-- judge
 opretire <-- judge
 opreenlist <-- judge
@@ -65,12 +69,14 @@ opdetain <-- judge
 oprelease <-- judge
 oplist <-- orga
 opdata <-- orga
+opedit <-- orga
 ophistory <-- orga
 opretire <-- orga
 opreenlist <-- orga
 oppetition <-- orga
 oprelease <-- orga
 opreg <-- admin
+opedit <-- admin
 oplist <-- admin
 opdata <-- admin
 ophistory <-- admin

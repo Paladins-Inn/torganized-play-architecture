@@ -12,14 +12,17 @@ skinparam ranksep 200
 
 Player << Human >> as user
 GM << Human >> as gm
+Judge << Human >> as judge
+Orga << Human >> as orga
+Admin << Human >> as admin
 
-rectangle DCIS {
-    :dcis-users: as dcisUsers << System >>
-    :dcis-gaming: as dcisGaming << System >>
-    :dcis-threats: as dcisThreats << System >>
-    :dcis-operatives: as dcisOperatives << System >>
-    :torg-codex: as torgCodex << System >>
-}
+user <|-- gm : is a
+
+:dcis-users: as dcisUsers << System >>
+:dcis-gaming: as dcisGaming << System >>
+:dcis-threats: as dcisThreats << System >>
+:dcis-operatives: as dcisOperatives << System >>
+:torg-codex: as torgCodex << System >>
 
 rectangle Player {
     usecase "List users" as ulist
@@ -37,19 +40,11 @@ rectangle Player {
     usecase "Unban user" as uunban
 }
 
-rectangle TorganizedPlay {
-    Judge << Human >> as judge
-    Orga << Human >> as orga
-    Admin << Human >> as admin
-}
-
 user --> ulist
 user --> ulogfile
 user --> upetition
 user --> udetainpetition
 user --> ubanpetition
-gm --> ulist
-gm --> upetition
 ulist <-- judge
 ulogfile <-- judge
 uban <-- judge

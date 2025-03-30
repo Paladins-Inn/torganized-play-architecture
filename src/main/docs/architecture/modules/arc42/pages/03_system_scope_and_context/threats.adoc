@@ -12,11 +12,14 @@ skinparam ranksep 200
 
 Player as user << Human >>
 GM as gm << Human >>
+Judge as judge << Human >>
+Orga as orga << Human >>
+Admin as admin << Human >>
 
-rectangle API {
-    :Foundry VTT: as foundryVTT << System >>
-    :Torg-Codex: as torgCodex << System >>
-}
+user <|-- gm : is a
+
+:Foundry VTT: as foundryVTT << System >>
+:Torg-Codex: as torgCodex << System >>
 
 rectangle Threats {
     usecase "Create a new threat" as cthreat
@@ -30,23 +33,15 @@ rectangle Threats {
     usecase "Download a threat" as cdown
 }
 
-rectangle TorganizedPlay {
-    Judge as judge << Human >>
-    Orga as orga << Human >>
-    Admin as admin << Human >>
-}
 
 user --> clist
 user --> cdown
 user --> pthreat
+user --> cblock : owned
+user --> cunblock : self blocked
+user --> cthreat
+user --> cremove : owned
 
-gm --> cthreat
-gm --> cremove : owned
-gm --> clist
-gm --> cblock : owned
-gm --> cunblock : self blocked
-gm --> cdown
-gm --> pthreat
 cthreat <-- orga
 clist <-- orga
 cdown <-- orga
@@ -63,12 +58,12 @@ cdown <-- admin
 cblock <-- admin
 cunblock <-- admin
 
+foundryVTT --> pthreat
 foundryVTT --> clist
 foundryVTT --> cdown
-foundryVTT --> pthreat
-torgCodex --> clist
-torgCodex --> cdown
-torgCodex --> pthreat
+torgCodex <.. cdown : asynchronous
+torgCodex ..> pthreat : asynchronous
+torgCodex <.. cthreat : asynchronous
 
 @enduml
 ....

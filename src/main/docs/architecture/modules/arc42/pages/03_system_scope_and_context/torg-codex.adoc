@@ -12,49 +12,57 @@ skinparam ranksep 200
 
 Player as user << Human >>
 GM as gm << Human >>
+Judge as judge << Human >>
+Orga as orga << Human >>
+Admin as admin << Human >>
 
-rectangle TorganizedPlay {
-    Judge as judge << Human >>
-    Orga as orga << Human >>
-    Admin as admin << Human >>
-}
+:Foundry VTT: as foundryVTT << System >>
+:DCIS Threats: as dcisThreats << System >>
+
+user <|-- judge : is a
+user <|-- orga : is a
+user <|-- admin : is a
 
 rectangle Codex {
-    usecase "All of torg-codex" as codex
-
     usecase "List Threats" as lthreat
     usecase "Threat Data" as dthreat
+    usecase "Create Threat" as cthreat
 
     usecase "List Items" as litem
     usecase "Item Data" as ditem
+    usecase "Create Item" as citem
 
     usecase "List Perk" as lperk
     usecase "Perk Data" as dperk
+    usecase "Create perk" as cperk
 
     usecase "List Power" as lpower
     usecase "Power Data" as dpower
+    usecase "Create Power" as cpower
+
+    usecase "Register Owernship" as rowner
+    usecase "Unregister Ownership" as downer
 }
 
-rectangle API {
-    :Foundry VTT: as foundryVTT << System >>
-    :DCIS Threats: as dcisThreats << System >>
-}
-
+user --> litem : owned or free
+user --> ditem : owned or free
+user --> citem : owned
 user --> lthreat : owned or free
 user --> dthreat : owned or free
 user --> lperk : owned or free
 user --> dperk : owned or free
+user --> cperk : owned
 user --> lpower : owned or free
 user --> dpower : owned or free
-gm --> lthreat : owned or free
-gm --> dthreat : owned or free
-gm --> lperk : owned or free
-gm --> dperk : owned or free
-gm --> lpower : owned or free
-gm --> dpower : owned or free
-
+user --> cpower : owned
+user --> dcisThreats : uses
+user <|-- gm : is a
+user --> rowner
+user --> downer
 gm --> foundryVTT : uses
 
+litem <-- foundryVTT : owned or free
+ditem <-- foundryVTT : owned or free
 lthreat <-- foundryVTT : owned or free
 dthreat <-- foundryVTT : owned or free
 lperk <-- foundryVTT : owned or free
@@ -62,8 +70,9 @@ dperk <-- foundryVTT : owned or free
 lpower <-- foundryVTT : owned or free
 dpower <-- foundryVTT : owned or free
 
-lthreat --> dcisThreats
-dthreat --> dcisThreats
+lthreat ..> dcisThreats : asynchronous
+dthreat ..> dcisThreats : asynchronous
+cthreat <.. dcisThreats : asynchronous
 
 @enduml
 ....
