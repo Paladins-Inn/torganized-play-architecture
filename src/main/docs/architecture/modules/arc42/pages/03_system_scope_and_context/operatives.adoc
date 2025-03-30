@@ -1,0 +1,82 @@
+[[uc-operatives-management]]
+= Operatives Management (torganized-play-operatives)
+
+.These use cases revolve around the ((PC))s. They are called ((Operative))s here.
+[plantuml,business-context-operatives,svg]
+....
+@startuml
+left to right direction
+skinparam actorStyle awesome
+skinparam nodesep 50
+skinparam ranksep 200
+
+rectangle Users {
+    Player as user << Human >>
+    GM as gm << Human >>
+}
+
+rectangle API {
+    :Foundry VTT: as foundryVTT << System >>
+}
+
+rectangle TorganizedPlay {
+    Judge as judge << Human >>
+    Orga as orga << Human >>
+    Admin as admin << Human >>
+}
+
+
+rectangle Operatives {
+    usecase "Register Operative" as opreg
+    usecase "List Operatives" as oplist
+    usecase "List Operatives History" as ophistory
+
+    usecase "Display Operatives Data" as opdata
+
+    usecase "Decomission Operative" as opretire
+    usecase "Re-enlist Operative" as opreenlist
+
+    usecase "Petition Operative" as oppetition
+    usecase "Detain Operative" as opdetain
+    usecase "Release Operative" as oprelease
+}
+
+gm --> foundryVTT : uses
+oplist <-- foundryVTT : only on table
+opdata <-- foundryVTT : only on table
+ophistory <-- foundryVTT : only on table
+
+user --> opreg
+user --> oplist
+user --> opdata : only owned
+user --> ophistory : only owned
+user --> opretire : only owned
+user --> oppetition
+gm --> oplist
+gm --> opdata : only on table
+gm --> ophistory : only on table
+gm --> oppetition
+oplist <-- judge
+opdata <-- judge
+ophistory <-- judge
+opretire <-- judge
+opreenlist <-- judge
+opdetain <-- judge
+oprelease <-- judge
+oplist <-- orga
+opdata <-- orga
+ophistory <-- orga
+opretire <-- orga
+opreenlist <-- orga
+oppetition <-- orga
+oprelease <-- orga
+opreg <-- admin
+oplist <-- admin
+opdata <-- admin
+ophistory <-- admin
+opretire <-- admin
+opreenlist <-- admin
+opdetain <-- admin
+oprelease <-- admin
+@enduml
+....

@@ -3,4 +3,39 @@
 
 ifndef::imagesdir[:imagesdir: ../images]
 
+== Modularization
 
+Every distinct aspect is modelled into a single vertical.
+The current verticals are:
+
+* xref:03_system_scope_and_context/users.adoc[]
+* xref:03_system_scope_and_context/operatives.adoc[]
+* xref:03_system_scope_and_context/gaming.adoc[]
+* xref:03_system_scope_and_context/threats.adoc[]
+* xref:03_system_scope_and_context/torg-codex.adoc[]
+* Commons
+** Online Assets (CSS, images, ...)
+** Shared Library to follow the (((DRY))) DRY principle.
+
+
+== Single Sign On
+
+The system holds no authentication data.
+It will be connected via OpenIDConnect to external identity providers (like keycloak).
+The users are specified via their external user.
+Internally they get an UUID which maps to the (Issuer, User) tuple of the external provider.
+
+
+== Frontend and backend integration
+
+The systems use frontend integration methods for the UI.
+
+Needed communication between the backends (data synchronization, event distribution) are handled via a messaging infrastructure.
+The broker used will be a rabbitMQ handling AMQP queues and topics.
+
+
+== Shared Libraries
+
+There is a small shared library.
+It is used to handle common stuff (e.g. user login notification to `torganized-play-users`).
+It _**must**_ only contain code that runs on almost any system.

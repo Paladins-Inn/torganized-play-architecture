@@ -1,0 +1,69 @@
+[[uc-torg-codex]]
+= Torg-Codex
+
+.The integrated ((torg-codex)).
+[plantuml,business-context-codex,svg]
+....
+@startuml
+left to right direction
+skinparam actorStyle awesome
+skinparam nodesep 50
+skinparam ranksep 200
+
+Player as user << Human >>
+GM as gm << Human >>
+
+rectangle TorganizedPlay {
+    Judge as judge << Human >>
+    Orga as orga << Human >>
+    Admin as admin << Human >>
+}
+
+rectangle Codex {
+    usecase "All of torg-codex" as codex
+
+    usecase "List Threats" as lthreat
+    usecase "Threat Data" as dthreat
+
+    usecase "List Items" as litem
+    usecase "Item Data" as ditem
+
+    usecase "List Perk" as lperk
+    usecase "Perk Data" as dperk
+
+    usecase "List Power" as lpower
+    usecase "Power Data" as dpower
+}
+
+rectangle API {
+    :Foundry VTT: as foundryVTT << System >>
+    :DCIS Threats: as dcisThreats << System >>
+}
+
+user --> lthreat : owned or free
+user --> dthreat : owned or free
+user --> lperk : owned or free
+user --> dperk : owned or free
+user --> lpower : owned or free
+user --> dpower : owned or free
+gm --> lthreat : owned or free
+gm --> dthreat : owned or free
+gm --> lperk : owned or free
+gm --> dperk : owned or free
+gm --> lpower : owned or free
+gm --> dpower : owned or free
+
+gm --> foundryVTT : uses
+
+lthreat <-- foundryVTT : owned or free
+dthreat <-- foundryVTT : owned or free
+lperk <-- foundryVTT : owned or free
+dperk <-- foundryVTT : owned or free
+lpower <-- foundryVTT : owned or free
+dpower <-- foundryVTT : owned or free
+
+lthreat --> dcisThreats
+dthreat --> dcisThreats
+
+@enduml
+....

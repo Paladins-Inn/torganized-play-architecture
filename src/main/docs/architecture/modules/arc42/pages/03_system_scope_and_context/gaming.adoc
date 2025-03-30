@@ -1,0 +1,87 @@
+[[uc-gaming-session-management]]
+= Gaming Session Management (torganized-play-gaming)
+
+.These use cases revolve around the session (((Session)) management of the games and the shared campaign (((Shared Campaign))) management.
+[plantuml,business-context-gaming,svg]
+....
+@startuml
+left to right direction
+skinparam actorStyle awesome
+skinparam nodesep 50
+skinparam ranksep 200
+
+Player as user << Human >>
+GM as gm << Human >>
+
+rectangle Gaming {
+    usecase "Create new Mission" as mcreate
+
+    usecase "Register new Mission" as mreg
+    usecase "Score a played Mission" as mscore
+
+    usecase "List open Missions" as mlist
+    usecase "Apply for Mission" as mapply
+    usecase "Accept for Mission" as maccept
+    usecase "Remove Operative from Mission" as mremove
+
+    usecase "Petition a mission" as mpetition
+    usecase "Block a mission" as mblock
+    usecase "Unblock a mission" as munblock
+    usecase "Delete a mission" as mdelete
+}
+
+rectangle TorganizedPlay {
+    Judge as judge << Human >>
+    Orga as orga << Human >>
+    Admin as admin << Human >>
+}
+
+rectangle API {
+    :Foundry VTT: as foundryVTT << System >>
+}
+
+
+user --> mlist
+user --> mapply : self
+user --> mremove : self
+user --> mpetition
+gm --> mcreate : special mission
+gm --> mreg
+gm --> mscore
+gm --> mlist
+gm --> maccept : owned
+gm --> mremove : owned
+gm --> mpetition
+gm --> foundryVTT : uses
+
+mlist <-- foundryVTT : only on table
+mscore <-- foundryVTT : only on table
+maccept <-- foundryVTT : only on table
+mremove <-- foundryVTT : only on table
+
+mlist <-- judge
+mremove <-- judge
+mblock <-- judge
+munblock <-- judge
+mdelete <-- judge
+mcreate <-- orga
+mlist <-- orga
+mremove <-- orga
+mblock <-- orga
+munblock <-- orga
+mpetition <-- orga
+mcreate <-- admin
+mreg <-- admin
+mscore <-- admin
+mlist <-- admin
+mapply <-- admin
+maccept <-- admin
+mremove <-- admin
+mpetition <-- admin
+mblock <-- admin
+munblock <-- admin
+mremove <-- admin
+mdelete <-- admin
+
+@enduml
+....

@@ -1,5 +1,5 @@
-= Runtime View
 [[section-runtime-view]]
+= Runtime View
 
 ifndef::imagesdir[:imagesdir: ../images]
 

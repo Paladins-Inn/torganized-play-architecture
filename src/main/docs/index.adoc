@@ -46,7 +46,7 @@ include::architecture/modules/arc42/pages/02_architecture_constraints.adoc[level
 
 <<<
 // 3. System Scope and Context
-include::architecture/modules/arc42/pages/03_system_scope_and_context.adoc[leveloffset=+1]
+include::architecture/modules/arc42/pages/03_system_scope_and_context/index.adoc[leveloffset=+1]
 
 
 <<<

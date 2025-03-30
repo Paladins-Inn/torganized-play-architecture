@@ -1,0 +1,74 @@
+[[uc-threat-management]]
+= Threat Management (torganized-play-threats)
+
+.The management and use of new ((Threat))s.
+[plantuml,business-context-threats,svg]
+....
+@startuml
+left to right direction
+skinparam actorStyle awesome
+skinparam nodesep 50
+skinparam ranksep 200
+
+Player as user << Human >>
+GM as gm << Human >>
+
+rectangle API {
+    :Foundry VTT: as foundryVTT << System >>
+    :Torg-Codex: as torgCodex << System >>
+}
+
+rectangle Threats {
+    usecase "Create a new threat" as cthreat
+    usecase "Remove a threat" as cremove
+
+    usecase "Petition threat" as pthreat
+    usecase "Block threat" as cblock
+    usecase "Unblock threat" as cunblock
+
+    usecase "List existing threats" as clist
+    usecase "Download a threat" as cdown
+}
+
+rectangle TorganizedPlay {
+    Judge as judge << Human >>
+    Orga as orga << Human >>
+    Admin as admin << Human >>
+}
+
+user --> clist
+user --> cdown
+user --> pthreat
+
+gm --> cthreat
+gm --> cremove : owned
+gm --> clist
+gm --> cblock : owned
+gm --> cunblock : self blocked
+gm --> cdown
+gm --> pthreat
+cthreat <-- orga
+clist <-- orga
+cdown <-- orga
+cblock <-- orga
+cunblock <-- orga
+pthreat <-- orga
+cblock <-- judge
+cunblock <-- judge
+cremove <-- judge
+cthreat <-- admin
+cremove <-- admin
+clist <-- admin
+cdown <-- admin
+cblock <-- admin
+cunblock <-- admin
+
+foundryVTT --> clist
+foundryVTT --> cdown
+foundryVTT --> pthreat
+torgCodex --> clist
+torgCodex --> cdown
+torgCodex --> pthreat
+
+@enduml
+....
