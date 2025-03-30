@@ -24,9 +24,6 @@ asciidoc:
   extensions:
     - asciidoctor-plantuml
 
-output:
-  dir: /site
-
 content:
   sources:
     - url: .
