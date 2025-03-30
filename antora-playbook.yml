@@ -4,7 +4,7 @@ site:
   start_page: tp:torganized-play:index.adoc
 ui:
   bundle:
-    url: ../ui-bundle/
+    url: src/main/ui-bundle/
     snapshot: true
 
 asciidoc:
@@ -17,19 +17,19 @@ asciidoc:
     - asciidoctor-plantuml
 
 output:
-  dir: ../../../site
+  dir: /site
 
 content:
   sources:
-    - url: ../../../
+    - url: .
       start_path: src/main/docs/torganized-play
       branches: main
       version: false
-    - url: ../../../
+    - url: .
       start_path: src/main/docs/dcis
       branches: main
       version: false
-    - url: ../../../
+    - url: .
       start_path: src/main/docs/architecture
       branches: main
       version: false
