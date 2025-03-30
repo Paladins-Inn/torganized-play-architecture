@@ -21,21 +21,21 @@ Since it is hard to get content into ((Roll20)), we decided to opt-in for ((Foun
 == Requirements Overview
 Priority are the requirements directly paying into the objective of the DCIS of organizing games and scoring for the shared campaign (((Shared Campaign))) of ((Torganized Play)).
 
-* {fs02}
-* {fs03}
+* xref:10_quality_requirements.adoc#FS02[Game Session Organization (FS02)] {fs02-index}
+* xref:10_quality_requirements.adoc#FS03[Shared Campaign (FS03)] {fs03-index}
 
 In addition, the interoperability with other Torg Eternity supporting systems is needed to make the system more usable.
 
-* {co01}
-* {co02}
-* {us02}
-* {us03}
+* xref:10_quality_requirements.adoc#CO01[Compatible with FoundryVTT (CO01)] {co01-index}
+* xref:10_quality_requirements.adoc#CO02[Compatible with Torg-Codex (CO02)] {co02-index}
+* xref:10_quality_requirements.adoc#US02[FoundryVTT Module (US02)] {us02-index}
+* xref:10_quality_requirements.adoc#US03[Multi Language (US03)] {us03-index}
 
 
 == Quality Goals
 
-* {re01}
-* {ef01}
+* xref:10_quality_requirements.adoc#RE01[Working hours 24/7 (RE01)] {re01-index}
+* xref:10_quality_requirements.adoc#EF01[12 Factor (RE02)] {ef01-index}
 
 
 == Stakeholders
