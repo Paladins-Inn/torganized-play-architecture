@@ -1,12 +1,20 @@
 ---
 site:
   title: Torganized Play
+  url: https://docs.paladins-inn.de
   start_page: tp:torganized-play:index.adoc
 ui:
   bundle:
     url: src/main/ui-bundle/
     snapshot: true
-
+  supplemental_files:
+    - path: ui.yml
+      contents: |
+        static_files:
+        - CNAME
+    - path: CNAME
+      contents: |
+       docs.paladins-inn.de
 asciidoc:
   attributes:
     sectanchors: true
