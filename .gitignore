@@ -10,10 +10,6 @@ src/main/docs/index.epub
 *.drawio.svg.bkp
 *.bak
 *.cache
-**/business-context-codex.svg
-**/business-context-gaming.svg
-**/business-context-operatives.svg
-**/business-context-threats.svg
-**/business-context-user.svg
+**/business-context-*.svg
 **/quality-tree.svg
 **/technical-context.svg

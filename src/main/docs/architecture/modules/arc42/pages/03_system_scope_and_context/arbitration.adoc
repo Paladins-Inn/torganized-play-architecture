@@ -6,7 +6,7 @@ While arbitration can be started in every system the core functions are seperate
 The result of the arbitration will then be executed in the correct vertical.
 
 .The Arbitration System.
-[plantuml,business-context-codex,svg]
+[plantuml,business-context-arbitration,svg]
 ....
 @startuml
 left to right direction
