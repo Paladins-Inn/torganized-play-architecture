@@ -1,1 +1,1 @@
-include::10_quality_requirements.adoc[]
+include::arc42:partial$includes/10_quality_requirements.adoc[]
