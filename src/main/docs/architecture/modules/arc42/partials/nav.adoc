@@ -13,3 +13,4 @@
 ** xref:arc42:10_quality_requirements.adoc[]
 ** xref:arc42:11_technical_risks.adoc[]
 ** xref:arc42:12_glossary.adoc[]
+** xref:arc42:13_bibliography.adoc[]

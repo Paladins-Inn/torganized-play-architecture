@@ -5,4 +5,6 @@ title: DCIS Systemarchitecture
 nav:
   - modules/ROOT/pages/nav.adoc
 
-asamBibliography: ROOT:torg-eternity.bib
+asciidoc:
+  attributes:
+    asamBibliography: 'ROOT:torg-eternity.bib'
