@@ -9,7 +9,6 @@ ifndef::imagesdir[:imagesdir: ../images]
 The following chapters describe the main usecases of the different verticals.
 Each will be fleshed out in more detail in section xref:06_runtime_view.adoc[].
 
-include::users.adoc[leveloffset=+2]
 include::operatives.adoc[leveloffset=+2]
 include::gaming.adoc[leveloffset=+2]
 include::threats.adoc[leveloffset=+2]

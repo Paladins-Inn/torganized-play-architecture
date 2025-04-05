@@ -7,231 +7,85 @@ include::partial$includes/all.adoc[]
 
 Handles the user management stuff for the whole system.
 
-== Quality/Performance Characteristics
-Besides of the default performance characteristics {ef01} no additional performance requirements exist.
+== Use cases
 
+.Player management.
+[plantuml,business-context-user,svg]
+....
+@startuml
+left to right direction
+skinparam actorStyle awesome
+skinparam nodesep 50
+skinparam ranksep 200
 
-== Pages/REST API
+Player << Human >> as user
+GM << Human >> as gm
+Judge << Human >> as judge
+Orga << Human >> as orga
+Admin << Human >> as admin
 
-.Web based UI and REST calls to the system
-[cols="<.<3h,<.<3m,<.<8m,<.<3m,<.<3a",options="header",frame="topbot",grid="rows"]
-|===
-| Name | Method | URL | UI/REST | Permission
+user <|-- gm : is a
 
-.2+| List Users | GET| /users/index | UI
-| anon
-4+| List all users matching the query parameters.
+:dcis-users: as dcisUsers << System >>
+:dcis-gaming: as dcisGaming << System >>
+:dcis-threats: as dcisThreats << System >>
+:dcis-operatives: as dcisOperatives << System >>
+:torg-codex: as torgCodex << System >>
 
-.2+| Create User | POST | /users/ | UI/REST
-| * ADMIN
-* ORGA
-* self
-4+| Creates a user with the given data.
+rectangle Player {
+    usecase "List users" as ulist
+    usecase "Create user" as ucreate
+    usecase "Edit users" as uedit
+    usecase "List user logfile" as ulogfile
 
-.2+| Edit User | GET | /users/<ID>  | UI/REST
-| * ADMIN
-* ORGA
-* JUDGE
-* self
-4+| Edits the data for the given user (if the role allowes editing).
-If the role has no write access to the users data, the public data is displayed instead.
+    usecase "Create new logfile entry" as ulog
 
-.2+| Delete User | DELETE | /users/<ID> | UI/REST
-| * ADMIN
-* ORGA
-* JUDGE
-* self
-4+| Blocks a user and marks it as deleted.
-The data is in the system but the user is not listed any more and only ADMIN/ORGA/JUDGES are able to access the data.
-The user can only be "undeleted" by ADMIN and ORGA.
+    usecase "Petition user" as upetition
+    usecase "Detain user" as udetain
+    usecase "Petition Detainment" as udetainpetition
+    usecase "Release user" as urelease
 
-.2+| Undelete User | PUT | /users/<ID>/undelete | UI/REST
-| * ADMIN
-* ORGA
-4+| "Undeletes" the user.
+    usecase "Rate user" as urate
 
-.2+| Ban User | PUT | /users/<ID>/ban?ttl=\d{1,3}&comment=.+ | UI/REST
-| * JUDGE
-* ORGA
-4+| Bans a user for `ttl` days.
+    usecase "Ban user" as uban
+    usecase "Petition Ban" as ubanpetition
+    usecase "Unban user" as uunban
+}
 
-.2+| Unban User | PUT | /users/<ID>/unban?comment=.+ | UI/REST
-| * JUDGE
-* ORGA
-* ADMIN
-4+| Unbans a banned user.
+user --> ucreate
+user --> ulist
+user --> ulogfile
+user --> upetition
+user --> udetainpetition
+user --> ubanpetition
+user --> urate
+ulist <-- judge
+ulogfile <-- judge
+uban <-- judge
+uunban <-- judge
+udetain <-- judge
+urelease <-- judge
+ulist <-- orga
+ulogfile <-- orga
+udetain <-- orga
+urelease <-- orga
+ulist <-- admin
+ucreate <-- admin
+ulogfile <-- admin
+uban <-- admin
+uunban <-- admin
+udetain <-- admin
+urelease <-- admin
 
-.2+| Rate User | POST | /users/<ID>/rating?rating=\d{0,5}&comment=.+ | UI/REST
-| * PLAYER
-* GM
-4+| Rates the user with the rating and adding a comment.
-Only logged-in users are allowed to rate other users.
+dcisUsers --> ulog
+dcisGaming --> ulog
+dcisThreats --> ulog
+dcisOperatives --> ulog
+torgCodex --> ulog
 
-.2+| Delete Rating | DELETE | /users/<ID>/rating/<ID> | UI/REST
-| * self
-* ADMIN
-* JUDGE
-4+| Removes a rating.
+@enduml
+....
 
-.2+| Delete all ratings | DELETE | /users/<ID>/rating | UI/REST
-| * ADMIN
-* JUDGE
-4+| Clears all ratings for this user.
-
-.2+| Block rating | PUT | /users/<ID>/rating/block | UI/REST
-| * ADMIN
-* ORGA
-* JUDGE
-4+| Blocks the user from being part of the rating system.
-
-.2+| Unblock rating | PUT | /users/<ID>/rating/unblock | UI/REST
-| * ADMIN
-* ORGA
-* JUDGE
-4+| Unblocks the user from being excluded from the rating system.
-
-.2+| Create Arbitration | POST | /arbitration/ | UI/REST
-| * PLAYER
-* GM
-* ORGA
-* JUDGE
-* ADMIN
-4+| Creates a new arbitration process for any data set.
-
-.2+| List Arbitration | GET | /arbitration/ | UI/REST
-| * PLAYER
-* GM
-* ORGA
-* JUDGE
-* ADMIN
-4+| Lists the arbitration running.
-The list may differ depending on the access rights of the user getting the list.
-
-.2+| Modify Arbitration | PUT | /arbitration/<ID>/update | UI/REST
-| * JUDGE
-* ADMIN
-4+| Changes the arbitration data.
-
-.2+| File Information | POST | /arbitration/<ID>/file | UI/REST
-| * PLAYER
-* GM
-* ORGA
-* JUDGE
-* ADMIN
-4+| Files additional information for the arbitration.
-
-.2+| Decide Arbitration | PUT | /arbitration/<ID>/decide | UI/REST
-| * JUDGE
-* ADMIN
-4+| Decides about the arbitration.
-|===
-
-
-== Transcludes
-.Transcludes of dcis-users to be included on other pages.
-[cols="<.<4,<.<12a,>.<1,>.<1,>.<1,>.<1",options="header",frame="topbot",grid="rows"]
-|===
-| Name | URL <| MinX <| MinY <| MaxX <| MaxY
-
-.2+h| User List | /users/tc/?id[]=<ID1>&id[]=<ID2> | 100 | 300 | 500 | 400
-5+a| Lists users with a link to the users details page.
-
-.2+h| User Title | /users/<ID>/title | 20 | 20 | 200 | 20
-5+a| Gives the username to be displayed on pages
-
-.2+h| ID-Card | /users/<ID>/card | 200 | 300 | 200 | 300
-5+a| A standardized card for displaying users.
-
-.2+h| List Arbitration | /arbitration/<system>/<entity>/<id>/list | 400 | 100 | 400 | 300
-5+a| Lists running arbitration for the given entity.
-
-.2+h| Contest Entity | /arbitration/<system>/<entity>/<id>/start | 400 | 300 | 400 | 300
-5+a| Start an arbitration for this entity.
-
-.2+h| Arbitration Card | /arbitration/<id>/card | 200 | 300 | 200 | 300
-5+a| A standardized card for displaying a single arbitration.
-|===
-
-
-== Messaging
-
-This is an overview over existing general queues that exist in the whole system.
-
-.General queues existing in all installations.
-[cols="<.<4m,<.<4,<.<4,<.<8", options="header",frame="topbot",grid="rows"]
-|===
-| Name | Type | Direction | SCS
-
-.2+| dcis.user.log
-| Queue
-| Inbound
-| dcis-users
-3+a| New log entries for the users action log
-
-.2+| dcis.user.notification
-| Topic
-| Outbound
-| dcis-users
-3+a| Changes to user states are published for recognition by other systems.
-
-.2+| dcis.user.registration
-| Queue
-| Inbound
-| dcis-users
-3+a| If users register themselves on other systems they can send the new user into this system.
-
-.2+| dcis.arbitration.start
-| Queue
-| Inbound
-| dcis-users
-3+a| Starting an arbitration.
-
-.2+| dcis.arbitration.file
-| Queue
-| Inbound
-| dcis-users
-3+a| File Information to an arbitration
-
-.2+| dcis.arbitration.close
-| Queue
-| Inbound
-| dcis-users
-3+a| Close arbitration by system.
-
-.2+| dcis.arbitration.notification
-| Topic
-| Outbound
-| dcis-users
-3+a| Changes to arbitrations are published for recognition by other systems.
-
-.2+| dcis.user.contact
-| Queue
-| Inbound
-| dcis-users
-3+a| Notify a user via e-mail, discord, ...
-
-|===
-
-
-== Scheduled Jobs
-
-.Scheduled jobs to do data house keeping
-[cols="<.<4,<.<16a", options="header",frame="topbot",grid="rows"]
-|===
-| Name | Period
-
-.2+h| Unban Users | daily
-| Unban users at end of their banning period.
-
-.2+h| Block Users | daily
-a| Block users inactive for more than 2 years.
-
-.2+h| Delete Users | daily
-| Delete user data blocked/marked for deletion more than 3 years.
-
-.2+h| Purge Logs | yearly
-| Purge logfiles after 10 years.
-|===
 
 
 == Fulfilled Requirements

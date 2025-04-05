@@ -1,0 +1,6 @@
+[[section-runtime-view]]
+= Runtime View
+
+ifndef::imagesdir[:imagesdir: ../images]
+
+include::dcis-users.adoc[leveloffset=+1]
