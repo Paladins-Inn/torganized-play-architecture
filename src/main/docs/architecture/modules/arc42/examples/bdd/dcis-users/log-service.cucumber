@@ -1,0 +1,6 @@
+Feature: User Log Service
+
+  Scenario: Write User Log Entry
+    Given: A user with namespace 'NAMESPACE' and name 'NAME' exists
+    When: A log entry for user with namespace 'NAMESPACE' and name 'NAME' with system 'SYSTEM' and a date 'NOW' with text 'TEXT FOR LOG' is sent
+    Then: A log entry with the data given has to be in the database
