@@ -3,7 +3,7 @@
 (((SCS,dcis-commons)))
 (((dcis-commons)))
 
-include::arc42:10_quality_requirements.includes.adoc[]
+include::arc42:partial$includes/all.adoc[]
 
 This SCS provides default CSS and java script that can be cached that way on the users computers to provide fast access to the HTML elements.
 

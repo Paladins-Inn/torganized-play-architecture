@@ -3,7 +3,7 @@
 (((SCS, dcis-users)))
 (((dcis-users)))
 
-include::arc42:10_quality_requirements.includes.adoc[]
+include::include::partial$includes/all_quality_requirements.includes.adoc[]
 
 Handles the user management stuff for the whole system.
 

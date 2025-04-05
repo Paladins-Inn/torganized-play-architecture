@@ -3,7 +3,7 @@
 (((SCS,dcis-operatives)))
 (((dcis-operatives)))
 
-include::arc42:10_quality_requirements.includes.adoc[]
+include::arc42:partial$includes/all.adoc[]
 
 Manage (((PC))) (((Player Character))) Player Characters.
 
