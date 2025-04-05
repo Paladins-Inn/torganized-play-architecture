@@ -126,6 +126,7 @@ The list may differ depending on the access rights of the user getting the list.
 4+| Decides about the arbitration.
 |===
 
+
 == Transcludes
 .Transcludes of dcis-users to be included on other pages.
 [cols="<.<4,<.<12a,>.<1,>.<1,>.<1,>.<1",options="header",frame="topbot",grid="rows"]
@@ -142,7 +143,7 @@ The list may differ depending on the access rights of the user getting the list.
 5+a| A standardized card for displaying users.
 
 .2+h| List Arbitration | /arbitration/<system>/<entity>/<id>/list | 400 | 100 | 400 | 300
-5+a| Lists running arbitrations for the given entity.
+5+a| Lists running arbitration for the given entity.
 
 .2+h| Contest Entity | /arbitration/<system>/<entity>/<id>/start | 400 | 300 | 400 | 300
 5+a| Start an arbitration for this entity.
@@ -179,11 +180,35 @@ This is an overview over existing general queues that exist in the whole system.
 | dcis-users
 3+a| If users register themselves on other systems they can send the new user into this system.
 
+.2+| dcis.arbitration.start
+| Queue
+| Inbound
+| dcis-users
+3+a| Starting an arbitration.
+
+.2+| dcis.arbitration.file
+| Queue
+| Inbound
+| dcis-users
+3+a| File Information to an arbitration
+
+.2+| dcis.arbitration.close
+| Queue
+| Inbound
+| dcis-users
+3+a| Close arbitration by system.
+
 .2+| dcis.arbitration.notification
 | Topic
 | Outbound
 | dcis-users
 3+a| Changes to arbitrations are published for recognition by other systems.
+
+.2+| dcis.user.contact
+| Queue
+| Inbound
+| dcis-users
+3+a| Notify a user via e-mail, discord, ...
 
 |===
 
