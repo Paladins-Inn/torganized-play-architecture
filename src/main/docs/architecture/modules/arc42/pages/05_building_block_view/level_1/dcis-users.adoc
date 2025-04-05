@@ -89,6 +89,41 @@ Only logged-in users are allowed to rate other users.
 * ORGA
 * JUDGE
 4+| Unblocks the user from being excluded from the rating system.
+
+.2+| Create Arbitration | POST | /arbitration/ | UI/REST
+| * PLAYER
+* GM
+* ORGA
+* JUDGE
+* ADMIN
+4+| Creates a new arbitration process for any data set.
+
+.2+| List Arbitration | GET | /arbitration/ | UI/REST
+| * PLAYER
+* GM
+* ORGA
+* JUDGE
+* ADMIN
+4+| Lists the arbitration running.
+The list may differ depending on the access rights of the user getting the list.
+
+.2+| Modify Arbitration | PUT | /arbitration/<ID>/update | UI/REST
+| * JUDGE
+* ADMIN
+4+| Changes the arbitration data.
+
+.2+| File Information | POST | /arbitration/<ID>/file | UI/REST
+| * PLAYER
+* GM
+* ORGA
+* JUDGE
+* ADMIN
+4+| Files additional information for the arbitration.
+
+.2+| Decide Arbitration | PUT | /arbitration/<ID>/decide | UI/REST
+| * JUDGE
+* ADMIN
+4+| Decides about the arbitration.
 |===
 
 == Transcludes
@@ -97,18 +132,23 @@ Only logged-in users are allowed to rate other users.
 |===
 | Name | URL <| MinX <| MinY <| MaxX <| MaxY
 
-.2+h| User List | /users/?id[]=<ID1>&id[]=<ID2> | 100 | 300 | 500 | 400
+.2+h| User List | /users/tc/?id[]=<ID1>&id[]=<ID2> | 100 | 300 | 500 | 400
 5+a| Lists users with a link to the users details page.
 
 .2+h| User Title | /users/<ID>/title | 20 | 20 | 200 | 20
 5+a| Gives the username to be displayed on pages
 
-.2+h| Rate User | /users/<ID>/rate | 100 | 100 | 100 | 100
-5+a| Box to rate users with.
-
 .2+h| ID-Card | /users/<ID>/card | 200 | 300 | 200 | 300
 5+a| A standardized card for displaying users.
 
+.2+h| List Arbitration | /arbitration/<system>/<entity>/<id>/list | 400 | 100 | 400 | 300
+5+a| Lists running arbitrations for the given entity.
+
+.2+h| Contest Entity | /arbitration/<system>/<entity>/<id>/start | 400 | 300 | 400 | 300
+5+a| Start an arbitration for this entity.
+
+.2+h| Arbitration Card | /arbitration/<id>/card | 200 | 300 | 200 | 300
+5+a| A standardized card for displaying a single arbitration.
 |===
 
 
@@ -138,6 +178,13 @@ This is an overview over existing general queues that exist in the whole system.
 | Inbound
 | dcis-users
 3+a| If users register themselves on other systems they can send the new user into this system.
+
+.2+| dcis.arbitration.notification
+| Topic
+| Outbound
+| dcis-users
+3+a| Changes to arbitrations are published for recognition by other systems.
+
 |===
 
 
