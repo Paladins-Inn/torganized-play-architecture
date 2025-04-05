@@ -1,35 +1,35 @@
 :fs01-index: (((Quality Requirement, Functional Suitability, Tailored to Torg Eternity))) (((Functional Suitability, Tailored to Torg))) 
-:fs01: <<FS01>> {fs01-index}
+:fs01: xref:10_quality_requirements.adoc#FS01[] {fs01-index}
 
 :fs02-index: (((Quality Requirement, Functional Suitability, Game Session Organization))) (((Functional Suitability, Game Session Organization)))
-:fs02: <<FS02>> {fs02-index}
+:fs02: xref:10_quality_requirements.adoc#FS02[] {fs02-index}
 
 :fs03-index: (((Quality Requirement, Functional Suitability, Shared Campaign))) (((Functional Suitability, Shared Campaign)))
-:fs03: <<FS03>> {fs03-index}
+:fs03: xref:10_quality_requirements.adoc#FS03[] {fs03-index}
 
 :co01-index: (((Quality Requirement, Compatibility, Compatible with FoundryVTT))) (((Compatibility, Compatible with FoundryVTT)))
-:co01: <<CO01>> {co01-index}
+:co01: xref:10_quality_requirements.adoc#CO01[] {co01-index}
 
 :co02-index: (((Quality Requirement, Compatibility, Compatible with torg-codex))) (((Compatibility, Compatible with torg-codex)))
-:co02: <<CO02>> {co02-index}
+:co02: xref:10_quality_requirements.adoc#CO02[] {co02-index}
 
 :us01-index: (((Quality Requirement, Usability, Web based))) (((Usability, Web based)))
-:us01: <<US01>> {us01-index}
+:us01: xref:10_quality_requirements.adoc#US01[] {us01-index}
 
 :us02-index: (((Quality Requirement, Usability, FoundryVTT Module))) (((Usability, FoundryVTT Module)))
-:us02: <<US02>> {us02-index}
+:us02: xref:10_quality_requirements.adoc#US02[] {us02-index}
 
 :us03-index: (((Quality Requirement, Usability, Multi-Language))) (((Usability, Multi-Language)))
-:us03: <<US03>> {us03-index}
+:us03: xref:10_quality_requirements.adoc#US03[] {us03-index}
 
 :re01-index: (((Quality Requirement, Reliability, Working hours 24/7))) (((Reliability, Working hours 24/7)))
-:re01: <<RE01>> {re01-index}
+:re01: xref:10_quality_requirements.adoc#RE01[] {re01-index}
 
 :re02-index: (((Quality Requirement, Reliability, 12-Factor))) (((Reliability, 12-Factor)))
-:re02: <<RE02>> {re02-index}
+:re02: xref:10_quality_requirements.adoc#RE02[] {re02-index}
 
 :ef01-index: (((Quality Requirement, Reliability, Fast Response Times))) (((Reliability, Fast Response Times)))
-:ef01: <<EF01>> {ef01-index}
+:ef01: xref:10_quality_requirements.adoc#EF01[] {ef01-index}
 
 :mt01-index: (((Quality Requirement, Maintainability, Small Team))) (((Maintainability, Small Team)))
-:mt01: <<MT01>> {mt01-index}
+:mt01: xref:10_quality_requirements.adoc#MT01[] {mt01-index}
