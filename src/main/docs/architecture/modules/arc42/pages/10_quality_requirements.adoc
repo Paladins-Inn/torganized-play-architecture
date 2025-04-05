@@ -47,7 +47,7 @@ This includes using widely used frameworks so help can be given quite easily.
 ---_ Tailored to Torg Eternity (FS01)
 ---_ Game Session Organization (FS02)
 ---_ Shared Campaign (FS03)
-+++_ Data Retention TTL (FS04)
+---_ Data Retention TTL (FS04)
 -- Compatibility (CO)
 ---_ Compatible with FoundryVTT (CO01)
 ---_ Compatible with torg-codex (CO02)
