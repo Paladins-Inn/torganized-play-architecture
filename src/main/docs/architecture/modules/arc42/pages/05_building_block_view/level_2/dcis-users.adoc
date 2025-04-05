@@ -13,10 +13,13 @@ include::partial$includes/all.adoc[]
 [plantuml,uc-users-scenario-add-log-entry,svg]
 ....
 @startuml
-left to right direction
 
 start
-:Write log to database:
+if (User exists?) then (yes)
+  :Write log to database;
+else (no)
+endif
+
 end
 
 @enduml
