@@ -3,7 +3,7 @@
 
 ifndef::imagesdir[:imagesdir: ../images]
 
-include::10_quality_requirements.includes.adoc[]
+include::partial$includes/all.adoc[]
 
 [cols="<.<1,<.<4a",options="header",frame="topbot",grid="rows"]
 |===

@@ -14,4 +14,4 @@
 
 :heading-font-color: #ff0000
 
-include::10_quality_requirements.includes.adoc[]
+include::partial$includes/all.adoc[]

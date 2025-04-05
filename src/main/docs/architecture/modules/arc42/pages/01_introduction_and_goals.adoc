@@ -2,7 +2,7 @@
 [[section-introduction-and-goals]]
 
 ifndef::imagesdir[:imagesdir: ../images]
-include::10_quality_requirements.includes.adoc[]
+include::partial$includes/all.adoc[]
 
 
 The ((DCIS)) (Delphi Council Information System) is a software to support the ((Torganized Play)).
