@@ -1,9 +1,10 @@
+[[dcis-threats]]
 = dcis-threats
+(((SCS,dcis-threats)))
+(((dcis-threats)))
 
 include::arc42:10_quality_requirements.includes.adoc[]
 
-(((SCS,dcis-threats)))
-(((dcis-threats)))
 Management of the threats library of Torganized Play.
 
 == Quality/Performance Characteristics

@@ -1,9 +1,10 @@
+[[dcis-operatives]]
 = dcis-operatives
+(((SCS,dcis-operatives)))
+(((dcis-operatives)))
 
 include::arc42:10_quality_requirements.includes.adoc[]
 
-(((SCS,dcis-operatives)))
-(((dcis-operatives)))
 Manage (((PC))) (((Player Character))) Player Characters.
 
 == Quality/Performance Characteristics
