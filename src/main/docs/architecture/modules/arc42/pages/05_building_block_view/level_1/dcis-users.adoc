@@ -10,7 +10,7 @@ Handles the user management stuff for the whole system.
 == Use cases
 
 .Player management.
-[plantuml,business-context-user,svg]
+[plantuml,use-cases-user,svg]
 ....
 @startuml
 left to right direction

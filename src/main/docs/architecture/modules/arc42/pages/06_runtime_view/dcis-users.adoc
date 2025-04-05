@@ -63,12 +63,19 @@ The user can only be "undeleted" by ADMIN and ORGA.
 * ORGA
 3+a| "Undeletes" the user.
 
-4+h| Use case: Unban user
+4+h| Use case: Detain/Release user
 
-.2+h| Ban User | PUT | /users/<ID>/ban?ttl=\d{1,3}&comment=.+
+.2+h| Detain User | PUT | /users/<ID>/detain?ttl=\d{1,3}&comment=.+
 | * JUDGE
 * ORGA
-3+a| Bans a user for `ttl` days.
+3+a| Detains a user for `ttl` days.
+
+.2+h| Release User | PUT | /users/<ID>/release&comment=.+
+| * JUDGE
+* ORGA
+* ADMIN
+3+a| Releases a detained user.
+
 
 4+h| Use case: Rate user
 
@@ -78,10 +85,6 @@ The user can only be "undeleted" by ADMIN and ORGA.
 3+a| Rates the user with the rating and adding a comment.
 Only logged-in users are allowed to rate other users.
 
-.2+h| Ban User | PUT | /users/<ID>/ban?ttl=\d{1,3}&comment=.+
-| * JUDGE
-* ORGA
-3+a| Bans a user for `ttl` days.
 
 .2+h| Delete Rating | DELETE | /users/<ID>/rating/<ID>
 | * self
