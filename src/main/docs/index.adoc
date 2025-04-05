@@ -59,7 +59,7 @@ include::architecture/modules/arc42/pages/05_building_block_view/index.adoc[leve
 
 <<<
 // 6. Runtime View
-include::architecture/modules/arc42/pages/06_runtime_view.adoc[leveloffset=+1]
+include::architecture/modules/arc42/pages/06_runtime_view/index.adoc[leveloffset=+1]
 
 <<<
 // 7. Deployment View

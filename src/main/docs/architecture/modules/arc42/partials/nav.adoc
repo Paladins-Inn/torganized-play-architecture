@@ -5,7 +5,7 @@
 * Systems
 ** xref:arc42:04_solution_strategy.adoc[]
 ** xref:arc42:05_building_block_view/index.adoc[]
-** xref:arc42:06_runtime_view.adoc[]
+** xref:arc42:06_runtime_view/index.adoc[]
 ** xref:arc42:07_deployment_view.adoc[]
 * Appendix
 ** xref:arc42:08_concepts.adoc[]
