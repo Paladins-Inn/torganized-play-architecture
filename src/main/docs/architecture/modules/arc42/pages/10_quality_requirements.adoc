@@ -47,6 +47,7 @@ This includes using widely used frameworks so help can be given quite easily.
 ---_ Tailored to Torg Eternity (FS01)
 ---_ Game Session Organization (FS02)
 ---_ Shared Campaign (FS03)
++++_ Data Retention TTL (FS04)
 -- Compatibility (CO)
 ---_ Compatible with FoundryVTT (CO01)
 ---_ Compatible with torg-codex (CO02)
@@ -80,6 +81,9 @@ This includes using widely used frameworks so help can be given quite easily.
 
 |[[FS03,Shared Campaign (FS03)]] **FS03** {fs03-index}
 |The software should create a shared campaign with a shared timeline following the Torganized Play (((Torganized Play))) concept.
+
+|[[FS04,Data Protection (FS04)]] **FS04** {fs04-index}
+|The software needs to be conform to the GDPR in Europe.
 
 |[[CO01,Compatible with FoundryVTT (CO01)]] **CO01** {co01-index}
 |The data transfer to FoundryVTT based modules should be as seamless as possible.

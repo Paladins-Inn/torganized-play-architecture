@@ -1,5 +1,5 @@
 [[level1-dcis-users]]
-= dcis-users
+= Level 1: dcis-users
 (((SCS, dcis-users)))
 (((dcis-users)))
 
@@ -11,51 +11,165 @@ Handles the user management stuff for the whole system.
 Besides of the default performance characteristics {ef01} no additional performance requirements exist.
 
 
-== Pages
-* List Users
-* Create User
-* Edit User
-* Rate User
-* List Tickets
-* Open Ticket
-* Manage Tickets
+== Pages/REST API
+
+.Web based UI and REST calls to the system
+[cols="<.<3h,<.<3m,<.<8m,<.<3m,<.<3a",options="header",frame="topbot",grid="rows"]
+|===
+| Name | Method | URL | UI/REST | Permission
+
+.2+| List Users | GET| /users/index | UI
+| anon
+4+| List all users matching the query parameters.
+
+.2+| Create User | POST | /users/ | UI/REST
+| * ADMIN
+* ORGA
+* self
+4+| Creates a user with the given data.
+
+.2+| Edit User | GET | /users/<ID>  | UI/REST
+| * ADMIN
+* ORGA
+* JUDGE
+* self
+4+| Edits the data for the given user (if the role allowes editing).
+If the role has no write access to the users data, the public data is displayed instead.
+
+.2+| Delete User | DELETE | /users/<ID> | UI/REST
+| * ADMIN
+* ORGA
+* JUDGE
+* self
+4+| Blocks a user and marks it as deleted.
+The data is in the system but the user is not listed any more and only ADMIN/ORGA/JUDGES are able to access the data.
+The user can only be "undeleted" by ADMIN and ORGA.
+
+.2+| Undelete User | PUT | /users/<ID>/undelete | UI/REST
+| * ADMIN
+* ORGA
+4+| "Undeletes" the user.
+
+.2+| Ban User | PUT | /users/<ID>/ban?ttl=\d{1,3}&comment=.+ | UI/REST
+| * JUDGE
+* ORGA
+4+| Bans a user for `ttl` days.
+
+.2+| Unban User | PUT | /users/<ID>/unban?comment=.+ | UI/REST
+| * JUDGE
+* ORGA
+* ADMIN
+4+| Unbans a banned user.
+
+.2+| Rate User | POST | /users/<ID>/rating?rating=\d{0,5}&comment=.+ | UI/REST
+| * PLAYER
+* GM
+4+| Rates the user with the rating and adding a comment.
+Only logged-in users are allowed to rate other users.
+
+.2+| Delete Rating | DELETE | /users/<ID>/rating/<ID> | UI/REST
+| * self
+* ADMIN
+* JUDGE
+4+| Removes a rating.
+
+.2+| Delete all ratings | DELETE | /users/<ID>/rating | UI/REST
+| * ADMIN
+* JUDGE
+4+| Clears all ratings for this user.
+
+.2+| Block rating | PUT | /users/<ID>/rating/block | UI/REST
+| * ADMIN
+* ORGA
+* JUDGE
+4+| Blocks the user from being part of the rating system.
+
+.2+| Unblock rating | PUT | /users/<ID>/rating/unblock | UI/REST
+| * ADMIN
+* ORGA
+* JUDGE
+4+| Unblocks the user from being excluded from the rating system.
+|===
 
 == Transcludes
-* User Actions
-* User List
-* User Tile
-* Ticket List
-* Complaint List
-
-== Messsaging
-
-[cols="<.<5,<.<2,<.<3,<.<10a" options="header",frame="topbot",grid="rows"]
+.Transcludes of dcis-users to be included on other pages.
+[cols="<.<4,<.<12a,>.<1,>.<1,>.<1,>.<1",options="header",frame="topbot",grid="rows"]
 |===
-| Name | Type | Direction | Notes
+| Name | URL <| MinX <| MinY <| MaxX <| MaxY
 
-| dcis.user.log
+.2+h| User List | /users/?id[]=<ID1>&id[]=<ID2> | 100 | 300 | 500 | 400
+5+a| Lists users with a link to the users details page.
+
+.2+h| User Title | /users/<ID>/title | 20 | 20 | 200 | 20
+5+a| Gives the username to be displayed on pages
+
+.2+h| Rate User | /users/<ID>/rate | 100 | 100 | 100 | 100
+5+a| Box to rate users with.
+
+.2+h| ID-Card | /users/<ID>/card | 200 | 300 | 200 | 300
+5+a| A standardized card for displaying users.
+
+|===
+
+
+== Messaging
+
+This is an overview over existing general queues that exist in the whole system.
+
+.General queues existing in all installations.
+[cols="<.<4m,<.<4,<.<4,<.<8", options="header",frame="topbot",grid="rows"]
+|===
+| Name | Type | Direction | SCS
+
+.2+| dcis.user.log
 | Queue
 | Inbound
-| New log entries for the users action log
+| dcis-users
+3+a| New log entries for the users action log
 
-| dcis.user.notification
+.2+| dcis.user.notification
 | Topic
 | Outbound
-| Changes to user states are published for recognition by other systems.
+| dcis-users
+3+a| Changes to user states are published for recognition by other systems.
 
-| dcis.user.register
+.2+| dcis.user.registration
 | Queue
 | Inbound
-| If users register themselves on other systems they can send the new user into this system.
-
+| dcis-users
+3+a| If users register themselves on other systems they can send the new user into this system.
 |===
 
 
-== Rest APIs
-* Add log entry to users log
+== Scheduled Jobs
+
+.Scheduled jobs to do data house keeping
+[cols="<.<4,<.<16a", options="header",frame="topbot",grid="rows"]
+|===
+| Name | Period
+
+.2+h| Unban Users | daily
+| Unban users at end of their banning period.
+
+.2+h| Block Users | daily
+a| Block users inactive for more than 2 years.
+
+.2+h| Delete Users | daily
+| Delete user data blocked/marked for deletion more than 3 years.
+
+.2+h| Purge Logs | yearly
+| Purge logfiles after 10 years.
+|===
+
 
 == Fulfilled Requirements
 
+* {fs02}
+* {fs04}
+* {us01}
+* {re01}
+* {ef01}
 * {mt01}
+
 
 == Open Issues/Problems/Risks

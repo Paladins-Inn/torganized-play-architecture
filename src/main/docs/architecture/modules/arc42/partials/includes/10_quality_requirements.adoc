@@ -7,6 +7,9 @@
 :fs03-index: (((Quality Requirement, Functional Suitability, Shared Campaign))) (((Functional Suitability, Shared Campaign)))
 :fs03: xref:10_quality_requirements.adoc#FS03[FS03 Shared Campaign] {fs03-index}
 
+:fs04-index: (((Quality Requirement, Functional Suitability, Data Protection))) (((Functional Suitability, Data Protection)))
+:fs04: xref:10_quality_requirements.adoc#FS04[FS04 Data Protection] {fs04-index}
+
 :co01-index: (((Quality Requirement, Compatibility, Compatible with FoundryVTT))) (((Compatibility, Compatible with FoundryVTT)))
 :co01: xref:10_quality_requirements.adoc#CO01[CO01 Compatible with FoundryVTT] {co01-index}
 
