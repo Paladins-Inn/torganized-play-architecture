@@ -1,0 +1,35 @@
+[[level2-dcis-users]]
+= Level 2: dcis-users
+(((SCS, dcis-users)))
+(((dcis-users)))
+
+include::partial$includes/all.adoc[]
+
+== User Log Service
+
+=== Scenario: Add an entry to the user log
+
+.Writing a log entry to the user log
+[plantuml,uc-users-scenario-add-log-entry,svg]
+....
+@startuml
+left to right direction
+
+start
+:Write log to database:
+end
+
+@enduml
+....
+
+
+=== BDD Test Defintion
+[source,gerkin]
+----
+Feature: User Log Service
+
+  Scenario: Write User Log Entry
+    Given: A user with namespace 'NAMESPACE' and name 'NAME' exists
+    When: A log entry for user with namespace 'NAMESPACE' and name 'NAME' with system 'SYSTEM' and a date 'NOW' with text 'TEXT FOR LOG' is sent
+    Then: A log entry with the data given has to be in the database
+----
