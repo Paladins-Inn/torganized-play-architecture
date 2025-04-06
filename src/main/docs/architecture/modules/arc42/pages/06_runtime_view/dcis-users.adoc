@@ -30,6 +30,7 @@ In addition the SCS handles arbitation and notification of users to external sys
 * self
 3+a| Creates a user with the given data.
 
+
 4+h| Use case: Edit User
 
 .2+h| Get User | GET | /users/<ID>
@@ -48,7 +49,19 @@ If the role has no write access to the users data, the public data is displayed 
 3+a| Edits the data for the given user (if the role allowes editing).
 If the role has no write access to the users data, the public data is displayed instead.
 
+
+4+h| Use case: User log
+
+.2+h| Show log | GET | /users/<ID>/log
+| * ADMIN
+* ORGA
+* JUDGE
+* self
+3+a| Shows the logfile for the given user.
+
+
 4+h| Use case: Ban user
+
 .2+h| Delete User | DELETE | /users/<ID>
 | * ADMIN
 * ORGA
