@@ -1,5 +1,7 @@
-[[uc-arbitration]]
-= Arbitration
+[[level1-dcis-arbitration]]
+= Level 1: dcis-arbitration
+(((SCS, dcis-arbitration)))
+(((dcis-arbitration)))
 
 To handle user-provided content and human interactions, a system for arbitration is needed.
 While arbitration can be started in every system the core functions are seperated out.

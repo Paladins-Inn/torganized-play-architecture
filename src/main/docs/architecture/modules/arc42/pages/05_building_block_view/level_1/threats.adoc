@@ -1,5 +1,7 @@
-[[uc-threat-management]]
-= Threat Management (torganized-play-threats)
+[[level1-dcis-threats]]
+= Level 1: dcis-threats
+(((SCS, dcis-threats)))
+(((dcis-threats)))
 
 .The management and use of new ((Threat))s.
 [plantuml,business-context-threats,svg]

@@ -1,5 +1,5 @@
-[[level-1torg-codex]]
-= Level 1: torg-codex
+[[level2-torg-codex]]
+= Level 2: torg-codex
 (((SCS,torg-codex)))
 (((torg-codex)))
 

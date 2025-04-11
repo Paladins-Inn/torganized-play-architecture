@@ -1,5 +1,7 @@
-[[uc-torg-codex]]
-= Torg-Codex
+[[level1-torg-codex]]
+= Level 1: torg-codex
+(((SCS, torg-codex)))
+(((torg-codex)))
 
 .The integrated ((torg-codex)).
 [plantuml,business-context-codex,svg]

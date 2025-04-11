@@ -1,5 +1,7 @@
-[[uc-operatives-management]]
-= Operatives Management (torganized-play-operatives)
+[[level1-dcis-operatives]]
+= Level 1: dcis-operatives
+(((SCS, dcis-operatives)))
+(((dcis-operatives)))
 
 .These use cases revolve around the ((PC))s. They are called ((Operative))s here.
 [plantuml,business-context-operatives,svg]

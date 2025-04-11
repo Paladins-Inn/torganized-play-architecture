@@ -1,5 +1,7 @@
-[[uc-gaming-session-management]]
-= Gaming Session Management (torganized-play-gaming)
+[[level1-dcis-gaming]]
+= Level 1: dcis-gaming
+(((SCS, dcis-gaming)))
+(((dcis-gaming)))
 
 .These use cases revolve around the session (((Session)) management of the games and the shared campaign (((Shared Campaign))) management.
 [plantuml,business-context-gaming,svg]

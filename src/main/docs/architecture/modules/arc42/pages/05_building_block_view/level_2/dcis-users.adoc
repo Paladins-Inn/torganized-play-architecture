@@ -1,5 +1,5 @@
-[[level1-dcis-users]]
-= Level 1: dcis-users
+[[level2-dcis-users]]
+= Level 2: dcis-users
 (((SCS, dcis-users)))
 (((dcis-users)))
 

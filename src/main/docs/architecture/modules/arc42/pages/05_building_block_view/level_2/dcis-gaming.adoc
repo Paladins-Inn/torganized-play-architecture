@@ -1,5 +1,5 @@
-[[level1-dcis-gaming]]
-= Level 1: dcis-gaming
+[[level2-dcis-gaming]]
+= Level 2: dcis-gaming
 (((SCS,dcis-gaming)))
 (((dcis-gaming)))
 
