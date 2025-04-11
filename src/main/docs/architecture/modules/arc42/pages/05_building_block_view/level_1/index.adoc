@@ -4,11 +4,11 @@
 The following chapters describe the main use cases of the different verticals.
 Each will be fleshed out in more detail in section xref:arc42:06_runtime_view/index.adoc[].
 
-include::users.adoc[leveloffset=+1]
-include::operatives.adoc[leveloffset=+1]
-include::gaming.adoc[leveloffset=+1]
-include::threats.adoc[leveloffset=+1]
+include::dcis-users.adoc[leveloffset=+1]
+include::dcis-arbitration.adoc[leveloffset=+1]
+include::dcis-operatives.adoc[leveloffset=+1]
+include::dcis-gaming.adoc[leveloffset=+1]
+include::dcis-threats.adoc[leveloffset=+1]
 include::torg-codex.adoc[leveloffset=+1]
-include::arbitration.adoc[leveloffset=+1]
 
 
