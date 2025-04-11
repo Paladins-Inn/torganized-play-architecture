@@ -8,11 +8,12 @@ ifndef::imagesdir[:imagesdir: ../images]
 Every distinct aspect is modelled into a single vertical.
 The current verticals are:
 
-* xref:03_system_scope_and_context/users.adoc[]
-* xref:03_system_scope_and_context/operatives.adoc[]
-* xref:03_system_scope_and_context/gaming.adoc[]
-* xref:03_system_scope_and_context/threats.adoc[]
-* xref:03_system_scope_and_context/torg-codex.adoc[]
+* xref:05_building_block_view/level_1/users.adoc[]
+* xref:05_building_block_view/level_1/operatives.adoc[]
+* xref:05_building_block_view/level_1/gaming.adoc[]
+* xref:05_building_block_view/level_1/threats.adoc[]
+* xref:05_building_block_view/level_1/torg-codex.adoc[]
+* xref:05_building_block_view/level_1/arbitration.adoc[]
 * Commons
 ** Online Assets (CSS, images, ...)
 ** Shared Library to follow the (((DRY))) DRY principle.

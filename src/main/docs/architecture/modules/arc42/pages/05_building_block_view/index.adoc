@@ -19,6 +19,7 @@ The system tries to separate the concerns of
 
 In addition the functionality of the torg-codex should be provided.
 
+
 === Contained Building Blocks
 
 dcis-gaming::
@@ -53,7 +54,12 @@ dcis-users::
 (((dcis-users)))
 A quite straight forward user management system.
 Authentication is offhanded to OpenIDConnect providers.
-So this SCS only manages some &#2191;Out-Game stuff.
+So this SCS only manages some Out-Game stuff.
+
+dcis-arbitration::
+(((SCS,dcis-arbitration)))
+(((dcis-arbitration)))
+A generic arbitration system to sort out differences.
 
 dcis-commons::
 (((SCS,dcis-commons)))
