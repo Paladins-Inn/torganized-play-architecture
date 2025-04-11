@@ -1,8 +1,8 @@
 [[uc-register-user]]
 = Feature: Register a new user
 
-.The UML flow for registering a new user
-[plantiml,uc-user-registration,svg]
+.The UML flow for the user log entry service.
+[plantuml,uc-user-registration,svg]
 ....
 @startuml
 
