@@ -181,4 +181,5 @@ AMQPbroker <.u.> AMQPcodex : use
 AMQPbroker <.u.> AMQPthreats : use
 AMQPbroker <.u.> AMQPoperatives : use
 AMQPbroker <.u.> AMQPusers : use
-@enduml....
+@enduml
+....
