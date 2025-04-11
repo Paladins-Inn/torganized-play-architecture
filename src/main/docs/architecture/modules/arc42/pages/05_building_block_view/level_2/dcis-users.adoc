@@ -5,12 +5,11 @@
 
 include::partial$includes/all.adoc[]
 
-== User Log Service
+[[uc-user-log-service]]
+== Feature: User Log Service
 
-=== Scenario: Add an entry to the user log
-
-.Writing a log entry to the user log
-[plantuml,uc-users-scenario-add-log-entry,svg]
+.The UML flow for the user log entry service.
+[plantuml,uc-user-log-entry,svg]
 ....
 @startuml
 
@@ -28,9 +27,47 @@ end
 @enduml
 ....
 
-
-=== BDD Test Defintion
+.The BDD test definition for the user log entry service.
 [source,cucumber]
 ----
-include::example$bdd/dcis-users/log-service.cucumber[]
+include::example$bdd/dcis-users/log-service.feature[]
+----
+
+
+[[uc-register-user]]
+== Feature: Register a new user
+
+.The UML flow for registering a new user
+[plantiml,uc-user-registration,svg]
+----
+@startuml
+start
+if (User exists?) then (yes)
+  if (User is banned or blocked) then (yes)
+    :Write WARN to system log;
+    :Reject registration;
+    :Increase error counter;
+    end
+  else (no)
+    if (User is deleted) then (yes)
+      :Undelete the user;
+    else (no)
+    endif
+  endif
+else (no)
+  :Write user to user database;
+endif
+
+:Write user registration to messaging topic;
+:Increase success counter;
+:Return user;
+
+end
+@enduml
+----
+
+.The BDD test definition for the user registration
+[source,cucumber]
+----
+include::example$bdd/dcis-users/user-registration.feature[]
 ----
