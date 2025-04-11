@@ -13,57 +13,60 @@ skinparam actorStyle awesome
 :Orga: as orga << Human >>
 :Admin: as admin << Human >>
 
+player <|.d. gm : is a
+player <|.d. judge : is a
+player <|.d. orga : is a
+player <|.d. admin : is a
+
+ui .-.> users : assembles
+ui .-.> operatives : assembles
+ui .-.> gaming : assembles
+ui .-.> threats : assembles
+ui .-.> codex : assembles
+
+player --> ui
+
 :Foundry VTT: as foundry << System >>
 :Discord: as discord << System >>
 
-together {
-  :Mail Server: as mail << System >>
-  :Single Sign-On: as sso << System >>
-}
+:API Layer: as api << System >>
+foundry --> api : use
 
 together {
-  :API Layer: as api << System >>
-
   :DCIS Users: as users << System >>
   :DCIS Operatives: as operatives << System >>
   :DCIS Gaming: as gaming << System >>
   :DCIS Threats: as threats << System >>
-  :Torg Codex: as codex << System>>
+  :Torg Codex: as codex << System >>
 }
+:Single Sign-On: as sso << System >>
+:Mail Server: as mail << System >>
 
-player <|-- gm : is a
-player <|-- judge : is a
-player <|-- orga : is a
-player <|-- admin : is a
+judge --> users
+judge --> gaming
 
-foundry .d.> api
+admin --> users
+admin --> operatives
+admin --> gaming
+admin --> threats
+admin --> codex
+admin --> sso
 
-api .d.> users
-api .d.> operatives
-api .d.> gaming
-api .d.> codex
 
-player .d.> users
-player .d.> operatives
-player .d.> gaming
-player .d.> threats
-player .d.> codex
+api .-.> users : assembles
+api .-.> operatives : assembles
+api .-.> gaming : assembles
+api .-.> threats : assembles
+api .-.> codex : assembles
 
-judge .d.> users
-judge .d.> gaming
+sso <.-. users
+sso <.-. operatives
+sso <.-. gaming
+sso <.-. threats
+sso <.-. codex
 
-admin .d.> users
-admin .d.> operatives
-admin .d.> gaming
-admin .d.> threats
-admin .d.> codex
-admin .d.> sso
-
-sso <.d. users
-sso <.d. operatives
-sso <.d. gaming
-sso <.d. threats
-sso <.d. codex
+mail <.-. users
+discord <.-. users
 
 @enduml
 ....
