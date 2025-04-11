@@ -1,5 +1,5 @@
 [[uc-user-log-service]]
-== Feature: User Log Service
+= Feature: User Log Service
 
 include::partial$includes/all.adoc[]
 

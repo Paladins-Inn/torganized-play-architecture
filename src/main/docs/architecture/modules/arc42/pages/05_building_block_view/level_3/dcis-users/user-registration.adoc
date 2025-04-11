@@ -1,5 +1,5 @@
 [[uc-register-user]]
-== Feature: Register a new user
+= Feature: Register a new user
 
 .The UML flow for registering a new user
 [plantiml,uc-user-registration,svg]
