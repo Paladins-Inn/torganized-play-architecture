@@ -39,9 +39,11 @@ include::example$bdd/dcis-users/log-service.feature[]
 
 .The UML flow for registering a new user
 [plantiml,uc-user-registration,svg]
-----
+....
 @startuml
+
 start
+
 if (User exists?) then (yes)
   if (User is banned or blocked) then (yes)
     :Write WARN to system log;
@@ -63,8 +65,9 @@ endif
 :Return user;
 
 end
+
 @enduml
-----
+....
 
 .The BDD test definition for the user registration
 [source,cucumber]
