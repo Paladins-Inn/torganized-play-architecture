@@ -7,12 +7,29 @@
 @startuml
 skinparam actorStyle awesome
 
-:Player: << Human >>
-:GM: << Human >>
-[k8s ingress]
-:Judge: << Human >>
-:Orga: << Human >>
-:Admin: << Human >>
+together {
+  :Player: << Human >>
+  :GM: << Human >>
+  :Judge: << Human >>
+  :Orga: << Human >>
+  :Admin: << Human >>
+}
+
+together {
+  rectangle << External >> {
+    together {
+      [FoundryVTT]
+      [discord]
+    }
+  }
+
+  [k8s ingress]
+}
+
+together {
+  [SSO]
+  [broker]
+}
 
 component "k8s ingress" {
     portin HTTP as HTTPingressIn
@@ -22,23 +39,22 @@ component "k8s ingress" {
     HTTPingressIn -- HTTPingress
 }
 
-[FoundryVTT]
+
+FoundryVTT --> HTTPingressIn
 [SSO]
 
-together{
-    [dcis-gaming]
-    [torg-codex]
-    [dcis-threats]
-    [dcis-operatives]
-    together {
-        [dcis-users]
-        [mail]
-        [discord]
-    }
+[dcis-gaming]
+[torg-codex]
+[dcis-threats]
+[dcis-operatives]
+[dcis-discord]
+together {
+  [dcis-users]
+  [mail]
 }
-[dcis-commons]
 
-component dcis-gaming {
+
+component dcis-gaming << SCS >> {
     portin HTTP as HTTPgaming
     portout AMQP as AMQPgaming
 
@@ -50,7 +66,7 @@ component dcis-gaming {
     DCISgaming -- gamingDB
 }
 
-component torg-codex {
+component torg-codex << SCS >> {
     portin HTTP as HTTPcodex
     portout AMQP as AMQPcodex
 
@@ -62,7 +78,7 @@ component torg-codex {
     DCIScodex -- codexDB
 }
 
-component dcis-threats {
+component dcis-threats << SCS >> {
     portin HTTP as HTTPthreats
     portout AMQP as AMQPthreats
 
@@ -83,7 +99,7 @@ component "broker" {
     AMQPbroker -- DCISbroker
 }
 
-component dcis-operatives {
+component dcis-operatives << SCS >> {
     portin HTTP as HTTPoperatives
     portout AMQP as AMQPoperatives
 
@@ -95,19 +111,36 @@ component dcis-operatives {
     DCISoperatives -- operativesDB
 }
 
-component dcis-users {
+component dcis-users << SCS >> {
     portin HTTP as HTTPusers
     portout AMQP as AMQPusers
 
     component "torganized-play-users" as DCISusers
+    component "torganized-play-arbitration" as DCISarbitration
     database "PostgreSQL" as usersDB
 
     HTTPusers -- DCISusers
+    HTTPusers -- DCISarbitration
+
     AMQPusers -- DCISusers
+    AMQPusers -- DCISarbitration
+
     DCISusers -- usersDB
+    DCISarbitration -- usersDB
 }
 
-component dcis-commons {
+component dcis-discord << SCS >> {
+    portout HTTP as HTTPdiscord
+    portout AMQP as AMQPdiscord
+
+    component "torganized-play-discord" AS DCISdiscord
+
+    HTTPdiscord --> discord
+
+    AMQPdiscord -- DCISdiscord
+}
+
+component dcis-commons << SCS >> {
     portin HTTP as HTTPcommons
 
     component "torganized-play-commons" as DCIScommons
@@ -139,12 +172,13 @@ HTTPingress .d.> HTTPusers : use
 HTTPingress .d.> HTTPcommons : use
 
 DCISusers ..> mail : use
-DCISusers ..> discord : use
 
+HTTPdiscord <.u.> discord : use
+
+AMQPbroker <.u.> AMQPdiscord : use
 AMQPbroker <.u.> AMQPgaming : use
 AMQPbroker <.u.> AMQPcodex : use
 AMQPbroker <.u.> AMQPthreats : use
 AMQPbroker <.u.> AMQPoperatives : use
 AMQPbroker <.u.> AMQPusers : use
-@enduml
-....
+@enduml....
