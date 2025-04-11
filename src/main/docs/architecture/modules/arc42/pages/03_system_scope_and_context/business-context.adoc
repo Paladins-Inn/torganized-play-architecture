@@ -19,7 +19,6 @@ together {
     rectangle <<External>> {
       :Foundry VTT: as foundry << System >>
       :Discord: as discord << System >>
-      :Mail Server: as mail << System >>
     }
   }
 }
@@ -60,10 +59,6 @@ together {
   }
 
   rectangle {
-    :Single Sign-On: as sso << System >>
-  }
-
-  rectangle {
     :Discord Bot: as bot << System >>
   }
 }
@@ -78,19 +73,13 @@ ui --> codex
 
 player --> ui
 player --> foundry
-gm --> foundry
+player --> discord
 admin --> sso
 
 foundry --> api
 discord <--> bot
 
-users <-- bot
-arbitration <-- bot
-operatives <-- bot
-gaming <-- bot
-threats <-- bot
-codex <-- bot
-
+api <-- bot
 
 api --> users
 api --> arbitration
@@ -99,14 +88,7 @@ api --> gaming
 api --> threats
 api --> codex
 
-users ..> sso
-arbitration ..> sso
-operatives ..> sso
-gaming ..> sso
-threats ..> sso
-codex ..> sso
-
-users .-.> mail
-users .-.> discord
+users --> player : sends email
+users --> discord : sends message
 @enduml
 ....
