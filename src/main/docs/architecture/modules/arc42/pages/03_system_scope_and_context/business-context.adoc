@@ -7,66 +7,106 @@
 @startuml
 skinparam actorStyle awesome
 
-:Player: as player << Human >>
-:GM: as gm << Human >>
-:Judge: as judge << Human >>
-:Orga: as orga << Human >>
-:Admin: as admin << Human >>
+together {
+  :GM: as gm << Human >>
+  :Judge: as judge << Human >>
+  :Orga: as orga << Human >>
+  :Admin: as admin << Human >>
 
-player <|.d. gm : is a
-player <|.d. judge : is a
-player <|.d. orga : is a
-player <|.d. admin : is a
+  together {
+    :Player: as player << Human >>
 
-ui .-.> users : assembles
-ui .-.> operatives : assembles
-ui .-.> gaming : assembles
-ui .-.> threats : assembles
-ui .-.> codex : assembles
+    rectangle <<External>> {
+      :Foundry VTT: as foundry << System >>
+      :Discord: as discord << System >>
+      :Mail Server: as mail << System >>
+    }
+  }
+}
 
-player --> ui
 
-:Foundry VTT: as foundry << System >>
-:Discord: as discord << System >>
-
-:API Layer: as api << System >>
-foundry --> api : use
+gm    .d.|> player : is a
+judge .d.|> player : is a
+orga  .d.|> player : is a
+admin .d.|> player : is a
 
 together {
-  :DCIS Users: as users << System >>
-  :DCIS Operatives: as operatives << System >>
-  :DCIS Gaming: as gaming << System >>
-  :DCIS Threats: as threats << System >>
-  :Torg Codex: as codex << System >>
+  rectangle << Virtual >> {
+    :UI Layer: as ui
+    :API Layer: as api
+  }
 }
-:Single Sign-On: as sso << System >>
-:Mail Server: as mail << System >>
 
-judge --> users
-judge --> gaming
+together {
+  rectangle {
+    :DCIS Users: as users << System >>
+    :DCIS Arbitration: as arbitration << System >>
+  }
 
-admin --> users
-admin --> operatives
-admin --> gaming
-admin --> threats
-admin --> codex
+  rectangle {
+    :DCIS Operatives: as operatives << System >>
+  }
+
+  rectangle {
+    :DCIS Gaming: as gaming << System >>
+  }
+
+  rectangle {
+    :DCIS Threats: as threats << System >>
+  }
+
+  rectangle {
+    :Torg Codex: as codex << System >>
+  }
+
+  rectangle {
+    :Single Sign-On: as sso << System >>
+  }
+
+  rectangle {
+    :Discord Bot: as bot << System >>
+  }
+}
+
+
+ui --> users
+ui --> arbitration
+ui --> operatives
+ui --> gaming
+ui --> threats
+ui --> codex
+
+player --> ui
+player --> foundry
+gm --> foundry
 admin --> sso
 
+foundry --> api
+discord <--> bot
 
-api .-.> users : assembles
-api .-.> operatives : assembles
-api .-.> gaming : assembles
-api .-.> threats : assembles
-api .-.> codex : assembles
+users <-- bot
+arbitration <-- bot
+operatives <-- bot
+gaming <-- bot
+threats <-- bot
+codex <-- bot
 
-sso <.-. users
-sso <.-. operatives
-sso <.-. gaming
-sso <.-. threats
-sso <.-. codex
 
-mail <.-. users
-discord <.-. users
+api --> users
+api --> arbitration
+api --> operatives
+api --> gaming
+api --> threats
+api --> codex
 
+users ..> sso
+arbitration ..> sso
+operatives ..> sso
+gaming ..> sso
+threats ..> sso
+codex ..> sso
+
+users .-.> mail
+users .-.> discord
 @enduml
 ....
