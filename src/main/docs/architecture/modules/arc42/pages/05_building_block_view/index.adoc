@@ -1,5 +1,5 @@
+[[building-block-view]]
 = Building Block View
-[[section-building-block-view]]
 
 ifndef::imagesdir[:imagesdir: ../images]
 
@@ -52,7 +52,7 @@ dcis-users::
 (((SCS,dcis-users)))
 (((dcis-users)))
 A quite straight forward user management system.
-Authentication is off handed to OpenIDConnect providers.
+Authentication is offhanded to OpenIDConnect providers.
 So this SCS only manages some &#2191;Out-Game stuff.
 
 dcis-commons::
@@ -75,15 +75,13 @@ Objective is to offer https://foundryvtt.com[FoundryVTT] modules to integrate wi
 ((torg-codex)) cite:[torgcodex]::
 The SCSs containing data types that are also provided by the torg-codex should provide an interface for the torg-codex to include that data.
 
-<<<
-== Level 1
-include::level_1/dcis-commons.adoc[leveloffset=+1]
-include::level_1/dcis-users.adoc[leveloffset=+1]
-include::level_1/dcis-gaming.adoc[leveloffset=+1]
-include::level_1/dcis-operatives.adoc[leveloffset=+1]
-include::level_1/dcis-threats.adoc[leveloffset=+1]
-include::level_1/torg-codex.adoc[leveloffset=+1]
 
-== Level 2
-include::level_2/dcis-users.adoc[leveloffset=+1]
-// Level 3
+<<<
+include::level_1/index.adoc[leveloffset=+1]
+
+<<<
+include::level_2/index.adoc[leveloffset=+1]
+
+<<<
+include::level_3/dcis-users.adoc[leveloffset=+1]
+

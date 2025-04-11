@@ -1,0 +1,69 @@
+[[business-context]]
+= Business Context
+
+.The business context of the DCIS.
+[plantuml,business-context,svg]
+....
+@startuml
+skinparam actorStyle awesome
+
+:Player: as player << Human >>
+:GM: as gm << Human >>
+:Judge: as judge << Human >>
+:Orga: as orga << Human >>
+:Admin: as admin << Human >>
+
+:Foundry VTT: as foundry << System >>
+:Discord: as discord << System >>
+
+together {
+  :Mail Server: as mail << System >>
+  :Single Sign-On: as sso << System >>
+}
+
+together {
+  :API Layer: as api << System >>
+
+  :DCIS Users: as users << System >>
+  :DCIS Operatives: as operatives << System >>
+  :DCIS Gaming: as gaming << System >>
+  :DCIS Threats: as threats << System >>
+  :Torg Codex: as codex << System>>
+}
+
+player <|-- gm : is a
+player <|-- judge : is a
+player <|-- orga : is a
+player <|-- admin : is a
+
+foundry .d.> api
+
+api .d.> users
+api .d.> operatives
+api .d.> gaming
+api .d.> codex
+
+player .d.> users
+player .d.> operatives
+player .d.> gaming
+player .d.> threats
+player .d.> codex
+
+judge .d.> users
+judge .d.> gaming
+
+admin .d.> users
+admin .d.> operatives
+admin .d.> gaming
+admin .d.> threats
+admin .d.> codex
+admin .d.> sso
+
+sso <.d. users
+sso <.d. operatives
+sso <.d. gaming
+sso <.d. threats
+sso <.d. codex
+
+@enduml
+....

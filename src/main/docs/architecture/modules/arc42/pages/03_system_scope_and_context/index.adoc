@@ -1,22 +1,7 @@
 [[section-system-scope-and-context]]
-= System Scope and Context
+= System Scope and context
 
-ifndef::imagesdir[:imagesdir: ../images]
-
-[[business-context]]
-== Business Context
-
-The following chapters describe the main usecases of the different verticals.
-Each will be fleshed out in more detail in section xref:06_runtime_view.adoc[].
-
-include::operatives.adoc[leveloffset=+2]
-include::gaming.adoc[leveloffset=+2]
-include::threats.adoc[leveloffset=+2]
-include::torg-codex.adoc[leveloffset=+2]
-include::arbitration.adoc[leveloffset=+2]
+include::business-context.adoc[leveloffset=+1]
 
 <<<
-[[technical-context]]
-== Technical Context
-
 include::technical-context.adoc[leveloffset=+1]

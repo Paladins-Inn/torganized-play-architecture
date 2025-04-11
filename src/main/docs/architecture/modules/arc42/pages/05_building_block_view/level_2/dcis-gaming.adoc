@@ -6,7 +6,7 @@
 include::arc42:partial$includes/all.adoc[]
 
 This system contains all logic for the shared campaign (((Shared Campaign))) management and all gaming sessions (session (((Session))).
-It relies on data provided by xref:arc42:05_building_block_view/level_1/dcis-operatives.adoc[dcis-operatives] and xref:arc42:05_building_block_view/level_1/dcis-users.adoc[dcis-users].
+It relies on data provided by xref:arc42:05_building_block_view/level_2/dcis-operatives.adoc[dcis-operatives] and xref:arc42:05_building_block_view/level_2/dcis-users.adoc[dcis-users].
 
 == Quality/Performance Characteristics
 Besides of the default performance characteristics {ef01} no additional performance requirements exist.
