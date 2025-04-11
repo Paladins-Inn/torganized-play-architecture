@@ -1,4 +1,3 @@
-[[building-block-view-level2]]
 = Level 2 Building Blocks
 
 include::dcis-commons.adoc[leveloffset=+1]

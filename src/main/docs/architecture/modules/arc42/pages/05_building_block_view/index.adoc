@@ -81,12 +81,7 @@ Objective is to offer https://foundryvtt.com[FoundryVTT] modules to integrate wi
 ((torg-codex)) cite:[torgcodex]::
 The SCSs containing data types that are also provided by the torg-codex should provide an interface for the torg-codex to include that data.
 
-
-<<<
-include::level_1/index.adoc[leveloffset=+1]
-
-<<<
-include::level_2/index.adoc[leveloffset=+1]
-
-<<<
-include::level_3/index.adoc[leveloffset=+1]
+== Building Blocks
+* xref:./level_1/index.adoc[]
+* xref:./level_2/index.adoc[]
+* xref:./level_3/index.adoc[]

@@ -1,39 +1,3 @@
-[[level3-dcis-users]]
-= Level 3: dcis-users
-(((SCS, dcis-users)))
-(((dcis-users)))
-
-include::partial$includes/all.adoc[]
-
-[[uc-user-log-service]]
-== Feature: User Log Service
-
-.The UML flow for the user log entry service.
-[plantuml,uc-user-log-entry,svg]
-....
-@startuml
-
-start
-if (User exists?) then (yes)
-  :Write log to database;
-  :Increase success counter;
-else (no)
-  :Write WARN to system log;
-  :Increase error counter;
-endif
-
-end
-
-@enduml
-....
-
-.The BDD test definition for the user log entry service.
-[source,cucumber]
-----
-include::example$bdd/dcis-users/log-service.feature[]
-----
-
-
 [[uc-register-user]]
 == Feature: Register a new user
 

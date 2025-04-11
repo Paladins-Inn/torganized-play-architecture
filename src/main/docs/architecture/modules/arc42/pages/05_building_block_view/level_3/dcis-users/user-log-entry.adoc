@@ -1,0 +1,29 @@
+[[uc-user-log-service]]
+== Feature: User Log Service
+
+include::partial$includes/all.adoc[]
+
+.The UML flow for the user log entry service.
+[plantuml,uc-user-log-entry,svg]
+....
+@startuml
+
+start
+if (User exists?) then (yes)
+  :Write log to database;
+  :Increase success counter;
+else (no)
+  :Write WARN to system log;
+  :Increase error counter;
+endif
+
+end
+
+@enduml
+....
+
+.The BDD test definition for the user log entry service.
+[source,cucumber]
+----
+include::example$bdd/dcis-users/log-service.feature[]
+----
