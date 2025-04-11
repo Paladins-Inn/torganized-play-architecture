@@ -88,3 +88,5 @@ include::level_1/index.adoc[leveloffset=+1]
 <<<
 include::level_2/index.adoc[leveloffset=+1]
 
+<<<
+include::level_3/index.adoc[leveloffset=+1]
