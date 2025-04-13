@@ -1,8 +1,8 @@
 = Level 2 Building Blocks
 
-* xref:./dcis-commons.adoc[leveloffset=+1]
-* xref:./dcis-users.adoc[leveloffset=+1]
-* xref:./dcis-gaming.adoc[leveloffset=+1]
-* xref:./dcis-operatives.adoc[leveloffset=+1]
-* xref:./dcis-threats.adoc[leveloffset=+1]
-* xref:./torg-codex.adoc[leveloffset=+1]
+* xref:./dcis-commons.adoc[dcis-commons]
+* xref:./dcis-users.adoc[dcis-users]
+* xref:./dcis-gaming.adoc[dcis-gaming]
+* xref:./dcis-operatives.adoc[dcis-operatives]
+* xref:./dcis-threats.adoc[dcis-threats]
+* xref:./torg-codex.adoc[torg-codex]
