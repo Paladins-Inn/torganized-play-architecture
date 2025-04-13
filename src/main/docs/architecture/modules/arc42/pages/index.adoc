@@ -1,6 +1,13 @@
-= DCIS Systemarchitektur
+= DCIS System Architecture
 :page-aliases: ROOT:index.adoc
 
-include::tp:torganized-play:partial$torganized-play.adoc[]
+[NOTE]
+====
+You can download this documentation in PDF format:
+
+https://docs.paladins-inn.de/architecture/dcis-systemarchitecture.pdf
+====
 
 include::nav.adoc[]
+
+include::tp:torganized-play:partial$torganized-play.adoc[]
