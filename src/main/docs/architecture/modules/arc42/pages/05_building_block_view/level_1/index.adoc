@@ -8,6 +8,7 @@ include::dcis-operatives.adoc[leveloffset=+1]
 include::dcis-gaming.adoc[leveloffset=+1]
 include::dcis-threats.adoc[leveloffset=+1]
 include::torg-codex.adoc[leveloffset=+1]
+include::dcis-commons.adoc[leveloffset=+1]
 include::dcis-discord.adoc[leveloffset=+1]
 
 

@@ -13,3 +13,4 @@ src/main/docs/index.epub
 **/business-context-*.svg
 **/quality-tree.svg
 **/technical-context.svg
+/src/main/docs/architecture/modules/arc42/images/business-context.svg

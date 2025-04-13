@@ -14,9 +14,8 @@ The current verticals are:
 * xref:05_building_block_view/level_1/dcis-gaming.adoc[]
 * xref:05_building_block_view/level_1/dcis-threats.adoc[]
 * xref:05_building_block_view/level_1/torg-codex.adoc[]
-* Commons
-** Online Assets (CSS, images, ...)
-** Shared Library to follow the (((DRY))) DRY principle.
+* xref:05_building_block_view/level_1/dcis-commons.adoc[]
+* xref:05_building_block_view/level_1/dcis-discord.adoc[]
 
 
 == Single Sign On
@@ -33,10 +32,3 @@ The systems use frontend integration methods for the UI.
 
 Needed communication between the backends (data synchronization, event distribution) are handled via a messaging infrastructure.
 The broker used will be a rabbitMQ handling AMQP queues and topics.
-
-
-== Shared Libraries
-
-There is a small shared library.
-It is used to handle common stuff (e.g. user login notification to `torganized-play-users`).
-It _**must**_ only contain code that runs on almost any system.
