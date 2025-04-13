@@ -1,8 +1,4 @@
 = Deployment View
-[[section-deployment-view]]
-
-
-ifndef::imagesdir[:imagesdir: ../images]
 
 
 

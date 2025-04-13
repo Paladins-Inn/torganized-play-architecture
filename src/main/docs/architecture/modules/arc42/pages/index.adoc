@@ -1,6 +1,4 @@
 = DCIS Systemarchitektur
-Roland T. Lichti <rlichti@kaiserpfalz-edv.de>
-0.1.0-SNAPSHOT, {docdate}
 :page-aliases: ROOT:index.adoc
 
 include::tp:torganized-play:partial$torganized-play.adoc[]

@@ -1,4 +1,3 @@
-[[section-glossary]]
 [glossary]
 = Glossary
 

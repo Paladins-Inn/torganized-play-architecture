@@ -1,7 +1,4 @@
-[[section-solution-strategy]]
 = Solution Strategy
-
-ifndef::imagesdir[:imagesdir: ../images]
 
 == Modularization
 

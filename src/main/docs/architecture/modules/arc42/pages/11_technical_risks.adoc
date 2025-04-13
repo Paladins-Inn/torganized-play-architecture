@@ -1,9 +1,6 @@
-[[section-technical-risks]]
 = Risks and Technical Debts
 
-ifndef::imagesdir[:imagesdir: ../images]
-
-.Rists and technical debts
+.Risks and technical debts
 [cols="<.<5m,<.<15a,<.<20a",option="headers",frame="topbot",grid="rows"]
 |===
 | ID | Risk | Description
