@@ -1,3 +1,10 @@
 = Level 3 Building Blocks
 
-* xref:./dcis-users/index.adoc[]
+include::dcis-commons/index.adoc[leveloffset=+1]
+include::dcis-users/index.adoc[leveloffset=+1]
+include::dcis-gaming/index.adoc[leveloffset=+1]
+include::dcis-operatives/index.adoc[leveloffset=+1]
+include::dcis-threats/index.adoc[leveloffset=+1]
+include::torg-codex/index.adoc[leveloffset=+1]
+include::dcis-commons/index.adoc[leveloffset=+1]
+include::dcis-discord/index.adoc[leveloffset=+1]

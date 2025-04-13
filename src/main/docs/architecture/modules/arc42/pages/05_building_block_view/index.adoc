@@ -25,6 +25,9 @@ In addition the functionality of the torg-codex should be provided.
 dcis-gaming::
 (((SCS,dcis-gaming)))
 (((dcis-gaming)))
+[ xref:./level_1/dcis-gaming.adoc[Level 1]
+| xref:./level_2/dcis-gaming.adoc[Level 2]
+| xref:./level_3/dcis-gaming/index.adoc[Level 3] ]
 The gaming gets organized in this SCS.
 The mission (((Mission)))s are defined and their play results collected in t his subsystem.
 ((Game Master))s can add local games to the system to enable a full track of an operative's (((Operative))) history.
@@ -32,12 +35,17 @@ The mission (((Mission)))s are defined and their play results collected in t his
 dcis-operatives::
 (((SCS,dcis-operatives)))
 (((dcis-operatives)))
+[ xref:./level_1/dcis-operatives.adoc[Level 1]
+| xref:./level_2/dcis-operatives.adoc[Level 2]
+| xref:./level_3/dcis-operatices/index.adoc[Level 3] ]
 The storm knight (((Storm Knight)))s or stormer (((Stormer)))s (referred to as operative (((Operative)))s of a campaign are managed inside of this SCS.
-
 
 dcis-threats::
 (((SCS,dcis-threats)))
 (((dcis-threats)))
+[ xref:./level_1/dcis-threats.adoc[Level 1]
+| xref:./level_2/dcis-threats.adoc[Level 2]
+| xref:./level_3/dcis-threats/index.adoc[Level 3] ]
 The opposition to the Players is known as Threat in Torg Eternity.
 This system lets create new threat in addition to the ones defined by the original publishers.
 It also creates the famous threat cards out of the data and the image provided by the user creating the threat.
@@ -45,13 +53,19 @@ It also creates the famous threat cards out of the data and the image provided b
 torg-codex::
 (((SCS,torg-codex)))
 (((torg-codex)))
-A rip-off of the original https://torg-codex.com[Torg Codex]. 
+[ xref:./level_1/torg-codex.adoc[Level 1]
+| xref:./level_2/torg-codex.adoc[Level 2]
+| xref:./level_3/torg-codex/index.adoc[Level 3] ]
+A rip-off of the original https://torg-codex.com[Torg Codex].
 A page I really appreciate and that shows the value to a lot of players.
 **Best case scenario is that the SCS could still run completely separately without relying on any other SCS (even with another theme for page display).**
 
 dcis-users::
 (((SCS,dcis-users)))
 (((dcis-users)))
+[ xref:./level_1/dcis-users.adoc[Level 1]
+| xref:./level_2/dcis-users.adoc[Level 2]
+| xref:./level_3/dcis-users/index.adoc[Level 3] ]
 A quite straight forward user management system.
 Authentication is offhanded to OpenIDConnect providers.
 So this SCS only manages some Out-Game stuff.
@@ -59,11 +73,25 @@ So this SCS only manages some Out-Game stuff.
 dcis-arbitration::
 (((SCS,dcis-arbitration)))
 (((dcis-arbitration)))
+[ xref:./level_1/dcis-arbitration.adoc[Level 1]
+| xref:./level_2/dcis-arbitration.adoc[Level 2]
+| xref:./level_3/dcis-arbitration/index.adoc[Level 3] ]
 A generic arbitration system to sort out differences.
+
+dcis-discord::
+(((SCS,dcis-discord)))
+(((dcis-discord)))
+[ xref:./level_1/dcis-discord.adoc[Level 1]
+| xref:./level_2/dcis-discord.adoc[Level 2]
+| xref:./level_3/dcis-discord/index.adoc[Level 3] ]
+A discord bot and module to send discord messages.
 
 dcis-commons::
 (((SCS,dcis-commons)))
 (((dcis-commons)))
+[ xref:./level_1/dcis-commons.adoc[Level 1]
+| xref:./level_2/dcis-commons.adoc[Level 2]
+| xref:./level_3/dcis-commons/index.adoc[Level 3] ]
 The common java script, CSS and images or other resources that are used on multiple SCS.
 Helps the browsers to cache by referring the same stuff with the same URL instead of copying it to the different SCS.
 
