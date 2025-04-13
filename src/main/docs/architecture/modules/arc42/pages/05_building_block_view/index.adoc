@@ -37,7 +37,7 @@ dcis-operatives::
 (((dcis-operatives)))
 [ xref:./level_1/dcis-operatives.adoc[Level 1]
 | xref:./level_2/dcis-operatives.adoc[Level 2]
-| xref:./level_3/dcis-operatices/index.adoc[Level 3] ]
+| xref:./level_3/dcis-operatives/index.adoc[Level 3] ]
 The storm knight (((Storm Knight)))s or stormer (((Stormer)))s (referred to as operative (((Operative)))s of a campaign are managed inside of this SCS.
 
 dcis-threats::
