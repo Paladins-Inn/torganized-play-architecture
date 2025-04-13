@@ -1,0 +1,39 @@
+= Role Based Access
+
+The system uses a RBAC approach to the system access control.
+The following roles are defined:
+
+.Roles of the system
+[cols="<.<4,<.<4,<.<12a",option="header",frame="topbot",grid="rows"]
+|===
+| Role | Cardinality | Description
+
+| Player
+| Everyone on the system
+| This is the basic role when logged in.
+Access is granted to all public data.
+
+| GM
+| Players who are also GMs
+| GMs can manage game sessions and see data of operatives (including their history) when being registered for or applying to a game session.
+
+| Third Party Systems
+| API using systems
+| Third Party Systems (like ((FoundryVTT))) normally use the privileges of the person using them.
+
+| Orga
+| Torganized Play Organization
+| The Orga organizes the whole system.
+It manages the storyline and handles the mission data.
+A person with orga access has the ability to see almost any data and block/unblock most data.
+
+| Judge
+| Torganized Play Organization
+| A Judge is an arbiter.
+If there are conflicts that can't be resolved between the parties themself, a judge may be called to decide.
+A judge has access to all data and can block, unblock and delete almost any data to execute on their decision.
+
+| Admin
+| Torganized Play Organization
+| Full access. Nothing is hidden or impossible for admin level.
+|===

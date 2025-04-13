@@ -1,0 +1,4 @@
+= Self Contained Systems
+
+The system architecture is a microservice based approach following the self-contained system as specified by
+cite:[scs].

@@ -1,0 +1,11 @@
+= Cross-Cutting Concepts
+
+include::scs.adoc[leveloffset=+1]
+
+include::event-bus.adoc[leveloffset=+1]
+
+include::rbac.adoc[leveloffset=+1]
+
+include::observability.adoc[leveloffset=+1]
+
+include::data-protection.adoc[leveloffset=+1]

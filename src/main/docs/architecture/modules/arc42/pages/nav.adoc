@@ -13,7 +13,12 @@
 ** xref:arc42:06_runtime_view/index.adoc[]
 ** xref:arc42:07_deployment_view.adoc[]
 * Appendix
-** xref:arc42:08_concepts.adoc[]
+** xref:arc42:08_concepts/index.adoc[]
+*** xref:arc42:08_concepts/scs.adoc[]
+*** xref:arc42:08_concepts/event-bus.adoc[]
+*** xref:arc42:08_concepts/rbac.adoc[]
+*** xref:arc42:08_concepts/observability.adoc[]
+*** xref:arc42:08_concepts/data-protection.adoc[]
 ** xref:arc42:09_architecture_decisions/index.adoc[]
 *** xref:arc42:09_architecture_decisions/using-adrs.adoc[]
 *** xref:arc42:09_architecture_decisions/sql-data-store.adoc[]
