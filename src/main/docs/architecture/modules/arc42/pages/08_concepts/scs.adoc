@@ -1,9 +1,4 @@
 = Self-Contained Systems (SCS)
-:toc:
-:icons: font
-:source-highlighter: coderay
-:plantuml-format: svg
-:plantuml-server-url: https://www.plantuml.com/plantuml
 
 == Introduction
 
