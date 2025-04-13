@@ -16,6 +16,12 @@
 :co02-index: (((Quality Requirement, Compatibility, Compatible with torg-codex))) (((Compatibility, Compatible with torg-codex)))
 :co02: xref:10_quality_requirements.adoc#CO02[CO02 Compatible with torg-codex] {co02-index}
 
+:co03-index: (((QUality Requirement, Compatiblity, Compatible with discord))) (((Compatibility, Compatible with discord)))
+:co03: xref:10_quality_requirements.adoc#CO03[CO03 Compatible with discord] {co03-index}
+
+:co04-index: (((QUality Requirement, Compatiblity, Compatible with WordPress))) (((Compatibility, Compatible with WordPress)))
+:co04: xref:10_quality_requirements.adoc#CO04[CO04 Compatible with WordPress] {co04-index}
+
 :us01-index: (((Quality Requirement, Usability, Web based))) (((Usability, Web based)))
 :us01: xref:10_quality_requirements.adoc#US01[US01 Web based] {us01-index}
 

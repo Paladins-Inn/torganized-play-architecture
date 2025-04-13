@@ -6,16 +6,16 @@ ifndef::imagesdir[:imagesdir: ../images]
 == Modularization
 
 Every distinct aspect is modelled into a single vertical.
-The current verticals are:
+The xref:05_building_block_view/index.adoc#building-block-view-overview[current verticals] are:
 
-* xref:05_building_block_view/level_1/dcis-users.adoc[]
-* xref:05_building_block_view/level_1/dcis-arbitration.adoc[]
-* xref:05_building_block_view/level_1/dcis-operatives.adoc[]
-* xref:05_building_block_view/level_1/dcis-gaming.adoc[]
-* xref:05_building_block_view/level_1/dcis-threats.adoc[]
-* xref:05_building_block_view/level_1/torg-codex.adoc[]
-* xref:05_building_block_view/level_1/dcis-commons.adoc[]
-* xref:05_building_block_view/level_1/dcis-discord.adoc[]
+* xref:05_building_block_view/index.adoc#dcis-users[dcis-users] -- Account Management
+* xref:05_building_block_view/index.adoc#dcis-arbitration[dcis-arbitration] -- Petitions and Arbitration
+* xref:05_building_block_view/index.adoc#dcis-operatives[dcis-operatives] -- Handling of Player Characters
+* xref:05_building_block_view/index.adoc#dcis-gaming[dcis-gaming] -- Table and Campaign management
+* xref:05_building_block_view/index.adoc#dcis-threats[dcis-threats] -- Monsters and Adversaries
+* xref:05_building_block_view/index.adoc#torg-codex[torg-codex] -- Tables of Torg
+* xref:05_building_block_view/index.adoc#dcis-commons[dcis-commons] -- Shared Library and web asset SCS
+* xref:05_building_block_view/index.adoc#dcis-discord[dcis-discord] -- Discord Bot
 
 
 == Single Sign On
@@ -25,6 +25,9 @@ It will be connected via OpenIDConnect to external identity providers (like keyc
 The users are specified via their external user.
 Internally they get an UUID which maps to the (Issuer, User) tuple of the external provider.
 
+IMPORTANT: The current implementation expects the subject to be an UUID. That is given with https://keycloak.org[Keycloak].
+You will need one also to manage the roles for RBAC as they are in the IDP and not mirrored into the SCS.
+
 
 == Frontend and backend integration
 
@@ -32,3 +35,5 @@ The systems use frontend integration methods for the UI.
 
 Needed communication between the backends (data synchronization, event distribution) are handled via a messaging infrastructure.
 The broker used will be a rabbitMQ handling AMQP queues and topics.
+
+We heavily rely on xref:08_concepts/scs.adoc[self-contained systems] as promoted by INNOQ.

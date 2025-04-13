@@ -1,4 +1,30 @@
 [[bibliography]]
 = Bibliography
 
-bibliography::[]
+[cols="<.<5a,<.<15a",frame="topbot",grid="rows"]
+|===
+| [[factor12,12FACTOR]][12FACTOR]
+| **A. Wiggins**, 'The Twelve-Factor App'. 2017, [Online]. Available: https://12factor.net.
+
+| [[agilemanifesto,AGILE]][AGILE]
+| **K. B. et al., Ed.**, 'Manifesto for Agile Software Development'. 2001, [Online]. Available: https://agilemanifesto.org.
+
+| [[wordpress,BLOG]][BLOG]
+| [Online]. Available: https://wordpress.com/de/.
+
+| [[cleancode,CLEANCODE]][CLEANCODE]
+| **S. L. Ralph Westphal**, 'Clean Code Developer'. [Online]. Available: https://clean-code-developer.com.
+
+| [[torgcodex,CODEX]][CODEX]
+| [Online]. Available: https://torg-codex.com.
+
+| [[foundryvtt,FOUNDRY]][FOUNDRY]
+| [Online]. Available: https://foundryvtt.com.
+
+| [[roll20,ROLL20]][ROLL20]
+| [Online]. Available: https://roll20.net.
+
+| [[scs,SCS]][SCS]
+| 'Self-contained Systems (SCS)'. INNOQ, [Online]. Available: https://scs-architecture.org.
+
+|===

@@ -35,8 +35,6 @@ This includes using widely used frameworks so help can be given quite easily.
 |===
 
 
-
-
 == Quality Tree
 
 [plantuml,quality-tree,svg]
@@ -51,6 +49,8 @@ This includes using widely used frameworks so help can be given quite easily.
 -- Compatibility (CO)
 ---_ Compatible with FoundryVTT (CO01)
 ---_ Compatible with torg-codex (CO02)
+---_ Compatible with discord (CO03)
+---_ Compatible with WordPress (CO04)
 -- Usability (US)
 ---_ Web based (US01)
 ---_ FoundryVTT (US02)
@@ -91,6 +91,12 @@ This includes using widely used frameworks so help can be given quite easily.
 |[[CO02,Compatible with torg-codex (CO02)]] **CO02** {co02-index}
 |The data from DCIS which is compatible with the torg-codex (((torg-codex))) should be included in the torg-codex.
 
+|[[CO03,Compatible with discord (CO03)]] **CO03** {co03-index}
+|The system should offer a discord bot to use the data (e.g. the ((torg-codex)) contents).
+
+|[[CO04,Compatible with WordPress (CO04)]] **CO04** {co04-index}
+|The system should provide a WordPressxref:13_bibliography.adoc#wordpress[^BLOG^] plugin for campaign updates.
+
 |[[US01,Web based (US01)]] **US01** {us01-index}
 |The main interface should be web based.
 
@@ -105,7 +111,7 @@ Other translations **should** be easily addable.
 |Torg Eternity is played around the world. So the systems have to work 24/7. There is no maintenance window available where no users would be affected.
 
 |[[RE02,12 Factor (RE02)]] **RE02** {re02-index}
-|Following the guidelines of 'The Twelve-Factor App'cite:[factor12]  support the maintainability and resilience of the system.
+|Following the guidelines of 'The Twelve-Factor App'xref:arc42:13_bibliography.adoc#factor12[^12FACTOR^]  support the maintainability and resilience of the system.
 
 |[[EF01,Fast Response Times (EF01)]] **EF01** {ef01-index}
 | Request have to be answered quickly. The following time percentiles are sufficient:

@@ -1,7 +1,4 @@
-[[building-block-view]]
 = Building Block View
-
-ifndef::imagesdir[:imagesdir: ../images]
 
 include::arc42:partial$includes/all.adoc[]
 
@@ -10,7 +7,7 @@ include::arc42:partial$includes/all.adoc[]
 .Overview of the SCS and their transcludes, pages and APIs.
 image::dcis-overview.drawio.svg[]
 
-Motivation::
+[[Motivation]]Motivation::
 The system tries to separate the concerns of 
 
 * managing the games and campaign,
@@ -20,9 +17,10 @@ The system tries to separate the concerns of
 In addition the functionality of the torg-codex should be provided.
 
 
+[[building-block-view-overview]]
 === Contained Building Blocks
 
-dcis-gaming::
+[[dcis-gaming]]dcis-gaming::
 (((SCS,dcis-gaming)))
 (((dcis-gaming)))
 [ xref:./level_1/dcis-gaming.adoc[Level 1]
@@ -31,8 +29,9 @@ dcis-gaming::
 The gaming gets organized in this SCS.
 The mission (((Mission)))s are defined and their play results collected in t his subsystem.
 ((Game Master))s can add local games to the system to enable a full track of an operative's (((Operative))) history.
+In addition the shared campaign is created here. The results of all tables are combined into a shared campaign moving on.
 
-dcis-operatives::
+[[dcis-operatives]]dcis-operatives::
 (((SCS,dcis-operatives)))
 (((dcis-operatives)))
 [ xref:./level_1/dcis-operatives.adoc[Level 1]
@@ -40,7 +39,7 @@ dcis-operatives::
 | xref:./level_3/dcis-operatives/index.adoc[Level 3] ]
 The storm knight (((Storm Knight)))s or stormer (((Stormer)))s (referred to as operative (((Operative)))s of a campaign are managed inside of this SCS.
 
-dcis-threats::
+[[dcis-threats]]dcis-threats::
 (((SCS,dcis-threats)))
 (((dcis-threats)))
 [ xref:./level_1/dcis-threats.adoc[Level 1]
@@ -50,7 +49,7 @@ The opposition to the Players is known as Threat in Torg Eternity.
 This system lets create new threat in addition to the ones defined by the original publishers.
 It also creates the famous threat cards out of the data and the image provided by the user creating the threat.
 
-torg-codex::
+[[torg-codex]]torg-codex::
 (((SCS,torg-codex)))
 (((torg-codex)))
 [ xref:./level_1/torg-codex.adoc[Level 1]
@@ -60,7 +59,7 @@ A rip-off of the original https://torg-codex.com[Torg Codex].
 A page I really appreciate and that shows the value to a lot of players.
 **Best case scenario is that the SCS could still run completely separately without relying on any other SCS (even with another theme for page display).**
 
-dcis-users::
+[[dcis-users]]dcis-users::
 (((SCS,dcis-users)))
 (((dcis-users)))
 [ xref:./level_1/dcis-users.adoc[Level 1]
@@ -70,7 +69,7 @@ A quite straight forward user management system.
 Authentication is offhanded to OpenIDConnect providers.
 So this SCS only manages some Out-Game stuff.
 
-dcis-arbitration::
+[[dcis-arbitration]]dcis-arbitration::
 (((SCS,dcis-arbitration)))
 (((dcis-arbitration)))
 [ xref:./level_1/dcis-arbitration.adoc[Level 1]
@@ -78,7 +77,7 @@ dcis-arbitration::
 | xref:./level_3/dcis-arbitration/index.adoc[Level 3] ]
 A generic arbitration system to sort out differences.
 
-dcis-discord::
+[[dcis-discord]]dcis-discord::
 (((SCS,dcis-discord)))
 (((dcis-discord)))
 [ xref:./level_1/dcis-discord.adoc[Level 1]
@@ -86,7 +85,7 @@ dcis-discord::
 | xref:./level_3/dcis-discord/index.adoc[Level 3] ]
 A discord bot and module to send discord messages.
 
-dcis-commons::
+[[dcis-commons]]dcis-commons::
 (((SCS,dcis-commons)))
 (((dcis-commons)))
 [ xref:./level_1/dcis-commons.adoc[Level 1]
@@ -95,19 +94,30 @@ dcis-commons::
 The common java script, CSS and images or other resources that are used on multiple SCS.
 Helps the browsers to cache by referring the same stuff with the same URL instead of copying it to the different SCS.
 
+[[core-earth-news]]core-earth-news::
+(((SCS,core-earth-news)))
+(((core-earth-news)))
+The publication of the shared campaign.
+This SCS is currently only an idea.
+It could be a blogging system containing the campaign updates.
+Technically it could be a plugin for wordpress to access the (((SCS,dcis-gaming)))(((dcis-gaming)))dcs-gaming to build an in-game view of the shared campaign.
 
 === Important Interfaces
 
-IDs::
+[[IDs]]IDs::
 IDs throughout the system are ((UUID)), not the simple numbers used by other systems.
 Reason is, that the ID should be generated on first creation of an object and UUID is a nice way to handle that distribution.
 
-((FoundryVTT)) cite:[foundryvtt]::
+[[FoundryVTT]]((FoundryVTT)) xref:arc42:13_bibliography.adoc#foundryvtt[^FOUNDRY^]::
 Some SCS declare a FoundryVTT API. This API is not defined yet.
 Objective is to offer https://foundryvtt.com[FoundryVTT] modules to integrate with DCIS to enable game play and make it as easy as possible for players to play Torg Eternity.
+These modules are not planned yet and will come after the base system.
 
-((torg-codex)) cite:[torgcodex]::
+[[Torg-Codex]]((torg-codex)) xref:arc42:13_bibliography.adoc#torgcodex[^CODEX^]::
 The SCSs containing data types that are also provided by the torg-codex should provide an interface for the torg-codex to include that data.
+
+[[Wordpress]]((wordpress)) xref:arc42:13_bibliography.adoc#wordpress[^BLOG^]::
+There could be a plugin for WordPress to update a shared campaign based on the data given by (((SCS,dcis-gaming)))(((dcis-gaming)))dcis-gaming.
 
 == Building Blocks
 * xref:./level_1/index.adoc[]

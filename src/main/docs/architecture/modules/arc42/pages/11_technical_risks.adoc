@@ -16,4 +16,14 @@ ifndef::imagesdir[:imagesdir: ../images]
 | Guava EventBus is deprecated
 | The central synchronous event bus used within the SCS is Guava EventBus.
 The maintainers declared that they consider it deprecated.
+
+| [[TR003, TR-003 FoundryVTT Module]] TR-003
+| ((FoundryVTT)) Module
+| The API for FoundryVTTxref:13_bibliography.adoc#foundryvtt[^FOUNDRY^] is not very stable.
+It will require constant maintenance and therefore contradicts xref:10_quality_requirements.adoc#MT01[MT01].
+
+| [[TR004, TR-004 WordPress Plugin]] TR-004
+| ((Wordpress)) Plugin
+| The Wordpressxref:13_bibliography.adoc#wordpress[^BLOG^] plugin is a compless software by itself.
+It may be hard to maintain with the quality requireement xref:10_quality_requirements.adoc#MT01[MT01].
 |===

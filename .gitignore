@@ -6,11 +6,13 @@ target/
 src/main/docs/index.html
 src/main/docs/index.pdf
 src/main/docs/index.epub
-**/.asciidoctor/
-*.drawio.svg.bkp
 *.bak
 *.cache
+**/.asciidoctor/
+*.drawio.svg.bkp
+**/business-context.svg
 **/business-context-*.svg
-**/quality-tree.svg
 **/technical-context.svg
-/src/main/docs/architecture/modules/arc42/images/business-context.svg
+**/quality-tree.svg
+**/event-flow.svg
+**/frontend-integration.svg

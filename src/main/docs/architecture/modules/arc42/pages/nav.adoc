@@ -10,6 +10,13 @@
 *** xref:arc42:05_building_block_view/level_1/index.adoc[]
 *** xref:arc42:05_building_block_view/level_2/index.adoc[]
 *** xref:arc42:05_building_block_view/level_3/index.adoc[]
+**** xref:arc42:05_building_block_view/level_3/dcis-users/index.adoc[]
+**** xref:arc42:05_building_block_view/level_3/dcis-gaming/index.adoc[]
+**** xref:arc42:05_building_block_view/level_3/dcis-operatives/index.adoc[]
+**** xref:arc42:05_building_block_view/level_3/dcis-threats/index.adoc[]
+**** xref:arc42:05_building_block_view/level_3/torg-codex/index.adoc[]
+**** xref:arc42:05_building_block_view/level_3/dcis-commons/index.adoc[]
+**** xref:arc42:05_building_block_view/level_3/dcis-discord/index.adoc[]
 ** xref:arc42:06_runtime_view/index.adoc[]
 ** xref:arc42:07_deployment_view.adoc[]
 * Appendix
