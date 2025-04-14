@@ -1,6 +1,5 @@
 @startuml
 left to right direction
-skinparam actorStyle awesome
 skinparam nodesep 50
 skinparam ranksep 200
 
@@ -34,17 +33,17 @@ rectangle :core-earth-news: as cen << System >> {
 :DCIS Arbitration: as dcisArbitration << System>>
 :DCIS Discord: as dcisDiscord << System >>
 
-user <--> discord : uses
+user --> discord : uses
+discord <-.-> dcisDiscord : uses
+
 user --> ucRead
 orga --> dcisGaming : publish
-ucPublish <-- dcisGaming
+ucPublish <-- dcisGaming : publish
 
-ucRead <-.-> dcisDiscord
-ucPublish <-.-> dcisUsers
-ucPublish <-.-> dcisOperatives
-ucPublish <-.-> dcisGaming
-ucPublish <-.-> codex
-ucPublish <-.-> dcisArbitration
-
-dcisDiscord <--> discord : uses
+ucRead <-.-> dcisDiscord : data sync
+ucPublish <-.-> dcisUsers : data sync
+ucPublish <-.-> dcisOperatives : data sync
+ucPublish <-.-> dcisGaming : data sync
+ucPublish <-.-> codex : data sync
+ucPublish <-.-> dcisArbitration : data sync
 @enduml
