@@ -8,7 +8,9 @@ The following chapters describe the main use cases of the different verticals.
 * xref:./dcis-gaming.adoc[dcis-gaming]
 * xref:./dcis-threats.adoc[dcis-threats]
 * xref:./torg-codex.adoc[torg-codex]
+* xref:./core-earth-news.adoc[core-earth-news]
 * xref:./dcis-commons.adoc[dcis-commons]
+* xref:./dcis-libraries.adoc[dcis-libraries]
 * xref:./dcis-discord.adoc[dcis-discord]
 
 

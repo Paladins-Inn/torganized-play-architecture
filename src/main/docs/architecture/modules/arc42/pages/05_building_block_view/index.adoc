@@ -94,9 +94,20 @@ A discord bot and module to send discord messages.
 The common java script, CSS and images or other resources that are used on multiple SCS.
 Helps the browsers to cache by referring the same stuff with the same URL instead of copying it to the different SCS.
 
+[[dcis-libraries]]dcis-libraries::
+(((Libraries)))
+(((dcis-libraries)))
+[ xref:./level_1/dcis-libraries.adoc[Level 1]
+| xref:./level_2/dcis-libraries.adoc[Level 2]
+| xref:./level_3/dcis-libraries/index.adoc[Level 3] ]
+
 [[core-earth-news]]core-earth-news::
 (((SCS,core-earth-news)))
 (((core-earth-news)))
+(((Core Earth News)))
+[ xref:./level_1/core-earth-news.adoc[Level 1]
+| xref:./level_2/core-earth-news.adoc[Level 2]
+| xref:./level_3/core-earth-news/index.adoc[Level 3] ]
 The publication of the shared campaign.
 This SCS is currently only an idea.
 It could be a blogging system containing the campaign updates.

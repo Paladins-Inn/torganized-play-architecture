@@ -1,0 +1,114 @@
+@startuml
+left to right direction
+skinparam actorStyle awesome
+skinparam nodesep 50
+skinparam ranksep 200
+
+rectangle Users {
+  Player << Human >> as user
+  GM << Human >> as gm
+
+}
+
+together {
+  :Discord: as discord << External System >>
+  :Foundry VTT: as foundry << External System >>
+}
+
+rectangle apis as "DCIS API Layer" {
+  :core-earth-news: as dcisBlog << System >>
+  :dcis-discord: as dcisDiscord << System >>
+  :Virtual API: as api << Virtual >>
+}
+
+rectangle tp as "Torganized Play" {
+  Judge << Human >> as judge
+  Orga << Human >> as orga
+  Admin << Human >> as admin
+}
+
+gm --|> user : is a
+orga --|> user : is a
+
+judge --|> orga : is a
+admin --|> orga : is a
+
+
+:dcis-users: as dcisUsers << System >>
+:dcis-gaming: as dcisGaming << System >>
+:dcis-threats: as dcisThreats << System >>
+:dcis-operatives: as dcisOperatives << System >>
+:torg-codex: as torgCodex << System >>
+:dcis-arbitration: as dcisArbitration << System >>
+
+
+orga --> dcisBlog
+user --> discord : uses
+
+discord -.-|> user : impersonates
+discord <--> dcisDiscord : uses
+
+gm <|-.- foundry : impersonates
+gm --> foundry : uses
+
+rectangle :dcis-player: as Player << System >> {
+    usecase "List users" as ulist
+    usecase "Create user" as ucreate
+    usecase "Edit users" as uedit
+    usecase "List user logfile" as ulogfile
+
+    usecase "Create new logfile entry" as ulog
+
+
+  rectangle ucArbitration as "Arbitration" {
+    usecase "Petition user" as upetition
+
+    usecase "Detain user" as udetain
+    usecase "Ban user" as uban
+    usecase "Release user" as urelease
+  }
+
+    usecase "Rate user" as urate
+}
+
+foundry --> api : uses
+dcisBlog --> api : uses
+
+
+user --> ucreate : register
+user --> uedit : self
+user --> ulist
+user --> ulogfile
+user --> upetition
+user --> urate
+
+dcisDiscord --> api
+
+api --> ulist
+api --> ulogfile
+api --> upetition
+api --> urate
+
+orga --> ulist
+orga --> uedit
+orga --> ulogfile
+
+orga --> udetain
+orga --> uban
+orga --> urelease
+
+orga --> upetition
+
+ucreate <-- admin : any
+
+
+api -.-> ulog
+ulog <-.- dcisUsers
+ulog <-.- dcisGaming
+ulog <-.- dcisOperatives
+
+ulog <-.- dcisThreats
+ulog <-.- torgCodex
+ulog <-.- dcisArbitration
+
+@enduml

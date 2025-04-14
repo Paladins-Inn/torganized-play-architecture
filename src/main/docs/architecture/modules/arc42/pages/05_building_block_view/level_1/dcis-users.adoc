@@ -1,4 +1,3 @@
-[[level1-dcis-users]]
 = Level 1: dcis-users
 (((SCS, dcis-users)))
 (((dcis-users)))
@@ -11,80 +10,9 @@ Handles the user management stuff for the whole system.
 
 .Player management.
 [plantuml,use-cases-user,svg]
-....
-@startuml
-left to right direction
-skinparam actorStyle awesome
-skinparam nodesep 50
-skinparam ranksep 200
-
-Player << Human >> as user
-GM << Human >> as gm
-Judge << Human >> as judge
-Orga << Human >> as orga
-Admin << Human >> as admin
-
-user <|-- gm : is a
-
-:dcis-users: as dcisUsers << System >>
-:dcis-gaming: as dcisGaming << System >>
-:dcis-threats: as dcisThreats << System >>
-:dcis-operatives: as dcisOperatives << System >>
-:torg-codex: as torgCodex << System >>
-
-rectangle Player {
-    usecase "List users" as ulist
-    usecase "Create user" as ucreate
-    usecase "Edit users" as uedit
-    usecase "List user logfile" as ulogfile
-
-    usecase "Create new logfile entry" as ulog
-
-    usecase "Petition user" as upetition
-    usecase "Detain user" as udetain
-    usecase "Petition Detainment" as udetainpetition
-    usecase "Release user" as urelease
-
-    usecase "Rate user" as urate
-
-    usecase "Ban user" as uban
-    usecase "Petition Ban" as ubanpetition
-    usecase "Unban user" as uunban
-}
-
-user --> ucreate
-user --> ulist
-user --> ulogfile
-user --> upetition
-user --> udetainpetition
-user --> ubanpetition
-user --> urate
-ulist <-- judge
-ulogfile <-- judge
-uban <-- judge
-uunban <-- judge
-udetain <-- judge
-urelease <-- judge
-ulist <-- orga
-ulogfile <-- orga
-udetain <-- orga
-urelease <-- orga
-ulist <-- admin
-ucreate <-- admin
-ulogfile <-- admin
-uban <-- admin
-uunban <-- admin
-udetain <-- admin
-urelease <-- admin
-
-dcisUsers --> ulog
-dcisGaming --> ulog
-dcisThreats --> ulog
-dcisOperatives --> ulog
-torgCodex --> ulog
-
-@enduml
-....
+----
+include::dcis-users.puml[]
+----
 
 
 

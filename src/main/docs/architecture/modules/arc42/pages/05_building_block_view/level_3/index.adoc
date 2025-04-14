@@ -1,10 +1,12 @@
 = Level 3 Building Blocks
 
 * xref:./dcis-commons/index.adoc[dcis-commons]
+* xref:./dcis-libraries/index.adoc[dcis-libraries]
 * xref:./dcis-users/index.adoc[dcis-users]
 * xref:./dcis-gaming/index.adoc[dcis-gaming]
 * xref:./dcis-operatives/index.adoc[dcis-operatives]
 * xref:./dcis-threats/index.adoc[dcis-threats]
 * xref:./torg-codex/index.adoc[torg-codex]
+* xref:./core-earth-news/index.adoc[core-earth-news]
 * xref:./dcis-commons/index.adoc[dcis-commons]
 * xref:./dcis-discord/index.adoc[dcis-discord]
