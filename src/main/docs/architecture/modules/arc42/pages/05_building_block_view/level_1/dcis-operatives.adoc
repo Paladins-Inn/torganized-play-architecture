@@ -6,5 +6,5 @@
 .These use cases revolve around the ((PC))s. They are called ((Operative))s here.
 [plantuml,business-context-operatives,svg]
 ----
-include::dcis-operatives.puml[]
+include::./dcis-operatives.puml[]
 ----

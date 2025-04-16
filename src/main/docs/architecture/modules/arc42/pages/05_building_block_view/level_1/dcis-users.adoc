@@ -11,7 +11,7 @@ Handles the user management stuff for the whole system.
 .Player management.
 [plantuml,use-cases-user,svg]
 ----
-include::dcis-users.puml[]
+include::./dcis-users.puml[]
 ----
 
 

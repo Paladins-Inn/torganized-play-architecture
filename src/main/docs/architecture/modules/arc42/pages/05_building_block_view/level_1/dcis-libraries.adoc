@@ -10,7 +10,7 @@ These are the libraries with common functionalities for all SCSes.
 .Discord Bot.
 [plantuml,dcis-libraries-level1,svg]
 ----
-include::dcis-libraries-level1.puml[]
+include::./dcis-libraries-level1.puml[]
 ----
 
 

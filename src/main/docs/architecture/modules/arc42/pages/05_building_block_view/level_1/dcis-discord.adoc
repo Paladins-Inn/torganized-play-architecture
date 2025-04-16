@@ -11,7 +11,7 @@ This is the discord bot for handling the data within Discord.
 .Discord Bot.
 [plantuml,use-cases-discord,svg]
 ----
-include::dcis-discord.puml[]
+include::./dcis-discord.puml[]
 ----
 
 

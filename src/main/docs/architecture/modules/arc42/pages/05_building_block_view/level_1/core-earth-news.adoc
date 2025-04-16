@@ -10,7 +10,7 @@ This is the discord bot for handling the data within Discord.
 .Discord Bot.
 [plantuml,use-cases-core-earth-news,svg]
 ----
-include::core-earth-news.puml[]
+include::./core-earth-news.puml[]
 ----
 
 
