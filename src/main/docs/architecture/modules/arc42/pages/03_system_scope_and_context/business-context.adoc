@@ -30,39 +30,37 @@ orga  .d.|> player : is a
 admin .d.|> player : is a
 
 together {
-  rectangle << Virtual >> {
-    :UI Layer: as ui
-    :API Layer: as api
-  }
-}
-
-together {
-  rectangle {
-    :DCIS Users: as users << System >>
-    :DCIS Arbitration: as arbitration << System >>
-  }
-
-  rectangle {
-    :DCIS Operatives: as operatives << System >>
-  }
-
-  rectangle {
-    :DCIS Gaming: as gaming << System >>
-  }
-
-  rectangle {
-    :DCIS Threats: as threats << System >>
-  }
-
-  rectangle {
-    :Torg Codex: as codex << System >>
-  }
-
-  rectangle {
+  rectangle "Application Layer" {
+    :UI Layer: as ui << Virtual >>
+    :API Layer: as api << Virtual >>
     :Discord Bot: as bot << System >>
   }
 }
 
+rectangle "Delphi Council Information System" {
+    :DCIS Arbitration: as arbitration << System >>
+    :DCIS Operatives: as operatives << System >>
+    :DCIS Gaming: as gaming << System >>
+    :DCIS Threats: as threats << System >>
+    :DCIS Users: as users << System >>
+}
+
+rectangle "Torg Codex" {
+    :Torg Codex: as codex << System >>
+}
+
+broker as "Messaging Broker" << Asynchronus >>
+mail as "Mailserver" << External Service >>
+
+player --> discord : uses
+player --> ui : uses
+player --> foundry : uses
+admin --> sso : configures
+
+foundry --> api
+discord <--> bot
+
+bot --> api
 
 ui --> users
 ui --> arbitration
@@ -71,16 +69,6 @@ ui --> gaming
 ui --> threats
 ui --> codex
 
-player --> ui
-player --> foundry
-player --> discord
-admin --> sso
-
-foundry --> api
-discord <--> bot
-
-api <-- bot
-
 api --> users
 api --> arbitration
 api --> operatives
@@ -88,7 +76,23 @@ api --> gaming
 api --> threats
 api --> codex
 
-users --> player : sends email
-users --> discord : sends message
+mail <-- users : sends email
+mail --> player : sends email
+bot <-- users : sends message
+
+users <-.-> broker
+arbitration <-.-> broker
+operatives <-.-> broker
+gaming <-.-> broker
+threats <-.-> broker
+codex <-.-> broker
+
+sso <-- player : logs into
+sso <-.- users
+sso <-.- arbitration
+sso <-.- operatives
+sso <-.- gaming
+sso <-.- threats
+sso <-.- codex
 @enduml
 ....

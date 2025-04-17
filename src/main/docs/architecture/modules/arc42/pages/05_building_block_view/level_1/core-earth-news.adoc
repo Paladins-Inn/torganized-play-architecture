@@ -10,7 +10,55 @@ This is the discord bot for handling the data within Discord.
 .Discord Bot.
 [plantuml,use-cases-core-earth-news,svg]
 ----
-include::./core-earth-news.puml[]
+@startuml
+left to right direction
+skinparam nodesep 50
+skinparam ranksep 200
+
+together {
+  Player << Human >> as user
+  GM << Human >> as gm
+  :Discord: as discord << External System >>
+}
+
+together {
+  Judge << Human >> as judge
+  Orga << Human >> as orga
+  Admin << Human >> as admin
+}
+
+gm --|> user : is a
+orga --|> user : is a
+
+judge --|> orga : is a
+admin --|> orga : is a
+
+rectangle :core-earth-news: as cen << System >> {
+  usecase (Read news)/ as ucRead
+  usecase (Publish news)/ as ucPublish
+}
+
+:DCIS Users: as dcisUsers << System >>
+:DCIS Operatives: as dcisOperatives << System >>
+:DCIS Gaming: as dcisGaming << System >>
+:Torg Codex: as codex << System>>
+:DCIS Arbitration: as dcisArbitration << System>>
+:DCIS Discord: as dcisDiscord << System >>
+
+user --> discord : uses
+discord <-.-> dcisDiscord : uses
+
+user --> ucRead
+orga --> dcisGaming : publish
+ucPublish <-- dcisGaming : publish
+
+ucRead <-.-> dcisDiscord : data sync
+ucPublish <-.-> dcisUsers : data sync
+ucPublish <-.-> dcisOperatives : data sync
+ucPublish <-.-> dcisGaming : data sync
+ucPublish <-.-> codex : data sync
+ucPublish <-.-> dcisArbitration : data sync
+@enduml
 ----
 
 

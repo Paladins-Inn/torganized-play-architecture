@@ -11,7 +11,70 @@ This is the discord bot for handling the data within Discord.
 .Discord Bot.
 [plantuml,use-cases-discord,svg]
 ----
-include::./dcis-discord.puml[]
+@startuml
+left to right direction
+skinparam actorStyle awesome
+skinparam nodesep 50
+skinparam ranksep 200
+
+together {
+  Player << Human >> as user
+  GM << Human >> as gm
+  :Discord: as discord << External System >>
+}
+
+together {
+  Judge << Human >> as judge
+  Orga << Human >> as orga
+  Admin << Human >> as admin
+}
+
+gm --|> user : is a
+
+judge --|> orga : is a
+admin --|> orga : is a
+
+rectangle :dcis-discord: as dcisDiscord << System >> {
+    usecase (User Use Cases)/ as ucUsers
+    usecase (Operative Use Cases)/ as ucOperatives
+    usecase (Game Table Use Cases)/ as ucGaming
+    usecase (Torg Codex Use Cases)/ as ucCodex
+    usecase (Arbitration Use Cases)/ as ucArbitration
+
+    usecase (Send Discord Message) as discordMessage
+}
+
+:DCIS Users: as dcisUsers << System >>
+:DCIS Operatives: as dcisOperatives << System >>
+:DCIS Gaming: as dcisGaming << System >>
+:Torg Codex: as codex << System>>
+:DCIS Arbitration: as dcisArbitration << System>>
+
+user --> discord
+orga --> discord
+
+discord --> ucUsers
+discord --> ucOperatives
+discord --> ucGaming
+discord --> ucCodex
+discord --> ucArbitration
+dcisDiscord -.-> dcisUsers : log
+
+ucUsers --> dcisUsers
+ucOperatives --> dcisOperatives
+ucGaming --> dcisGaming
+ucCodex --> codex
+ucArbitration --> dcisArbitration
+
+discordMessage <-.- dcisUsers : message
+discordMessage <-.- dcisOperatives : message
+discordMessage <-.- dcisGaming : message
+discordMessage <-.- codex : message
+discordMessage <-.- dcisArbitration : message
+
+discord <-.- discordMessage
+@enduml
+
 ----
 
 
