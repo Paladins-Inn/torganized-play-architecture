@@ -29,14 +29,14 @@ In addition, the interoperability with other Torg Eternity supporting systems is
 * {co03}
 * {co04}
 * {us02}
-* {us03}
 
 
 == Quality Goals
 
 * {re01}
-* {re02}
-* {}
+* {us03}
+* {us04}
+* {mt01}
 
 
 == Stakeholders

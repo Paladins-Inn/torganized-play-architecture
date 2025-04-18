@@ -1,0 +1,6 @@
+[index]]
+= Index
+
+NOTE: The index only is generated for the PDF. Please use the full text search online.
+
+<<<
