@@ -3,7 +3,7 @@
 (((SCS,dcis-commons)))
 (((dcis-commons)))
 
-include::arc42:partial$includes/all.adoc[]
+include::partial$includes/config.adoc[]
 
 This SCS provides default CSS and java script that can be cached that way on the users computers to provide fast access to the HTML elements.
 
@@ -24,3 +24,5 @@ The project also provides a small library for use by all other SCS.
 == Open Issues/Problems/Risks
 * The versioned assets need to be managed carefully.
   Otherwise pages relying on them may break.
+
+<<<

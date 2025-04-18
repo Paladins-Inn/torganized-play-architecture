@@ -1,5 +1,7 @@
 = Self-Contained Systems (SCS)
 
+include::partial$includes/config.adoc[]
+
 == Introduction
 
 Self-Contained Systems (SCS) is an architectural style promoted by INNOQ xref:arc42:13_bibliography.adoc#scs[^SCS^].
@@ -146,3 +148,5 @@ These drawbacks mean that SCS is best suited for medium to large teams and proje
 The Self-Contained Systems architecture enables high autonomy and scalability.
 They ensuring each system is independent in both **UI and backend**, and communicates only via **asynchronous events**.
 Frontend integration is handled through server-side includes or Web Components, maintaining both modularity and user experience.
+
+<<<

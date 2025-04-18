@@ -1,11 +1,11 @@
-[[uc-user-log-service]]
 = Feature: User Log Service
 
-include::partial$includes/all.adoc[]
+include::partial$includes/config.adoc[]
+
 
 .The UML flow for the user log entry service.
 [plantuml,uc-user-log-entry,svg]
-....
+----
 @startuml
 
 start
@@ -20,10 +20,13 @@ endif
 end
 
 @enduml
-....
+----
+
 
 .The BDD test definition for the user log entry service.
 [source,cucumber]
 ----
 include::example$bdd/dcis-users/log-service.feature[]
 ----
+
+<<<

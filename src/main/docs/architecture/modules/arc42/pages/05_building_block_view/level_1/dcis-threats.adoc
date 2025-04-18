@@ -5,7 +5,7 @@
 
 .The management and use of new ((Threat))s.
 [plantuml,business-context-threats,svg]
-....
+----
 @startuml
 left to right direction
 skinparam actorStyle awesome
@@ -68,4 +68,6 @@ torgCodex ..> pthreat : asynchronous
 torgCodex <.. cthreat : asynchronous
 
 @enduml
-....
+----
+
+<<<

@@ -1,5 +1,7 @@
 = Data Protection
 
+include::partial$includes/config.adoc[]
+
 Most of the data is user generated and heavily linked to the person who created it.
 Therefore there must be provisions to protect the rights of the users.
 
@@ -65,3 +67,5 @@ The personal data will be blocked at the moment the account is closed.
 The data will be deleted **three years** after closing the account.
 
 If there is a lawsuit (ongoing or up-coming) or a written agreement by the owner, the data will not be deleted.
+
+<<<

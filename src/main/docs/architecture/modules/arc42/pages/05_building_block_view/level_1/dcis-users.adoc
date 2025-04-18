@@ -2,7 +2,7 @@
 (((SCS, dcis-users)))
 (((dcis-users)))
 
-include::partial$includes/all.adoc[]
+include::partial$includes/config.adoc[]
 
 Handles the user management stuff for the whole system.
 
@@ -135,8 +135,10 @@ ulog <-.- dcisArbitration
 * {fs04}
 * {us01}
 * {re01}
-* {ef01}
+* {us04}
 * {mt01}
 
 
 == Open Issues/Problems/Risks
+
+<<<

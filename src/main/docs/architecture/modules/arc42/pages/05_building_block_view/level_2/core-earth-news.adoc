@@ -1,4 +1,8 @@
 = Level 2: core-earth-news
 (((SCS, core-earth-news))) (((core-earth-news))) (((Core Earth News)))
 
+include::partial$includes/config.adoc[]
+
 _**TBD**_
+
+<<<

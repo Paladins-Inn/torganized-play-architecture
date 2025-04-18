@@ -1,9 +1,8 @@
-[[runtime-dcis-users]]
 = dcis-users
 (((SCS, dcis-users)))
 (((dcis-users)))
 
-include::partial$includes/all.adoc[]
+include::partial$includes/config.adoc[]
 
 Handles the user management stuff for the whole system.
 In addition the SCS handles arbitation and notification of users to external systems like e-mail or discord.
@@ -376,3 +375,5 @@ a| Block users inactive for more than 2 years.
 .2+h| Purge Logs | yearly
 | Purge logfiles after 10 years.
 |===
+
+<<<

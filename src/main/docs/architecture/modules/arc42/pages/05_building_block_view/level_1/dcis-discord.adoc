@@ -2,7 +2,7 @@
 (((SCS, dcis-discord)))
 (((dcis-discord)))
 
-include::partial$includes/all.adoc[]
+include::partial$includes/config.adoc[]
 
 This is the discord bot for handling the data within Discord.
 
@@ -87,10 +87,12 @@ discord <-.- discordMessage
 * {fs04}
 * {co03}
 * {re01}
-* {ef01}
+* {us04}
 * {mt01}
 
 
 == Open Issues/Problems/Risks
 
 It's only an idea yet.
+
+<<<

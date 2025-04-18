@@ -5,7 +5,7 @@
 
 .The integrated ((torg-codex)).
 [plantuml,business-context-codex,svg]
-....
+----
 @startuml
 left to right direction
 skinparam actorStyle awesome
@@ -121,4 +121,6 @@ cthreat <.. dcisThreats : asynchronous
 rthreat <.. dcisThreats : asynchronous
 
 @enduml
-....
+----
+
+<<<

@@ -1,0 +1,12 @@
+// asciidoc settings for EN (English)
+// ==================================
+include::pi:commons:page$/config.adoc[]
+
+:toc-title: Table of contents
+
+:heading-font-color: #ff0000
+
+include::partial$includes/09_architecture_decisions.adoc[]
+include::partial$includes/10_quality_requirements.adoc[]
+include::partial$includes/11_technical_risks.adoc[]
+include::partial$includes/13_bibliography.adoc[]

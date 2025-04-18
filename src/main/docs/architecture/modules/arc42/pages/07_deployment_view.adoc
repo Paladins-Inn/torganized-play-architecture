@@ -1,6 +1,6 @@
 = Deployment View
 
-
+include::partial$includes/config.adoc[]
 
 == Infrastructure Level 1
 
@@ -37,3 +37,5 @@ _<diagram + explanation>_
 === _<Infrastructure Element n>_
 
 _<diagram + explanation>_
+
+<<<

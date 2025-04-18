@@ -1,6 +1,6 @@
 = Quality Requirements
 
-include::partial$includes/all.adoc[]
+include::partial$includes/config.adoc[]
 
 [cols="<.<1,<.<4a",options="header",frame="topbot",grid="rows"]
 |===
@@ -22,9 +22,6 @@ include::partial$includes/all.adoc[]
 |[[REQ-RE,Reliability]] **Reliability** (((Quality Requirement, Reliability)))
 |The systems needs to operate for world wide consumption.
 
-|[[REQ-EF,Efficiency]] **Efficiency** (((Quality Requirement, Efficiency)))
-|The software needs to answer requests fast. Otherwise it will not be accepted.
-
 |[[REQ-MT,Maintainability]] **Maintainability** (((Quality Requirement, Maintainability)))
 |The software should be easily maintainable.
 This includes using widely used frameworks so help can be given quite easily.
@@ -35,7 +32,7 @@ This includes using widely used frameworks so help can be given quite easily.
 == Quality Tree
 
 [plantuml,quality-tree,svg]
-....
+----
 @startmindmap
 + **Requirements**
 -- Functional Suitability (FS)
@@ -48,21 +45,20 @@ This includes using widely used frameworks so help can be given quite easily.
 ---_ Compatible with torg-codex (CO02)
 ---_ Compatible with discord (CO03)
 ---_ Compatible with WordPress (CO04)
--- Usability (US)
----_ Web based (US01)
----_ FoundryVTT (US02)
----_ Multi-language (US03)
 
+++ Usability (US)
++++_ Web based (US01)
++++_ FoundryVTT (US02)
++++_ Multi-language (US03)
++++_ Fast Responses (us04)
 ++ Reliability (RE)
 +++_ Working Hours 24/7 (RE01)
 +++_ 12-Factor (RE02)
-++ Efficiency (EF)
-+++_ Fast Responses (EF01)
 ++ Maintainability (MT)
 +++_ Small Team (MT01)
 +++_ 12-Factor (RE02)
 @endmindmap
-....
+----
 
 == Quality Scenarios
 
@@ -92,7 +88,7 @@ This includes using widely used frameworks so help can be given quite easily.
 |The system should offer a discord bot to use the data (e.g. the ((torg-codex)) contents).
 
 |[[CO04,Compatible with WordPress (CO04)]] **CO04** {co04-index}
-|The system should provide a WordPressxref:13_bibliography.adoc#wordpress[^BLOG^] plugin for campaign updates.
+|The system should provide a WordPress{wordpress} plugin for campaign updates.
 
 |[[US01,Web based (US01)]] **US01** {us01-index}
 |The main interface should be web based.
@@ -104,13 +100,7 @@ This includes using widely used frameworks so help can be given quite easily.
 |The system **has to** be available at least in *German* and *English* language.
 Other translations **should** be easily addable.
 
-|[[RE01,Working hours 24/7 (RE01)]] **RE01** {re01-index}
-|Torg Eternity is played around the world. So the systems have to work 24/7. There is no maintenance window available where no users would be affected.
-
-|[[RE02,12 Factor (RE02)]] **RE02** {re02-index}
-|Following the guidelines of 'The Twelve-Factor App'xref:arc42:13_bibliography.adoc#factor12[^12FACTOR^]  support the maintainability and resilience of the system.
-
-|[[EF01,Fast Response Times (EF01)]] **EF01** {ef01-index}
+|[[US04,Fast Response Times (US04)]] **us04** {us04-index}
 | Request have to be answered quickly. The following time percentiles are sufficient:
 [cols="<.<1,<.<1",width=40%,options="header",frame="topbot",grid="rows"]
 !===
@@ -122,8 +112,15 @@ Other translations **should** be easily addable.
 !25%!5
 !===
 
+|[[RE01,Working hours 24/7 (RE01)]] **RE01** {re01-index}
+|Torg Eternity is played around the world. So the systems have to work 24/7. There is no maintenance window available where no users would be affected.
+
+|[[RE02,12 Factor (RE02)]] **RE02** {re02-index}
+|Following the guidelines of 'The Twelve-Factor App'xref:arc42:13_bibliography.adoc#factor12[^12FACTOR^]  support the maintainability and resilience of the system.
+
 |[[MT01,Small Team (MT01)]] **MT01** {mt01-index}
 |Maintaining the software and the data must be possible for a small team (basically the full army of myself, me, and I).
 
 |===
 
+<<<

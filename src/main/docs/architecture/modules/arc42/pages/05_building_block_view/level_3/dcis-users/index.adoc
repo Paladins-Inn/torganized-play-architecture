@@ -1,5 +1,0 @@
-[[building-block-view-level3]]
-= Level 3: dcis-users
-
-include::user-log-entry.adoc[leveloffset=+1]
-include::user-registration.adoc[leveloffset=+1]

@@ -1,6 +1,8 @@
 [[bibliography]]
 = Bibliography
 
+include::partial$includes/config.adoc[]
+
 [cols="<.<5a,<.<15a",frame="topbot",grid="rows"]
 |===
 | [[factor12,12FACTOR]][12FACTOR]
@@ -28,3 +30,5 @@
 | 'Self-contained Systems (SCS)'. INNOQ, [Online]. Available: https://scs-architecture.org.
 
 |===
+
+<<<

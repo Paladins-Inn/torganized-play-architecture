@@ -1,7 +1,7 @@
 [glossary]
 = Glossary
 
-ifndef::imagesdir[:imagesdir: ../images]
+include::partial$includes/config.adoc[]
 
 This glossary tries to explain the terms used throughout this document.
 There are terms of the general _TTRPG_ lingo specialized terms to _Torg Eternity_.
@@ -12,10 +12,10 @@ And of course there are terms special to the _DCIS_.
 |Term |Definition
 
 |12 Factor App
-|Some principles how to design a microservice application. Please check xref:arc42:13_bibliography.adoc#factor12[^12FACTOR^] for further information.
+|Some principles how to design a microservice application. Please check {12factor} for further information.
 
 |Agile Manifesto
-|The Manifesto for Agile Software Development as published on xref:arc42:13_bibliography.adoc#agilemanifesto[^AGILE^].
+|The Manifesto for Agile Software Development as published on {agilemanifesto}.
 
 |((AMQP))
 |A messaging protocol standard that defines also the wire protocol.
@@ -35,7 +35,7 @@ But in future they may need to split to keep up the _shared campaign_ within _To
 
 |((Clean Code))
 |Clean Code has been promoted by several books by Robert C. Martin.
-A nice website to describe it is xref:arc42:13_bibliography.adoc#cleancode[^CLEANCODE^].
+A nice website to describe it is {cleancode}.
 
 |((Core Earth))
 |The _realm_ of the original Earth.
@@ -63,8 +63,8 @@ During the covid pandemic the _TTRPG_ community discovered discord to play games
 |((DRY))-Principle
 |An architectural principle in software development: "**D**on't **repeat** **y**ourself".
 
-|((FoundryVTT)) xref:arc42:13_bibliography.adoc#foundryvtt[^FOUNDRY^]
-|A _virtual table top_.
+|((FoundryVTT))
+|{foundryvtt} A _virtual table top_.
 
 |((GM)) ((Game Master))
 |The one person who plays the world the _players_ play their _PCs_ in.
@@ -104,14 +104,14 @@ Normal _campaigns_ circle around Storm Knights, but perhaps some want to play St
 |((Realm))
 |The different realities invading in Torg Eternity create the so called Realms on Earth. The remaining parts form the Realm of Core Earth.
 
-|((Roll20)) xref:arc42:13_bibliography.adoc#roll20[^ROLL20^]
-|A _virtual table top_.
+|((Roll20))
+|{roll20} A _virtual table top_.
 
 |((Self Contained System)) ((SCS))
 |A self contained system is a microservice with UI responsibly and independent database.
 Needed data is transferred asynchronously and fulfills eventual consistency.
 It offers fragments of HTML via HTTP to be included in UIs from other systems.
-Please check xref:arc42:13_bibliography.adoc#scs[^SCS^] for more information.
+Please check {scs} for more information.
 
 |((Session))
 |A single event on a _TTRPG_ _table_. 
@@ -172,3 +172,5 @@ And the results can be scored for creating a _shared campaign_ in the _Possibili
 |An architectural principle in software development: "**Y**ou **A**in't **G**ona **N**eed **I**t".
 
 |===
+
+<<<

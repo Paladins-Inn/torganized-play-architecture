@@ -1,4 +1,0 @@
-= System Scope and context
-
-* xref:./business-context.adoc[]
-* xref:./technical-context.adoc[]

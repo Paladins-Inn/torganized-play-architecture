@@ -1,7 +1,7 @@
 = Level 1: dcis-libraries
 (((Libraries))) (((Libraries, discord))) (((Libraries, dcis-lib-users))) (((Libraries, dcis-lib-petitions)))
 
-include::partial$includes/all.adoc[]
+include::partial$includes/config.adoc[]
 
 These are the libraries with common functionalities for all SCSes.
 
@@ -78,3 +78,5 @@ kpDrivethru ..> drivethru : uses
 == Open Issues/Problems/Risks
 
 It's only an idea yet.
+
+<<<

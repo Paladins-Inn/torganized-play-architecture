@@ -1,5 +1,7 @@
 = Role Based Access
 
+include::partial$includes/config.adoc[]
+
 The system uses a RBAC approach to the system access control.
 The following roles are defined:
 
@@ -37,3 +39,5 @@ A judge has access to all data and can block, unblock and delete almost any data
 | Torganized Play Organization
 | Full access. Nothing is hidden or impossible for admin level.
 |===
+
+<<<

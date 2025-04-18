@@ -1,9 +1,10 @@
-[[technical-context]]
 = Technical Context
+
+include::partial$includes/config.adoc[]
 
 .The technical context of the DCIS.
 [plantuml,technical-context,svg]
-....
+----
 @startuml
 skinparam actorStyle awesome
 
@@ -182,4 +183,4 @@ AMQPbroker <.u.> AMQPthreats : use
 AMQPbroker <.u.> AMQPoperatives : use
 AMQPbroker <.u.> AMQPusers : use
 @enduml
-....
+----

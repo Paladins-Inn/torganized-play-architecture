@@ -5,7 +5,7 @@
 
 .These use cases revolve around the session (((Session)) management of the games and the shared campaign (((Shared Campaign))) management.
 [plantuml,business-context-gaming,svg]
-....
+----
 @startuml
 left to right direction
 skinparam actorStyle awesome
@@ -81,4 +81,6 @@ mremove <-- admin
 mdelete <-- admin
 
 @enduml
-....
+----
+
+<<<

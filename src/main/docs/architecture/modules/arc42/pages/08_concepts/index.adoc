@@ -1,7 +1,0 @@
-= Cross-Cutting Concepts
-
-* xref:./scs.adoc[]
-* xref:./event-bus.adoc[]
-* xref:./rbac.adoc[]
-* xref:./observability.adoc[]
-* xref:./data-protection.adoc[]

@@ -1,13 +1,12 @@
-[[level2-torg-codex]]
 = Level 2: torg-codex
 (((SCS,torg-codex)))
 (((torg-codex)))
 
-include::arc42:partial$includes/all.adoc[]
+include::partial$includes/config.adoc[]
 
 
 == Quality/Performance Characteristics
-Besides of the default performance characteristics {ef01} no additional performance requirements exist.
+Besides of the default performance characteristics {us04} no additional performance requirements exist.
 
 
 == Transcludes
@@ -42,3 +41,5 @@ Besides of the default performance characteristics {ef01} no additional performa
 * {us02}
 
 == Open Issues/Problems/Risks
+
+<<<

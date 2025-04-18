@@ -1,6 +1,8 @@
 = DCIS System Architecture
 :page-aliases: ROOT:index.adoc
 
+include::partial$includes/config.adoc[]
+
 [NOTE]
 ====
 You can download this documentation in PDF format:
@@ -8,6 +10,10 @@ You can download this documentation in PDF format:
 https://docs.paladins-inn.de/architecture/dcis-systemarchitecture.pdf
 ====
 
-include::nav.adoc[]
+This is the system architecture for the DCISfootnote:[DCIS stands for Delphi Council Information System.
+It is an in-game styled system for organizing game tables of Torg games.
+The objective is to build a shared campaign for the possibility wars that are the back-story of all Torg Eternity game sessions.
+].
+The system follows the
 
 include::tp:torganized-play:partial$torganized-play.adoc[]

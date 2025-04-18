@@ -1,5 +1,7 @@
 = Observability Concept with Spring Boot, Prometheus, and JSON Logging
 
+include::partial$includes/config.adoc[]
+
 Observability refers to a system’s ability to provide insights into its internal state by exposing external outputs. It is typically built on three pillars: *Logging*, *Monitoring*, and *Alerting*.
 
 == 🔍 Logging
@@ -109,3 +111,5 @@ The observability setup is composed of the following components:
 |===
 
 This setup provides deep visibility into the system’s behavior and ensures quick incident response.
+
+<<<

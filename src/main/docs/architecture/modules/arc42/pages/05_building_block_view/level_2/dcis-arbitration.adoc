@@ -1,3 +1,7 @@
 = Level 2: dcis-arbitration
 
+include::partial$includes/config.adoc[]
+
 _*TBD*_
+
+<<<

@@ -9,7 +9,7 @@ The result of the arbitration will then be executed in the correct vertical.
 
 .The Arbitration System.
 [plantuml,business-context-arbitration,svg]
-....
+----
 @startuml
 left to right direction
 skinparam actorStyle awesome
@@ -64,4 +64,6 @@ dcisUsers <.. decide : asynchronous
 user <.. dcisUsers : decision via email/discord/...
 
 @enduml
-....
+----
+
+<<<

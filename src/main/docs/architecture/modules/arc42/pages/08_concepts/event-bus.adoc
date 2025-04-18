@@ -1,5 +1,7 @@
 = Guava EventBus: Concept Overview
 
+include::partial$includes/config.adoc[]
+
 The *Guava EventBus*, part of the Google Guava library for Java, implements a *publish-subscribe (pub-sub)* messaging pattern. This design pattern decouples the components that send events (publishers) from those that handle them (subscribers).
 
 == 🔁 Core Concept
@@ -18,14 +20,14 @@ The Guava EventBus allows objects to communicate with each other *without being 
 
 === 1. EventBus Instance
 
-[source,java]
+[source,java,opts=novalidate]
 ----
 EventBus eventBus = new EventBus();
 ----
 
 === 2. Event Class
 
-[source,java]
+[source,java,opts=novalidate]
 ----
 @Builder
 @AllArgsConstructor
@@ -37,7 +39,7 @@ public class UserCreatedEvent {
 
 === 3. Subscriber
 
-[source,java]
+[source,java,opts=novalidate]
 ----
 public class UserEventListener {
     @Subscribe
@@ -49,7 +51,7 @@ public class UserEventListener {
 
 === 4. Posting an Event
 
-[source,java]
+[source,java,opts=novalidate]
 ----
 eventBus.register(new UserEventListener());
 eventBus.post(new UserCreatedEvent("Alice"));
@@ -61,3 +63,5 @@ eventBus.post(new UserCreatedEvent("Alice"));
 * UI updates in response to model changes
 * Decoupling business logic from controllers or services
 * In-process communication within complex systems
+
+<<<

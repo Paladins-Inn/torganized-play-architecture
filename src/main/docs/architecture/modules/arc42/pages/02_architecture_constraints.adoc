@@ -1,6 +1,6 @@
 = Architecture Constraints
 
-ifndef::imagesdir[:imagesdir: ../images]
+include::partial$includes/config.adoc[]
 
 .Technical Constraints
 [cols="<.<4m,<.<16a,<.<20a",option="headers",frame="topbot",grid="rows"]
@@ -43,3 +43,5 @@ ifndef::imagesdir[:imagesdir: ../images]
 | The TORG franchise is owned by Ulisses Spiele and is licensed for non-profit for Torganized Play to Roland Lichti.
 
 |===
+
+<<<

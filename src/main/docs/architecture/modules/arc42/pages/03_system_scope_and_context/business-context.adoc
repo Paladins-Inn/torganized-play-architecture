@@ -1,9 +1,10 @@
-[[business-context]]
 = Business Context
+
+include::partial$includes/config.adoc[]
 
 .The business context of the DCIS.
 [plantuml,business-context,svg]
-....
+----
 @startuml
 skinparam actorStyle awesome
 
@@ -95,4 +96,4 @@ sso <-.- gaming
 sso <-.- threats
 sso <-.- codex
 @enduml
-....
+----

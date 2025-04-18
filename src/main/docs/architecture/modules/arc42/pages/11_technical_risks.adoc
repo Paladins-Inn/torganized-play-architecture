@@ -1,26 +1,30 @@
 = Risks and Technical Debts
 
-.Risks and technical debts
-[cols="<.<5m,<.<15a,<.<20a",option="headers",frame="topbot",grid="rows"]
-|===
-| ID | Risk | Description
+include::partial$includes/config.adoc[]
 
-| [[TR001, TR-001 The team is too small]] TR-001
-| The Team is too small
+.Risks and technical debts
+[cols="<.<5a,<.<15a",option="headers",frame="topbot",grid="rows"]
+|===
+| ID | Risk
+
+.2+m| [[TR001, TR-001 The team is too small]] TR-001
+h| The Team is too small
 | The long development shows that the team is too small for this project.
 
-| [[TR002, TR-002 Google Guava EventBus]] TR-002
-| Guava EventBus is deprecated
+.2+m| [[TR002, TR-002 Google Guava EventBus]] TR-002
+h| Guava EventBus is deprecated
 | The central synchronous event bus used within the SCS is Guava EventBus.
 The maintainers declared that they consider it deprecated.
 
-| [[TR003, TR-003 FoundryVTT Module]] TR-003
-| ((FoundryVTT)) Module
-| The API for FoundryVTTxref:13_bibliography.adoc#foundryvtt[^FOUNDRY^] is not very stable.
-It will require constant maintenance and therefore contradicts xref:10_quality_requirements.adoc#MT01[MT01].
+.2+m| [[TR003, TR-003 FoundryVTT Module]] TR-003
+h| ((FoundryVTT)) Module
+| The API for FoundryVTT{foundryvtt} is not very stable.
+It will require constant maintenance and therefore contradicts {mt01}.
 
-| [[TR004, TR-004 WordPress Plugin]] TR-004
-| ((Wordpress)) Plugin
-| The Wordpressxref:13_bibliography.adoc#wordpress[^BLOG^] plugin is a compless software by itself.
-It may be hard to maintain with the quality requireement xref:10_quality_requirements.adoc#MT01[MT01].
+.2+m| [[TR004, TR-004 WordPress Plugin]] TR-004
+h| ((Wordpress)) Plugin
+| The Wordpress{wordpress} plugin is a compless software by itself.
+It may be hard to maintain with the quality requireement {mt01}.
 |===
+
+<<<

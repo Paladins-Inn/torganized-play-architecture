@@ -1,7 +1,7 @@
 = Level 1: core-earth-news
 (((SCS, core-earth-news))) (((core-earth-news))) (((Core Earth News)))
 
-include::partial$includes/all.adoc[]
+include::partial$includes/config.adoc[]
 
 This is the discord bot for handling the data within Discord.
 
@@ -70,10 +70,12 @@ ucPublish <-.-> dcisArbitration : data sync
 * {fs04}
 * {us01}
 * {re01}
-* {ef01}
+* {us04}
 * {mt01}
 
 
 == Open Issues/Problems/Risks
 
 It's only an idea yet.
+
+<<<

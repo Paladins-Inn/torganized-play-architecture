@@ -1,9 +1,10 @@
-[[uc-register-user]]
 = Feature: Register a new user
+
+include::partial$includes/config.adoc[]
 
 .The UML flow for the user log entry service.
 [plantuml,uc-user-registration,svg]
-....
+----
 @startuml
 
 start
@@ -31,10 +32,12 @@ endif
 end
 
 @enduml
-....
+----
 
 .The BDD test definition for the user registration
 [source,cucumber]
 ----
 include::example$bdd/dcis-users/user-registration.feature[]
 ----
+
+<<<

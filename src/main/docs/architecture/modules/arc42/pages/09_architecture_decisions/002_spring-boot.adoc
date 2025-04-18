@@ -1,10 +1,10 @@
-:adr-title: XXXX
-:adr-state: Proposed
-:adr-date: ./.
+:adr-title: Spring boot
+:adr-state: Accepted
+:adr-date: 2025-03-30
 :adr-expires: ./.
 :adr-author: klenkes74
 :adr-body: klenkes74
-:adr-seq: {counter:adr}
+:adr-seq: 002
 :adr-short: ADR-{adr-seq}
 = {adr-short} -- {adr-title}
 
@@ -26,13 +26,14 @@
 
 include::partial$includes/config.adoc[]
 
+
 == Context
+To keep the system maintainable, it should not contain too many different programming languages.
+Also the frameworks should be limited and selected in a way, maintenance development can be streamlined.
 
 
 == Decision
-
-
-== Consequences
-
+Since we use java as the primary language, the decision was easy to use the spring-boot framework.
+Also the integrations of the spring-boot framework and its eco system should be used.
 
 <<<

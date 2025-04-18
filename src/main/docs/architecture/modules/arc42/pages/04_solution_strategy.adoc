@@ -1,5 +1,7 @@
 = Solution Strategy
 
+include::partial$includes/config.adoc[]
+
 == Modularization
 
 Every distinct aspect is modelled into a single vertical.
@@ -31,6 +33,8 @@ You will need one also to manage the roles for RBAC as they are in the IDP and n
 The systems use frontend integration methods for the UI.
 
 Needed communication between the backends (data synchronization, event distribution) are handled via a messaging infrastructure.
-The broker used will be a rabbitMQ handling AMQP queues and topics.
+The broker {adr-003} used will be a rabbitMQ handling AMQP queues and topics.
 
 We heavily rely on xref:08_concepts/scs.adoc[self-contained systems] as promoted by INNOQ.
+
+<<<

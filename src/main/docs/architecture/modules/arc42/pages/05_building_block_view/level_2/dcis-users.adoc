@@ -1,9 +1,8 @@
-[[level2-dcis-users]]
 = Level 2: dcis-users
 (((SCS, dcis-users)))
 (((dcis-users)))
 
-include::partial$includes/all.adoc[]
+include::partial$includes/config.adoc[]
 
 Handles the user management stuff for the whole system.
 
@@ -11,7 +10,7 @@ Handles the user management stuff for the whole system.
 
 .Player management.
 [plantuml,use-cases-user,svg]
-....
+----
 @startuml
 left to right direction
 skinparam actorStyle awesome
@@ -84,7 +83,7 @@ dcisOperatives --> ulog
 torgCodex --> ulog
 
 @enduml
-....
+----
 
 
 
@@ -94,8 +93,10 @@ torgCodex --> ulog
 * {fs04}
 * {us01}
 * {re01}
-* {ef01}
+* {us04}
 * {mt01}
 
 
 == Open Issues/Problems/Risks
+
+<<<

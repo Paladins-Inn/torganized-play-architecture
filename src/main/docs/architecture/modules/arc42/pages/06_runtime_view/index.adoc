@@ -1,3 +1,0 @@
-= Runtime View
-
-* xref:./dcis-users.adoc[]
