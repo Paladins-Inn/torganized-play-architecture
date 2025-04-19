@@ -1,7 +1,184 @@
 = Level 2: dcis-libraries
-(((Libraries))) (((Libraries, dcis-libraries)))
 
 include::partial$includes/config.adoc[]
 
+(((Libraries)))
+
+[NOTE]
+====
+Auf Level 2 werden nur die allgemeinen Informationen über die Maven-Struktur und die Packages gegeben.
+Für weitere Informationen wird auf die jeweiligen JavaDocs der Bibliotheken verwiesen.
+Das Handling der drei verschiedenen Bibliothekstypen wird in xref:08_concepts/asynchronus-data-handling.adoc[] tiefergehend beschrieben.
+====
+
+== ((dcis-lib-messaging)), ((dcis-lib-rest)), ((dcis-lib-ui))
+(((Libraries)))(((Libraries, dcis-lib-messaging))) (((Libraries, dcis-lib-rest)))(((Libraries, dcis-lib-ui)))
+
+[cols="<.<5,<.<15a", frame="topbot", grid="rows"]
+|===
+| GroupId | de.paladins-inn.torganized-play
+| ArtifactId | dcis-lib-messaging +
+dcis-lib-rest +
+dcis-lib-ui
+| Package | de.paladinsinn.tp.dcis.lib.messaging +
+de.paladinsinn.tp.dcis.lib.rest +
+de.paladinsinn.tp.dcis.lib.ui
+|===
+
+
+== ((dcis-client-users))
+(((Libraries)))(((Libraries, dcis-client-users)))
+
+[cols="<.<5,<.<15a", frame="topbot", grid="rows"]
+|===
+| GroupId | de.paladins-inn.torganized-play
+| ArtifactId | dcis-client-users
+| Package | de.paladinsinn.tp.dcis.users.client
+| Handler | de.paladinsinn.tp.dcis.users.client.events.UserEventsHandler
+|===
+
+
+== ((dcis-client-arbitration))
+(((Libraries)))(((Libraries, dcis-client-arbitration)))
+
+[cols="<.<5,<.<15a", frame="topbot", grid="rows"]
+|===
+| GroupId | de.paladins-inn.torganized-play
+| ArtifactId | dcis-client-arbitration
+| Package | de.paladinsinn.tp.dcis..client
+| Handler | de.paladinsinn.tp.dcis.arbitration.client.events.ArbitrationEventsHandler
+|===
+
+
+== ((dcis-client-operatives))
+(((Libraries)))(((Libraries, dcis-client-operatives)))
+
+[cols="<.<5,<.<15a", frame="topbot", grid="rows"]
+|===
+| GroupId | de.paladins-inn.torganized-play
+| ArtifactId | dcis-client-operatives
+| Package | de.paladinsinn.tp.dcis.operatives.client
+| Handler | de.paladinsinn.tp.dcis.operatives.client.events.OperativesEventsHandler
+|===
+
+
+== ((dcis-client-gaming))
+(((Libraries)))(((Libraries, dcis-client-gaming)))
+
+[cols="<.<5,<.<15a", frame="topbot", grid="rows"]
+|===
+| GroupId | de.paladins-inn.torganized-play
+| ArtifactId | dcis-client-gaming
+| Package | de.paladinsinn.tp.dcis.gaming.client
+| Handler | de.paladinsinn.tp.dcis.gaming.client.events.GamingEventsHandler
+|===
+
+
+== ((dcis-client-threats))
+(((Libraries)))(((Libraries, dcis-client-threats)))
+
+[cols="<.<5,<.<15a", frame="topbot", grid="rows"]
+|===
+| GroupId | de.paladins-inn.torganized-play
+| ArtifactId | dcis-client-threats
+| Package | de.paladinsinn.tp.dcis.threats.client
+| Handler | de.paladinsinn.tp.dcis.threats.client.events.ThreatEventsHandler
+|===
+
+
+== ((dcis-client-codex))
+(((Libraries)))(((Libraries, dcis-client-codex)))
+
+[cols="<.<5,<.<15a", frame="topbot", grid="rows"]
+|===
+| GroupId | de.paladins-inn.torganized-play
+| ArtifactId | dcis-client-codex
+| Package | de.paladinsinn.tp.dcis.codex.client
+| Handler | de.paladinsinn.tp.dcis.codex.client.events.CodexEventsHandler
+|===
+
+
+== ((dcis-client-discord))
+(((Libraries)))(((Libraries, dcis-client-discord)))
+
+[cols="<.<5,<.<15a", frame="topbot", grid="rows"]
+|===
+| GroupId | de.paladins-inn.torganized-play
+| ArtifactId | dcis-client-discord
+| Package | de.paladinsinn.tp.dcis.discord.client
+| Handler | de.paladinsinn.tp.dcis.discord.client.events.EventsHandler
+|===
+
+
+== ((dcis-store-users))
+(((Libraries)))(((Libraries, dcis-store-users)))
+
+[cols="<.<5,<.<15a", frame="topbot", grid="rows"]
+|===
+| GroupId | de.paladins-inn.torganized-play
+| ArtifactId | dcis-store-users
+| Package | de.paladinsinn.tp.dcis.users.store
+| Changelog | db/users/master.yml
+|===
+
+
+== ((dcis-store-arbitration))
+(((Libraries)))(((Libraries, dcis-store-arbitration)))
+
+[cols="<.<5,<.<15a", frame="topbot", grid="rows"]
+|===
+| GroupId | de.paladins-inn.torganized-play
+| ArtifactId | dcis-store-arbitration
+| Package | de.paladinsinn.tp.dcis.arbitration.store
+| Changelog | db/arbitration/master.yml
+|===
+
+
+== ((dcis-store-operatives))
+(((Libraries)))(((Libraries, dcis-store-operatives)))
+
+[cols="<.<5,<.<15a", frame="topbot", grid="rows"]
+|===
+| GroupId | de.paladins-inn.torganized-play
+| ArtifactId | dcis-store-operatives
+| Package | de.paladinsinn.tp.dcis.operatives.store
+| Changelog | db/operatives/master.yml
+|===
+
+
+== ((dcis-store-gaming))
+(((Libraries)))(((Libraries, dcis-store-gaming)))
+
+[cols="<.<5,<.<15a", frame="topbot", grid="rows"]
+|===
+| GroupId | de.paladins-inn.torganized-play
+| ArtifactId | dcis-store-gaming
+| Package | de.paladinsinn.tp.dcis.gaming.store
+| Changelog | db/gaming/master.yml
+|===
+
+
+== ((dcis-store-threats))
+(((Libraries)))(((Libraries, dcis-store-threats)))
+
+[cols="<.<5,<.<15a", frame="topbot", grid="rows"]
+|===
+| GroupId | de.paladins-inn.torganized-play
+| ArtifactId | dcis-store-threats
+| Package | de.paladinsinn.tp.dcis.threats.store
+| Changelog | db/threats/master.yml
+|===
+
+
+== ((dcis-store-codex))
+(((Libraries)))(((Libraries, dcis-store-codex)))
+
+[cols="<.<5,<.<15a", frame="topbot", grid="rows"]
+|===
+| GroupId | de.paladins-inn.torganized-play
+| ArtifactId | dcis-store-codex
+| Package | de.paladinsinn.tp.dcis.codex.store
+| Changelog | db/codex/master.yml
+|===
 
 <<<

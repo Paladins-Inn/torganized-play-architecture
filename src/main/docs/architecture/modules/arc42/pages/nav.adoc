@@ -20,6 +20,7 @@
 **** xref:05_building_block_view/level_1/core-earth-news.adoc[]
 *** Level 2
 **** xref:05_building_block_view/level_2/dcis-commons.adoc[]
+**** xref:05_building_block_view/level_2/dcis-libraries.adoc[]
 **** xref:05_building_block_view/level_2/dcis-users.adoc[]
 **** xref:05_building_block_view/level_2/dcis-gaming.adoc[]
 **** xref:05_building_block_view/level_2/dcis-operatives.adoc[]
