@@ -1,5 +1,5 @@
 = Level 1: dcis-libraries
-(((Libraries))) (((Libraries, discord))) (((Libraries, dcis-lib-users))) (((Libraries, dcis-lib-petitions)))
+(((Libraries))) (((Libraries, discord))) (((Libraries, dcis-client-users))) (((Libraries, dcis-client-petitions)))
 
 include::partial$includes/config.adoc[]
 

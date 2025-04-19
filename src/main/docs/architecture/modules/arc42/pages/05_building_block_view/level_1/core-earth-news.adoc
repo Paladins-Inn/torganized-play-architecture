@@ -12,6 +12,7 @@ This is the discord bot for handling the data within Discord.
 ----
 @startuml
 left to right direction
+skinparam actorStyle awesome
 skinparam nodesep 50
 skinparam ranksep 200
 
