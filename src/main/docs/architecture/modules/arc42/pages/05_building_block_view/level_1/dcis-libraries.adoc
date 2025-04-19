@@ -4,6 +4,11 @@
 include::partial$includes/config.adoc[]
 
 These are the libraries with common functionalities for all SCSes.
+The libraries are the clients.
+They are responsible for the asynchronous data transfer of the data between the systems.
+So they will basically receive the data from the leading SCS via messaging and provide a default
+handler to retrieve the data. There is a second library for a default JPA implementation to keep the data.
+Every SCS has to decide if keeping the default data for the domain is fine or if it needs to implement the handler interface itself.
 
 == Use cases
 
@@ -22,13 +27,26 @@ rectangle "Torganized Play Libraries" as torgLibraries {
   [Library Codex] as libCodex << Client >>
 }
 
+rectangle "Torganized Play Data Store Libraries" as dataLibraries {
+  [Library Operatives Data] as jpaOperatives << DataStore >>
+  [Library Gaming Data] as jpaGaming << DataStore >>
+  [Library Threats Data] as jpaThreats << DataStore >>
+  [Library Codex Data] as jpaCodex << DataStore >>
+}
+
 rectangle "Generic Libraries" as genericLibraries {
-  [Library User Data] as libUsers << Client >>
+  [Library Users] as libUsers << Client >>
   [Library Arbitration] as libArbitration << Client >>
+}
+
+rectangle "Generic Data Store Libraries" as genericDataLibraries {
+  [Library User Data] as jpaUsers << DataStore >>
+  [Library Arbitration] as jpaArbitration << DataStore >>
 }
 
 rectangle "External Libraries" as externalLibs {
   [kp-commons] as kpCommons << External >>
+  [kp-rpg-torg] as kpTorg << External >>
   [kp-rpg] as kpRPG << External >>
   [kp-discord] as kpDiscord << External >>
   [kp-rpg-drivethru] as kpDrivethru << External >>
@@ -45,21 +63,28 @@ rectangle "External Libraries" as externalLibs {
 () "DriveThru" as drivethru << External >>
 
 libUsers ..> dcisUsers : uses
+libUsers -.-> jpaUsers : optional
 
-libOperatives ..> kpRPG : uses
+libOperatives ..> kpTorg : uses
 libOperatives ..> dcisOperatives : uses
+libOperatives -.-> jpaOperatives : optional
 
+libGaming ..> kpTorg : uses
 libGaming ..> dcisGaming : uses
-libGaming ..> kpRPG : uses
+libGaming -.-> jpaGaming : optional
 
+libThreats ..> kpTorg : uses
 libThreats ..> dcisThreats : uses
-libThreats ..> kpRPG : uses
+libThreats -.-> jpaThreats : optional
 
-libCodex ..> kpRPG : uses
 libCodex ..> codex : uses
+libCodex ..> kpTorg : uses
+libCodex -.-> jpaCodex : optional
 
 libArbitration ..> dcisArbitration : uses
+libArbitration -.-> jpaArbitration : optional
 
+kpTorg --> kpRPG
 kpDiscord ..> discord : uses
 kpDrivethru ..> drivethru : uses
 @enduml
