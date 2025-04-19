@@ -2,19 +2,41 @@
 
 include::partial$includes/config.adoc[]
 
+
 == Modularization
 
 Every distinct aspect is modelled into a single vertical.
 The xref:05_building_block_view/index.adoc#building-block-view-overview[current verticals] are:
 
-* xref:05_building_block_view/index.adoc#dcis-users[dcis-users] -- Account Management
-* xref:05_building_block_view/index.adoc#dcis-arbitration[dcis-arbitration] -- Petitions and Arbitration
-* xref:05_building_block_view/index.adoc#dcis-operatives[dcis-operatives] -- Handling of Player Characters
-* xref:05_building_block_view/index.adoc#dcis-gaming[dcis-gaming] -- Table and Campaign management
-* xref:05_building_block_view/index.adoc#dcis-threats[dcis-threats] -- Monsters and Adversaries
-* xref:05_building_block_view/index.adoc#torg-codex[torg-codex] -- Tables of Torg
-* xref:05_building_block_view/index.adoc#dcis-commons[dcis-commons] -- Shared Library and web asset SCS
-* xref:05_building_block_view/index.adoc#dcis-discord[dcis-discord] -- Discord Bot
+xref:05_building_block_view/index.adoc#dcis-users[dcis-users]::
+Account Management for users of the system.
+
+xref:05_building_block_view/index.adoc#dcis-arbitration[dcis-arbitration]::
+Petitions and Arbitration for all users, gaming and Torg Asset data.
+
+xref:05_building_block_view/index.adoc#dcis-operatives[dcis-operatives]::
+Handling of Player Characters
+
+xref:05_building_block_view/index.adoc#dcis-gaming[dcis-gaming]::
+Table and Campaign management
+
+xref:05_building_block_view/index.adoc#dcis-threats[dcis-threats]::
+Monsters and Adversaries
+
+xref:05_building_block_view/index.adoc#torg-codex[torg-codex]::
+Tables of Torg. A reference guide to Torg Items, perks, cosms, ...
+
+xref:05_building_block_view/index.adoc#dcis-libraries[dcis-libraries]::
+Java Libraries for common utilities, asynchronous data transfer and local data storage for data managed by other SCSes.
+
+xref:05_building_block_view/index.adoc#dcis-commons[dcis-commons]::
+Web asset SCS for all SCS in the system.
+
+xref:05_building_block_view/index.adoc#dcis-discord[dcis-discord]::
+Discord Bot for the whole system.
+
+xref:05_building_block_view/index.adoc#core-earth-news[Core Earth News]::
+A nice in game version of a news outlet to provide access to campaign data and missions.
 
 
 == Single Sign On
@@ -35,6 +57,8 @@ The systems use frontend integration methods for the UI.
 Needed communication between the backends (data synchronization, event distribution) are handled via a messaging infrastructure.
 The broker {adr-003} used will be a rabbitMQ handling AMQP queues and topics.
 
-We heavily rely on xref:08_concepts/scs.adoc[self-contained systems] as promoted by INNOQ.
+We heavily rely on xref:08_concepts/scs.adoc[self-contained systems] {scs} as promoted by INNOQ.
+
+The asynchronous data replication is addressed in section xref:08_concepts/asynchronus-data-handling.adoc[].
 
 <<<

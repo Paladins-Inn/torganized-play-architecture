@@ -5,4 +5,4 @@
 :torgcodex: [xref:13_bibliography.adoc#torgcodex[CODEX]]
 :foundryvtt: [xref:13_bibliography.adoc#foundtyvtt[FOUNDRY]]
 :roll20: [xref:13_bibliography.adoc#roll20[ROLL20]]
-:scs: [xref:13_bibliography.adoc#scs[SV*CS]]
+:scs: [xref:13_bibliography.adoc#scs[SCS]]
