@@ -41,7 +41,7 @@ discipline of architecture very important:
 
 
 == Decision
-We will document every architecture-level decision for DCIS and its core modules with an http://thinkrelevance.com/blog/2011/11/15/documenting-architecture-decisions[Architecture Decision Record].
+We will document every architecture-level decision for DCIS and its core modules with an http://thinkrelevance.com/WordPress/2011/11/15/documenting-architecture-decisions[Architecture Decision Record].
 These are a well structured, relatively lightweight way to capture architectural proposals. 
 They can serve as an artifact for discussion, and remain as an enduring record of the context and motivation of past decisions.
 

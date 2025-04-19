@@ -6,6 +6,7 @@ include::pi:commons:page$/config.adoc[]
 
 :heading-font-color: #ff0000
 
+include::partial$includes/02_architecture_constraints.adoc[]
 include::partial$includes/09_architecture_decisions.adoc[]
 include::partial$includes/10_quality_requirements.adoc[]
 include::partial$includes/11_technical_risks.adoc[]

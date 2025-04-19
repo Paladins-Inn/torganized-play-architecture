@@ -11,23 +11,23 @@ include::partial$includes/config.adoc[]
 | [[agilemanifesto,AGILE]][AGILE]
 | **K. B. et al., Ed.**, 'Manifesto for Agile Software Development'. 2001, [Online]. Available: https://agilemanifesto.org.
 
-| [[wordpress,BLOG]][BLOG]
-| [Online]. Available: https://wordpress.com/de/.
-
 | [[cleancode,CLEANCODE]][CLEANCODE]
 | **S. L. Ralph Westphal**, 'Clean Code Developer'. [Online]. Available: https://clean-code-developer.com.
 
 | [[torgcodex,CODEX]][CODEX]
-| [Online]. Available: https://torg-codex.com.
+| [Online]. Torg Eternity Reference. [Online]. Available: https://torg-codex.com.
 
 | [[foundryvtt,FOUNDRY]][FOUNDRY]
-| [Online]. Available: https://foundryvtt.com.
+| [Online]. Self-Hosted Roleplaying Virtual Table Top. Available: https://foundryvtt.com.
 
 | [[roll20,ROLL20]][ROLL20]
-| [Online]. Available: https://roll20.net.
+| [Online]. Hosted Roleplaying Virtual Table Top. Available: https://roll20.net.
 
 | [[scs,SCS]][SCS]
 | 'Self-contained Systems (SCS)'. INNOQ, [Online]. Available: https://scs-architecture.org.
+
+| [[wordpress,WORDPRESS]][WORDPRESS]
+| [Online]. WordPress Blogging and CRM System. Available: https://wordpress.com/de/.
 
 |===
 

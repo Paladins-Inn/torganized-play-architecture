@@ -11,6 +11,9 @@
 :fs04-index: (((Quality Requirement, Functional Suitability, Data Protection))) (((Functional Suitability, Data Protection)))
 :fs04: [xref:10_quality_requirements.adoc#FS04[FS04 Data Protection]] {fs04-index}
 
+:fs05-index: (((Quality Requirement, Functional Suitability, Enable other RPG systems))) (((Functional Suitability, Enable other RPG systems)))
+:fs05: [xref:10_quality_requirements.adoc#FS05[FS05 Enable other RPG systems]] {fs05-index}
+
 :co01-index: (((Quality Requirement, Compatibility, Compatible with FoundryVTT))) (((Compatibility, Compatible with FoundryVTT)))
 :co01: [xref:10_quality_requirements.adoc#CO01[CO01 Compatible with FoundryVTT]] {co01-index}
 

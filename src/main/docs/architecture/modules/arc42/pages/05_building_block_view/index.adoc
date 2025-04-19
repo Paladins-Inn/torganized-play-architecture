@@ -100,7 +100,8 @@ Helps the browsers to cache by referring the same stuff with the same URL instea
 (((dcis-libraries)))
 [ xref:./level_1/dcis-libraries.adoc[Level 1]
 | xref:./level_2/dcis-libraries.adoc[Level 2]
-| Level 3 ]
+]
+The client and datastore libraries used within the systems.
 
 [[core-earth-news]]core-earth-news::
 (((SCS,core-earth-news)))
@@ -121,13 +122,13 @@ Technically it could be a plugin for wordpress to access the (((SCS,dcis-gaming)
 IDs throughout the system are ((UUID)), not the simple numbers used by other systems.
 Reason is, that the ID should be generated on first creation of an object and UUID is a nice way to handle that distribution.
 
-[[FoundryVTT]]((FoundryVTT)) xref:arc42:13_bibliography.adoc#foundryvtt[^FOUNDRY^]::
+[[FoundryVTT]]((FoundryVTT)) {foundryvtt}::
 Some SCS declare a FoundryVTT API. This API is not defined yet.
 Objective is to offer https://foundryvtt.com[FoundryVTT] modules to integrate with DCIS to enable game play and make it as easy as possible for players to play Torg Eternity.
 These modules are not planned yet and will come after the base system.
 
-[[Torg-Codex]]((torg-codex)) xref:arc42:13_bibliography.adoc#torgcodex[^CODEX^]::
+[[Torg-Codex]]((torg-codex)) {torgcodex}::
 The SCSs containing data types that are also provided by the torg-codex should provide an interface for the torg-codex to include that data.
 
-[[Wordpress]]((wordpress)) xref:arc42:13_bibliography.adoc#wordpress[^BLOG^]::
+[[Wordpress]]((wordpress)) {wordpress}::
 There could be a plugin for WordPress to update a shared campaign based on the data given by (((SCS,dcis-gaming)))(((dcis-gaming)))dcis-gaming.

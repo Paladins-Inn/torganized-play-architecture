@@ -1,6 +1,6 @@
 :12factor: [xref:13_bibliography.adoc#factor12[12FACTOR]]
 :agilemanifesto: [xref:13_bibliography.adoc#agilemanifesto[AGILE]]
-:wordpress: [xref:13_bibliography.adoc#wordpress[BLOG]]
+:wordpress: [xref:13_bibliography.adoc#wordpress[WORDPRESS]]
 :cleancode: [xref:13_bibliography.adoc#cleancode[CLEANCODE]]
 :torgcodex: [xref:13_bibliography.adoc#torgcodex[CODEX]]
 :foundryvtt: [xref:13_bibliography.adoc#foundtyvtt[FOUNDRY]]

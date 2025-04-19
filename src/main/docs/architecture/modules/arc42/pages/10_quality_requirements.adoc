@@ -8,6 +8,7 @@ include::partial$includes/config.adoc[]
 
 |[[REQ-FS,Functional Suitability]] **Functional Suitability** (((Quality Requirement, Functional Suitability)))
 |* The software **has to** support the playing of Torg Eternity games.
+* The software **should** support the playing of other RPG games {cp003}.
 * The software **should** support the shared campaign.
 
 |[[REQ-CO,Compatibility]] **Compatibility** (((Quality Requirement, Compatibility)))
@@ -40,6 +41,7 @@ This includes using widely used frameworks so help can be given quite easily.
 ---_ Game Session Organization (FS02)
 ---_ Shared Campaign (FS03)
 ---_ Data Retention TTL (FS04)
+---_ Enables other RPG systems (FS05)
 -- Compatibility (CO)
 ---_ Compatible with FoundryVTT (CO01)
 ---_ Compatible with torg-codex (CO02)
@@ -77,6 +79,11 @@ This includes using widely used frameworks so help can be given quite easily.
 
 |[[FS04,Data Protection (FS04)]] **FS04** {fs04-index}
 |The software needs to be conform to the GDPR in Europe.
+
+|[[FS05,Enables other RPG systems (FS05]] **FS05** {fs05-index}
+|The software should be usable for other RPG systems.
+This requirement is optional to {fs01}.
+FS01 is more important.
 
 |[[CO01,Compatible with FoundryVTT (CO01)]] **CO01** {co01-index}
 |The data transfer to FoundryVTT based modules should be as seamless as possible.
