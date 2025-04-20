@@ -61,7 +61,7 @@ It started as chat system for video games to support creating and running guilds
 During the covid pandemic the _TTRPG_ community discovered discord to play games on it.
 
 |((DRY))-Principle
-|An architectural principle in software development: "**D**on't **repeat** **y**ourself".
+|An architectural principle in software development: "**D**on't **R**epeat **Y**ourself".
 
 |((FoundryVTT))
 |{foundryvtt} A _virtual table top_.
