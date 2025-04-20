@@ -25,8 +25,9 @@ de.paladinsinn.tp.dcis.lib.rest +
 de.paladinsinn.tp.dcis.lib.ui
 |===
 
+== Client Libraries
 
-== ((dcis-client-users))
+=== ((dcis-client-users))
 (((Libraries)))(((Libraries, dcis-client-users)))
 
 [cols="<.<5,<.<15a", frame="topbot", grid="rows"]
@@ -40,7 +41,7 @@ de.paladinsinn.tp.dcis.lib.ui
 |===
 
 
-== ((dcis-client-arbitration))
+=== ((dcis-client-arbitration))
 (((Libraries)))(((Libraries, dcis-client-arbitration)))
 
 [cols="<.<5,<.<15a", frame="topbot", grid="rows"]
@@ -54,7 +55,7 @@ de.paladinsinn.tp.dcis.lib.ui
 |===
 
 
-== ((dcis-client-operatives))
+=== ((dcis-client-operatives))
 (((Libraries)))(((Libraries, dcis-client-operatives)))
 
 [cols="<.<5,<.<15a", frame="topbot", grid="rows"]
@@ -68,7 +69,7 @@ de.paladinsinn.tp.dcis.lib.ui
 |===
 
 
-== ((dcis-client-gaming))
+=== ((dcis-client-gaming))
 (((Libraries)))(((Libraries, dcis-client-gaming)))
 
 [cols="<.<5,<.<15a", frame="topbot", grid="rows"]
@@ -82,7 +83,7 @@ de.paladinsinn.tp.dcis.lib.ui
 |===
 
 
-== ((dcis-client-threats))
+=== ((dcis-client-threats))
 (((Libraries)))(((Libraries, dcis-client-threats)))
 
 [cols="<.<5,<.<15a", frame="topbot", grid="rows"]
@@ -96,7 +97,7 @@ de.paladinsinn.tp.dcis.lib.ui
 |===
 
 
-== ((dcis-client-codex))
+=== ((dcis-client-codex))
 (((Libraries)))(((Libraries, dcis-client-codex)))
 
 [cols="<.<5,<.<15a", frame="topbot", grid="rows"]
@@ -110,7 +111,7 @@ de.paladinsinn.tp.dcis.lib.ui
 |===
 
 
-== ((dcis-client-discord))
+=== ((dcis-client-discord))
 (((Libraries)))(((Libraries, dcis-client-discord)))
 
 [cols="<.<5,<.<15a", frame="topbot", grid="rows"]
@@ -124,7 +125,9 @@ de.paladinsinn.tp.dcis.lib.ui
 |===
 
 
-== ((dcis-store-users))
+== Store Libraries
+
+=== ((dcis-store-users))
 (((Libraries)))(((Libraries, dcis-store-users)))
 
 [cols="<.<5,<.<15a", frame="topbot", grid="rows"]
@@ -136,7 +139,7 @@ de.paladinsinn.tp.dcis.lib.ui
 |===
 
 
-== ((dcis-store-arbitration))
+=== ((dcis-store-arbitration))
 (((Libraries)))(((Libraries, dcis-store-arbitration)))
 
 [cols="<.<5,<.<15a", frame="topbot", grid="rows"]
@@ -148,7 +151,7 @@ de.paladinsinn.tp.dcis.lib.ui
 |===
 
 
-== ((dcis-store-operatives))
+=== ((dcis-store-operatives))
 (((Libraries)))(((Libraries, dcis-store-operatives)))
 
 [cols="<.<5,<.<15a", frame="topbot", grid="rows"]
@@ -160,7 +163,7 @@ de.paladinsinn.tp.dcis.lib.ui
 |===
 
 
-== ((dcis-store-gaming))
+=== ((dcis-store-gaming))
 (((Libraries)))(((Libraries, dcis-store-gaming)))
 
 [cols="<.<5,<.<15a", frame="topbot", grid="rows"]
@@ -172,7 +175,7 @@ de.paladinsinn.tp.dcis.lib.ui
 |===
 
 
-== ((dcis-store-threats))
+=== ((dcis-store-threats))
 (((Libraries)))(((Libraries, dcis-store-threats)))
 
 [cols="<.<5,<.<15a", frame="topbot", grid="rows"]
@@ -184,7 +187,7 @@ de.paladinsinn.tp.dcis.lib.ui
 |===
 
 
-== ((dcis-store-codex))
+=== ((dcis-store-codex))
 (((Libraries)))(((Libraries, dcis-store-codex)))
 
 [cols="<.<5,<.<15a", frame="topbot", grid="rows"]
