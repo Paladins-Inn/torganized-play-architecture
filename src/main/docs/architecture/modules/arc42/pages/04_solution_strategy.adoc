@@ -46,9 +46,6 @@ It will be connected via OpenIDConnect to external identity providers (like keyc
 The users are specified via their external user.
 Internally they get an UUID which maps to the (Issuer, User) tuple of the external provider.
 
-IMPORTANT: The current implementation expects the subject to be an UUID. That is given with https://keycloak.org[Keycloak].
-You will need one also to manage the roles for RBAC as they are in the IDP and not mirrored into the SCS.
-
 
 == Frontend and backend integration
 
@@ -60,5 +57,6 @@ The broker {adr-003} used will be a rabbitMQ handling AMQP queues and topics.
 We heavily rely on xref:08_concepts/scs.adoc[self-contained systems] {scs} as promoted by INNOQ.
 
 The asynchronous data replication is addressed in section xref:08_concepts/asynchronus-data-handling.adoc[].
+This decision is documented in {adr-005}.
 
 <<<

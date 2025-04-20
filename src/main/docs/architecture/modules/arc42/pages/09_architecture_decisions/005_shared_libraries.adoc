@@ -1,0 +1,46 @@
+:adr-title: Shared libraries
+:adr-state: Accepted
+:adr-date: 2025-04-18
+:adr-expires: ./.
+:adr-author: klenkes74
+:adr-body: klenkes74
+:adr-seq: 005
+:adr-short: ADR-{adr-seq}
+= {adr-short} -- {adr-title}
+
+(((Architectural Decisions, {adr-short})))
+(((Architectural Decisions, {adr-title})))
+((({adr-short})))
+((({adr-title})))
+
+[cols="<.<8h,<.<12a", frame="topbot", grid="rows"]
+|===
+| ADR | {adr-short}
+| Title | {adr-title}
+| State | {adr-state}
+| Author | {adr-author}
+| Decision Body | {adr-body}
+| Valid from | {adr-date}
+| Expires | {adr-expires}
+|===
+
+include::partial$includes/config.adoc[]
+
+
+== Context
+{scs} are created to be as indipendent as possible.
+But not to implement certain functions again and again some methods should be implemented only once {mt01}.
+
+
+== Decision
+For every SCS handling data there are libraries as defined in xref:08_concepts/asynchronus-data-handling.adoc[] to facilitate the data transfer.
+The libraries are listed in xref:05_building_block_view/level_2/dcis-libraries.adoc[].
+
+
+== Consequences
+. The shared libraries break the concepts of {scs}.
+. The SCS may be more dependable on shared code.
+. The SCS are fully seperated via data synchronization. Only the user creation depends on xref:05_building_block_view/level_1/dcis-users.adoc[]] to be online.
+
+
+<<<
