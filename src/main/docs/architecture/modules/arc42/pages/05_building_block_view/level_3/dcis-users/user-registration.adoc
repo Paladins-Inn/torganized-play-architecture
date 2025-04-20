@@ -2,6 +2,50 @@
 
 include::partial$includes/config.adoc[]
 
+
+== User login within a client system
+.The UML flow for the dcis-client-users system
+[plantuml,uc-user-registration-client,svg]
+----
+@startuml
+
+start
+
+if (User exists?) then (yes)
+  If (user is banned or blocked or deleted?) then (yes)
+    :Write WARN to system log;
+    :Reject login;
+    :Increase error counter;
+    end
+  else (no)
+  endif
+else (no)
+  :Send user creation request to dcis-users (HTTP);
+  if (User creation is successful) then (yes)
+    :Read ID from response;
+    :Write user to local database;
+  else (no)
+    :Write WARN to system log;
+    :Reject login;
+    :Increase error counter;
+    end
+  endif
+endif
+    :Send user login event;
+:Write INFO to system log;
+:Increase success counter;
+end
+@enduml
+----
+
+.The BDD test definition for the user registration
+[source,cucumber]
+----
+include::example$bdd/dcis-users/user-registration-client.feature[]
+----
+
+
+== User registration within the dcis-users system
 .The UML flow for the user log entry service.
 [plantuml,uc-user-registration,svg]
 ----

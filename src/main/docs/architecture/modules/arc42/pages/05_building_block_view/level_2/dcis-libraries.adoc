@@ -35,6 +35,8 @@ de.paladinsinn.tp.dcis.lib.ui
 | ArtifactId | dcis-client-users
 | Package | de.paladinsinn.tp.dcis.users.client
 | Handler | de.paladinsinn.tp.dcis.users.client.events.UserEventsHandler
+| Queue (out) | dcis.users.modification (users-modification)
+| Topics (int) | dcis.users.changes (users-changes)
 |===
 
 
@@ -47,6 +49,8 @@ de.paladinsinn.tp.dcis.lib.ui
 | ArtifactId | dcis-client-arbitration
 | Package | de.paladinsinn.tp.dcis..client
 | Handler | de.paladinsinn.tp.dcis.arbitration.client.events.ArbitrationEventsHandler
+| Queue (out) | dcis.arbitrations.modification (users-modification)
+| Topics (int) | dcis.arbitrations.changes (users-changes)
 |===
 
 
@@ -59,6 +63,8 @@ de.paladinsinn.tp.dcis.lib.ui
 | ArtifactId | dcis-client-operatives
 | Package | de.paladinsinn.tp.dcis.operatives.client
 | Handler | de.paladinsinn.tp.dcis.operatives.client.events.OperativesEventsHandler
+| Queue (out) | dcis.operatives.modification (users-modification)
+| Topics (int) | dcis.operatives.changes (users-changes)
 |===
 
 
@@ -71,6 +77,8 @@ de.paladinsinn.tp.dcis.lib.ui
 | ArtifactId | dcis-client-gaming
 | Package | de.paladinsinn.tp.dcis.gaming.client
 | Handler | de.paladinsinn.tp.dcis.gaming.client.events.GamingEventsHandler
+| Queue (out) | dcis.gaming.modification (users-modification)
+| Topics (int) | dcis.gaming.changes (users-changes)
 |===
 
 
@@ -83,6 +91,8 @@ de.paladinsinn.tp.dcis.lib.ui
 | ArtifactId | dcis-client-threats
 | Package | de.paladinsinn.tp.dcis.threats.client
 | Handler | de.paladinsinn.tp.dcis.threats.client.events.ThreatEventsHandler
+| Queue (out) | dcis.threats.modification (users-modification)
+| Topics (int) | dcis.threats.changes (users-changes)
 |===
 
 
@@ -95,6 +105,8 @@ de.paladinsinn.tp.dcis.lib.ui
 | ArtifactId | dcis-client-codex
 | Package | de.paladinsinn.tp.dcis.codex.client
 | Handler | de.paladinsinn.tp.dcis.codex.client.events.CodexEventsHandler
+| Queue (out) | dcis.codex.modification (users-modification)
+| Topics (int) | dcis.codex.changes (users-changes)
 |===
 
 
@@ -107,6 +119,8 @@ de.paladinsinn.tp.dcis.lib.ui
 | ArtifactId | dcis-client-discord
 | Package | de.paladinsinn.tp.dcis.discord.client
 | Handler | de.paladinsinn.tp.dcis.discord.client.events.EventsHandler
+| Queue (out) | dcis.discord.output (users-modification)
+| Topics (int) | dcis.discord.input (users-changes)
 |===
 
 
