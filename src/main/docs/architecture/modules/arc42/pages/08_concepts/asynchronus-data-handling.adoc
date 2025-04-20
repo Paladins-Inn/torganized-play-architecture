@@ -54,7 +54,7 @@ skinparam nodesep 50
 skinparam ranksep 200
 
 component scsClient as Client {
-  package "client-code" as scsClientCode
+  component "client-code" as scsClientCode
 
   rectangle << generic >> {
     package lib.messaging << generic >> {
@@ -133,7 +133,7 @@ skinparam nodesep 50
 skinparam ranksep 200
 
 component scsClient as Client {
-  package "client-code" as scsClientCode {
+  component "client-code" as scsClientCode {
     component code
 
     package local.store << store >> {
