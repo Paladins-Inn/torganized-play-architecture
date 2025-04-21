@@ -1,0 +1,81 @@
+= Feature: User API key management
+
+include::partial$includes/config.adoc[]
+
+
+== Generating a new api key
+
+.The UML flow for the api key generation
+[plantuml,uc-user-api-key-generation,svg]
+----
+@startuml
+
+start
+
+:generate new api key;
+:write api key to database;
+if (api key got saved) then (yes)
+  :increase success counter;
+  :Log successful
+key generation to user log;
+  :return api key to user;
+else (no)
+  :increase failure counter;
+  :Log unsuccessful
+key generation to user log;
+  :return error to user;
+endif
+
+end
+
+@enduml
+----
+
+
+.The BDD test definition for the user api key generation.
+[source,cucumber]
+----
+include::example$bdd/dcis-users/api-key-generation.feature[]
+----
+
+
+== Revoking an api key
+
+.The UML flow for the api key generation
+[plantuml,uc-user-api-key-generation,svg]
+----
+@startuml
+
+start
+
+:load API key from database;
+if (api key loaded) then (yes)
+  if (api key belongs to current user) then (yes)
+    :drop api key from database;
+  else (no)
+    :increase error counter;
+    :Log failure of deletion to user log;
+    :return error to user;
+    end
+  endif
+else (no)
+endif
+
+:increase success counter;
+:Log successful
+key removal to user log;
+:return success state to user;
+
+end
+
+@enduml
+----
+
+
+.The BDD test definition for the user api key generation.
+[source,cucumber]
+----
+include::example$bdd/dcis-users/api-key-removal.feature[]
+----
+
+<<<

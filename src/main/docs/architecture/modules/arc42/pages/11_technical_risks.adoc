@@ -25,6 +25,11 @@ It will require constant maintenance and therefore contradicts {mt01}.
 h| ((Wordpress)) Plugin
 | The Wordpress{wordpress} plugin is a compless software by itself.
 It may be hard to maintain with the quality requireement {mt01}.
+
+.2+m| [[TR005, TR-005 HTML Asset Management]] TR-005
+h| HTML asset management
+| The assets in xref:05_building_block_view/level_1/dcis-commons.adoc[] need to be managed very carefully.
+
 |===
 
 <<<

@@ -23,7 +23,141 @@ dcis-lib-ui
 | Package | de.paladinsinn.tp.dcis.lib.messaging +
 de.paladinsinn.tp.dcis.lib.rest +
 de.paladinsinn.tp.dcis.lib.ui
+| Application config snippet
+| [source,yaml]
+----
+keycloak:
+  initializeOnStartup: true
+  realm: delphi-council
+  url: ${SSO_ISSUER}
+  client-id: ${SSO_CLIENT_ID}
+  client-secret: ${SSO_CLIENT_SECRET}
+
+kp:
+  security:
+    keycloak:
+      group-authority-mapper:
+        role-attribute: groups
+
+spring:
+  application:
+    name: dcis-users
+    admin:
+      enabled: true
+  main:
+    banner-mode: off
+
+  security:
+    user:
+      name: monitor
+      password: observing
+      roles: ACTUATOR
+    oauth2:
+      client:
+        registration:
+          sso:
+            provider: sso
+            client-id: ${SSO_CLIENT_ID}
+            client-secret: ${SSO_CLIENT_SECRET}
+            scope: ${SSO_SCOPES}
+            client-authentication-method: client_secret_post
+        provider:
+          sso:
+            issuer-uri: ${SSO_ISSUER}
+            user-name-attribute: ${SSO_USERNAME_ATTRIBUTE}
+
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: changeme
+    password: changeme
+    stream:
+      host: ${spring.rabbitmq.host}
+      port: ${spring.rabbitmq.port}
+      virtual-host: /
+      username:  ${spring.rabbitmq.username}
+      password: ${spring.rabbitmq.password}
+
+
+server:
+  error:
+    whitelabel:
+      enabled: false
+  port: ${HTTP_PORT:8080}
+  servlet:
+    contextPath: /users
+  forward-headers-strategy: framework
+
+management:
+  server:
+    port: ${METRICS_PORT:8081}
+    ssl:
+      enabled: false
+    base-path: /
+  tracing:
+    sampling:
+      probability: 0.5
+  endpoint:
+    health:
+      probes:
+        enabled: true
+    liquibase:
+      access: read_only
+    scheduledtasks:
+      access: read_only
+    metrics:
+      access: read_only
+    configprops:
+      access: read_only
+  endpoints:
+    access:
+      default: read_only
+    web:
+      exposure:
+        include: health,info,env,prometheus,httptrace,liquibase,scheduledtasks,metrics,configprops
+  health:
+    livenessState:
+      enabled: true
+    readinessState:
+      enabled: true
+    rabbit:
+      enabled: true
+    db:
+      enabled: true
+    circuitbreakers:
+      enabled: true
+    diskspace:
+      enabled: true
+      threshold: 10MB
+      path: /tmp
+    ping:
+      enabled: true
+    ratelimiters:
+      enabled: true
+    ssl:
+      enabled: true
+      certificate-validity-warning-threshold: 7d
+
+
+logging:
+  group:
+    rest: de.paladinsinn.tp.dcis.api,org.springframework.web,org.springframework.http
+  level:
+    web: WARN
+    security: WARN
+    rest: WARN
+    liquibase: WARN
+    de:
+      kaiserpfalzedv: INFO
+      paladinsinn: INFO
+    org:
+      springframework:
+        web:
+          filter:
+            CommonsRequestLoggingFilter: INFO
+----
 |===
+
 
 == Client Libraries
 
@@ -37,7 +171,38 @@ de.paladinsinn.tp.dcis.lib.ui
 | Package | de.paladinsinn.tp.dcis.users.client
 | Handler | de.paladinsinn.tp.dcis.users.client.events.UserEventsHandler
 | Queue (out) | dcis.users.modification (users-modification)
-| Topics (int) | dcis.users.changes (users-changes)
+| Topics (in) | dcis.users.changes (users-changes)
+| Application config snippet
+| [source,yaml]
+----
+spring:
+  application:
+    name: dcis-users
+    system: DCIS
+  cloud:
+    stream:
+      # noinspection SpringBootApplicationYaml
+      bindings:
+        input:
+          users-changes:
+            destination: dcis.users.changes
+            content-type: application/json
+            consumer:
+              use-native-decoding: false
+              auto-startup: true
+        output:
+          users-modification:
+            destination: dcis.users.modification
+            content-type: application/json
+            producer:
+              use-native-encoding: false
+              auto-startup: true
+dcis:
+  users:
+    rest:
+      url: https://dcis.delphi-council.org/users
+      apiKey: 6519fb80-8b0f-42ca-a5cc-031b852fcf6a
+----
 |===
 
 
@@ -50,8 +215,34 @@ de.paladinsinn.tp.dcis.lib.ui
 | ArtifactId | dcis-client-arbitration
 | Package | de.paladinsinn.tp.dcis..client
 | Handler | de.paladinsinn.tp.dcis.arbitration.client.events.ArbitrationEventsHandler
-| Queue (out) | dcis.arbitrations.modification (users-modification)
-| Topics (int) | dcis.arbitrations.changes (users-changes)
+| Queue (out) | dcis.arbitrations.modification (arbitrations-modification)
+| Topics (in) | dcis.arbitrations.changes (arbitrations-changes)
+| Application config snippet
+| [source,yaml]
+----
+spring:
+  application:
+    name: dcis-users
+    system: DCIS
+  cloud:
+    stream:
+      # noinspection SpringBootApplicationYaml
+      bindings:
+        input:
+          users-changes:
+            destination: dcis.arbitrations.changes
+            content-type: application/json
+            consumer:
+              use-native-decoding: false
+              auto-startup: true
+        output:
+          users-modification:
+            destination: dcis.arbitrations.modification
+            content-type: application/json
+            producer:
+              use-native-encoding: false
+              auto-startup: true
+----
 |===
 
 
@@ -64,8 +255,34 @@ de.paladinsinn.tp.dcis.lib.ui
 | ArtifactId | dcis-client-operatives
 | Package | de.paladinsinn.tp.dcis.operatives.client
 | Handler | de.paladinsinn.tp.dcis.operatives.client.events.OperativesEventsHandler
-| Queue (out) | dcis.operatives.modification (users-modification)
-| Topics (int) | dcis.operatives.changes (users-changes)
+| Queue (out) | dcis.operatives.modification (operatives-modification)
+| Topics (in) | dcis.operatives.changes (operatives-changes)
+| Application config snippet
+| [source,yaml]
+----
+spring:
+  application:
+    name: dcis-users
+    system: DCIS
+  cloud:
+    stream:
+      # noinspection SpringBootApplicationYaml
+      bindings:
+        input:
+          users-changes:
+            destination: dcis.operatives.changes
+            content-type: application/json
+            consumer:
+              use-native-decoding: false
+              auto-startup: true
+        output:
+          users-modification:
+            destination: dcis.operatives.modification
+            content-type: application/json
+            producer:
+              use-native-encoding: false
+              auto-startup: true
+----
 |===
 
 
@@ -78,8 +295,34 @@ de.paladinsinn.tp.dcis.lib.ui
 | ArtifactId | dcis-client-gaming
 | Package | de.paladinsinn.tp.dcis.gaming.client
 | Handler | de.paladinsinn.tp.dcis.gaming.client.events.GamingEventsHandler
-| Queue (out) | dcis.gaming.modification (users-modification)
-| Topics (int) | dcis.gaming.changes (users-changes)
+| Queue (out) | dcis.gaming.modification (gaming-modification)
+| Topics (in) | dcis.gaming.changes (gaming-changes)
+| Application config snippet
+| [source,yaml]
+----
+spring:
+  application:
+    name: dcis-users
+    system: DCIS
+  cloud:
+    stream:
+      # noinspection SpringBootApplicationYaml
+      bindings:
+        input:
+          users-changes:
+            destination: dcis.gaming.changes
+            content-type: application/json
+            consumer:
+              use-native-decoding: false
+              auto-startup: true
+        output:
+          users-modification:
+            destination: dcis.gaming.modification
+            content-type: application/json
+            producer:
+              use-native-encoding: false
+              auto-startup: true
+----
 |===
 
 
@@ -92,8 +335,34 @@ de.paladinsinn.tp.dcis.lib.ui
 | ArtifactId | dcis-client-threats
 | Package | de.paladinsinn.tp.dcis.threats.client
 | Handler | de.paladinsinn.tp.dcis.threats.client.events.ThreatEventsHandler
-| Queue (out) | dcis.threats.modification (users-modification)
-| Topics (int) | dcis.threats.changes (users-changes)
+| Queue (out) | dcis.threats.modification (threats-modification)
+| Topics (in) | dcis.threats.changes (threats-changes)
+| Application config snippet
+| [source,yaml]
+----
+spring:
+  application:
+    name: dcis-users
+    system: DCIS
+  cloud:
+    stream:
+      # noinspection SpringBootApplicationYaml
+      bindings:
+        input:
+          users-changes:
+            destination: dcis.threats.changes
+            content-type: application/json
+            consumer:
+              use-native-decoding: false
+              auto-startup: true
+        output:
+          users-modification:
+            destination: dcis.threats.modification
+            content-type: application/json
+            producer:
+              use-native-encoding: false
+              auto-startup: true
+----
 |===
 
 
@@ -106,8 +375,34 @@ de.paladinsinn.tp.dcis.lib.ui
 | ArtifactId | dcis-client-codex
 | Package | de.paladinsinn.tp.dcis.codex.client
 | Handler | de.paladinsinn.tp.dcis.codex.client.events.CodexEventsHandler
-| Queue (out) | dcis.codex.modification (users-modification)
-| Topics (int) | dcis.codex.changes (users-changes)
+| Queue (out) | dcis.codex.modification (codex-modification)
+| Topics (in) | dcis.codex.changes (codex-changes)
+| Application config snippet
+| [source,yaml]
+----
+spring:
+  application:
+    name: dcis-users
+    system: DCIS
+  cloud:
+    stream:
+      # noinspection SpringBootApplicationYaml
+      bindings:
+        input:
+          users-changes:
+            destination: dcis.codex.changes
+            content-type: application/json
+            consumer:
+              use-native-decoding: false
+              auto-startup: true
+        output:
+          users-modification:
+            destination: dcis.codex.modification
+            content-type: application/json
+            producer:
+              use-native-encoding: false
+              auto-startup: true
+----
 |===
 
 
@@ -120,12 +415,75 @@ de.paladinsinn.tp.dcis.lib.ui
 | ArtifactId | dcis-client-discord
 | Package | de.paladinsinn.tp.dcis.discord.client
 | Handler | de.paladinsinn.tp.dcis.discord.client.events.EventsHandler
-| Queue (out) | dcis.discord.output (users-modification)
-| Topics (int) | dcis.discord.input (users-changes)
+| Queue (out) | dcis.discord.output (discord-modification)
+| Topics (in) | dcis.discord.input (discord-changes)
+| Application config snippet
+| [source,yaml]
+----
+spring:
+  application:
+    name: dcis-users
+    system: DCIS
+  cloud:
+    stream:
+      # noinspection SpringBootApplicationYaml
+      bindings:
+        input:
+          users-changes:
+            destination: dcis.discord.changes
+            content-type: application/json
+            consumer:
+              use-native-decoding: false
+              auto-startup: true
+        output:
+          users-modification:
+            destination: dcis.discord.modification
+            content-type: application/json
+            producer:
+              use-native-encoding: false
+              auto-startup: true
+----
 |===
 
 
 == Store Libraries
+
+=== Application config snippet
+
+The snippet presented points to a file mode H2 database in PostgreSQL mode.
+The `url`, `username` and `password` will be overwritten via environment variables during runtime:
+
+* `SPRING_DATASOURCE_URL`
+* `SPRING_DATASOURCE_USERNAME`
+* `SPRING_DATASOURCE_PASSWORD`
+
+.Default snippet for `application.yml` for datase setup.
+[source,yaml]
+----
+spring:
+  datasource:
+    url: jdbc:h2:file:./target/db;MODE=PostgreSQL
+    username: sa
+    password: password
+    hikari:
+      connectionTimeout: 20000
+      maximumPoolSize: 5
+
+  jpa:
+    showSql: false
+    hibernate:
+      ddlAuto: validate
+
+  liquibase:
+    enabled: true
+    show-summary-output: log
+    show-summary: summary
+    change-log: classpath:/db/changelog/db.changelog-master.yaml
+    url: ${spring.datasource.url}
+    user: ${spring.datasource.username}
+    password: ${spring.datasource.password}
+----
+
 
 === ((dcis-store-users))
 (((Libraries)))(((Libraries, dcis-store-users)))

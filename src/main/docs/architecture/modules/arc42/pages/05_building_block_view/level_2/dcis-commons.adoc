@@ -10,8 +10,6 @@ This SCS provides default CSS and java script that can be cached that way on the
 == Quality/Performance Characteristics
 In the container only static HTML/CSS/JavaScript is provided.
 
-The project also provides a small library for use by all other SCS.
-
 
 == Pages
 * CSS for Torganized Play
@@ -20,9 +18,5 @@ The project also provides a small library for use by all other SCS.
 == Fulfilled Requirements
 
 * {mt01}
-
-== Open Issues/Problems/Risks
-* The versioned assets need to be managed carefully.
-  Otherwise pages relying on them may break.
 
 <<<
