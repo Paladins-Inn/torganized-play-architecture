@@ -11,7 +11,7 @@ include::partial$includes/config.adoc[]
 | [[agilemanifesto,AGILE]][AGILE]
 | **K. B. et al., Ed.**, 'Manifesto for Agile Software Development'. 2001, [Online]. Available: https://agilemanifesto.org.
 
-| [[baldung01,BALDUNG01]][BALDUNG01]
+| [[baeldung01,BALDUNG01]][BALDUNG01]
 | [Online]. Access Control Models. Available: https://www.baeldung.com/java-access-control-models.
 
 | [[cleancode,CLEANCODE]][CLEANCODE]
