@@ -6,3 +6,6 @@
 :foundryvtt: [xref:13_bibliography.adoc#foundtyvtt[FOUNDRY]]
 :roll20: [xref:13_bibliography.adoc#roll20[ROLL20]]
 :scs: [xref:13_bibliography.adoc#scs[SCS]]
+:baeldung01: [xref:13_bibliography.adocs#baeldung01[BAELDUNG01]]
+:sapl: [xref:13_bibliography.adoc#sapl[SAPL]]
+:wiki01: [xref:13_bibliography.adoc#wiki01[WIKI01]]

@@ -21,6 +21,10 @@ And of course there are terms special to the _DCIS_.
 |A messaging protocol standard that defines also the wire protocol.
 That way the wire protocol is not proprietary which enables cross-organization communication via messaging.
 
+|((Attribute-based access control)) +
+((ABAC))
+| Attribute-based access control (ABAC), also known as policy-based access control for IAM, defines an access control paradigm whereby a subject's authorization to perform a set of operations is determined by evaluating attributes associated with the subject, object, requested operations, and, in some cases, environment attributes.
+
 |((Campaign))
 |A series of _sessions_ that are connected in some way.
 Often used in _TTRPGs_ groups to connect several separate adventures to create a long arch or storyline with a big impact on the world or the heroes of the campaign.
@@ -60,8 +64,10 @@ but mainly it tries to be as immersive as possible.
 It started as chat system for video games to support creating and running guilds but evolved in a general chat system with different so called servers for any topic possible.
 During the covid pandemic the _TTRPG_ community discovered discord to play games on it.
 
-|((DRY))-Principle
-|An architectural principle in software development: "**D**on't **R**epeat **Y**ourself".
+|((DRY))-Principle (((DRY)))
+|An architectural principle in software development:
+
+"**D**on't **R**epeat **Y**ourself".
 
 |((FoundryVTT))
 |{foundryvtt} A _virtual table top_.
@@ -104,10 +110,15 @@ Normal _campaigns_ circle around Storm Knights, but perhaps some want to play St
 |((Realm))
 |The different realities invading in Torg Eternity create the so called Realms on Earth. The remaining parts form the Realm of Core Earth.
 
+|((Role-based access control)) +
+((RBAC))
+| In computer systems security, role-based access control (RBAC)[1][2] or role-based security[3] is an approach to restricting system access to authorized users, and to implementing mandatory access control (MAC) or discretionary access control (DAC).
+
 |((Roll20))
 |{roll20} A _virtual table top_.
 
-|((Self Contained System)) ((SCS))
+|((Self Contained System)) +
+((SCS))
 |A self contained system is a microservice with UI responsibly and independent database.
 Needed data is transferred asynchronously and fulfills eventual consistency.
 It offers fragments of HTML via HTTP to be included in UIs from other systems.
@@ -136,6 +147,15 @@ It has been introduced to the _DCIS_ to enable _GMs_ to play in the _shared camp
 
 If the events are easily integrated in the _shared campaign_ the _campaign orga_ may introduce it in the _campaign updates_.
 
+|((SOLID-Principle)) (((SOLID)))
+| In software programming, SOLID is a mnemonic acronym for five design principles intended to make object-oriented designs more understandable, flexible, and maintainable. Although the SOLID principles apply to any object-oriented design, they can also form a core philosophy for methodologies such as agile development or adaptive software development.
+
+* **S**ingle responsible principle
+* **O**pen-closed principle
+* **L**iskov substitution principle
+* **I**nterface segregation principle
+* **D**ependency inversion principle
+
 |((Storm Knight))
 |The good guys in the possibility wars. They are called _operatives_ in context of the DCIS.
 
@@ -147,9 +167,6 @@ The "evil" _operatives_.
 |A single _Game Master_ runs his own table.
 The concept is quite young in _TTRPG_.
 It describes either a group meeting regular with the same _Game Master_; or a _Game Master_ runs a table where _players_ get invited to.
-
-> I think the concept entered the _TTRPG_ space with the famous actual play streams of the big _TTRPG_ streamers.
-> -- klenkes74
 
 |((Torg Eternity))
 |The reboot of the original _TTRPG_ from the early 1990. The topic this whole system revolves about.
@@ -168,8 +185,10 @@ And the results can be scored for creating a _shared campaign_ in the _Possibili
 |((Virtual Table Top)) ((VTT))
 |A highly specialized environment to play _TTRPG_ online.
 
-|((YAGNI))-Principle
-|An architectural principle in software development: "**Y**ou **A**in't **G**ona **N**eed **I**t".
+|((YAGNI))-Principle (((YAGNI)))
+|An architectural principle in software development:
+
+"**Y**ou **A**in't **G**ona **N**eed **I**t".
 
 |===
 

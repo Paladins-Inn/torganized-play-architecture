@@ -39,6 +39,7 @@
 *** xref:08_concepts/asynchronus-data-handling.adoc[]
 *** xref:08_concepts/event-bus.adoc[]
 *** xref:08_concepts/rbac.adoc[]
+*** xref:08_concepts/abac.adoc[]
 *** xref:08_concepts/observability.adoc[]
 *** xref:08_concepts/data-protection.adoc[]
 ** Architecture decisions

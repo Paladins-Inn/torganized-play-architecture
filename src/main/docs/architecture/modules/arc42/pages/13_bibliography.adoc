@@ -11,6 +11,9 @@ include::partial$includes/config.adoc[]
 | [[agilemanifesto,AGILE]][AGILE]
 | **K. B. et al., Ed.**, 'Manifesto for Agile Software Development'. 2001, [Online]. Available: https://agilemanifesto.org.
 
+| [[baldung01,BALDUNG01]][BALDUNG01]
+| [Online]. Access Control Models. Available: https://www.baeldung.com/java-access-control-models.
+
 | [[cleancode,CLEANCODE]][CLEANCODE]
 | **S. L. Ralph Westphal**, 'Clean Code Developer'. [Online]. Available: https://clean-code-developer.com.
 
@@ -23,8 +26,14 @@ include::partial$includes/config.adoc[]
 | [[roll20,ROLL20]][ROLL20]
 | [Online]. Hosted Roleplaying Virtual Table Top. Available: https://roll20.net.
 
+| [[sapl,SAPL]][SAPL]
+| [Online]. The Streaming Attribute Policy Language and Engine. Available: https://sapl.io/.
+
 | [[scs,SCS]][SCS]
 | 'Self-contained Systems (SCS)'. INNOQ, [Online]. Available: https://scs-architecture.org.
+
+| [[wiki01,WIKI01]][WIKI01]
+| 'Attribute-based access control', Wikipedia, [Online]. Available: https://en.wikipedia.org/wiki/Attribute-based_access_control
 
 | [[wordpress,WORDPRESS]][WORDPRESS]
 | [Online]. WordPress Blogging and CRM System. Available: https://wordpress.com/de/.
