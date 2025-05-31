@@ -11,10 +11,12 @@ include::partial$includes/config.adoc[]
 h| The Team is too small
 | The long development shows that the team is too small for this project.
 
-.2+m| [[TR002, TR-002 Google Guava EventBus]] TR-002
-h| Guava EventBus is deprecated
+.2+m| [line-through]#[[TR002, TR-002 Google Guava EventBus]] TR-002#
+h| [line-through]#Guava EventBus is deprecated#
 | The central synchronous event bus used within the SCS is Guava EventBus.
 The maintainers declared that they consider it deprecated.
+
+_We replaced Guave EventBus with Spring Events._
 
 .2+m| [[TR003, TR-003 FoundryVTT Module]] TR-003
 h| ((FoundryVTT)) Module

@@ -67,6 +67,7 @@ A page I really appreciate and that shows the value to a lot of players.
 | xref:./level_2/dcis-users.adoc[Level 2]
 | Level 3 ]
 A quite straight forward user management system.
+It is based on https://docs.kaiserpfalz-edv.de/kp-commons-users/current/manual/index.html[kp-commons-users].
 Authentication is offhanded to OpenIDConnect providers.
 So this SCS only manages some Out-Game stuff.
 
